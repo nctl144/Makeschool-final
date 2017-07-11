@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Green" customModuleProvider="target" sceneMemberID="viewController">
@@ -44,19 +44,19 @@
                             <constraint firstItem="1Gd-dw-jPU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="354" id="ZRH-lJ-h0I"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Fkk-wN-Wz5"/>
+                    <navigationItem key="navigationItem" title="Home" id="Fkk-wN-Wz5"/>
                     <connections>
-                        <segue destination="vSO-EQ-eOs" kind="show" id="AQ5-gc-2LB"/>
+                        <segue destination="vSO-EQ-eOs" kind="show" identifier="toTreeInfo" id="AQ5-gc-2LB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047" y="119"/>
         </scene>
-        <!--View Controller-->
+        <!--Tree View Controller-->
         <scene sceneID="oWB-9m-27b">
             <objects>
-                <viewController id="vSO-EQ-eOs" sceneMemberID="viewController">
+                <viewController id="vSO-EQ-eOs" customClass="TreeViewController" customModule="Green" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FFh-PG-sQf"/>
                         <viewControllerLayoutGuide type="bottom" id="PuI-e0-TwW"/>
@@ -72,29 +72,35 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kh-fu-KHs">
-                                <rect key="frame" x="97" y="399" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVH-ec-UmB">
-                                <rect key="frame" x="313" y="95" width="46" height="30"/>
+                                <rect key="frame" x="313" y="95" width="46" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="camera"/>
+                                <connections>
+                                    <action selector="cameraButtonTapped:" destination="vSO-EQ-eOs" eventType="touchUpInside" id="1JP-9p-mxm"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NNf-w7-Jdv">
                                 <rect key="frame" x="67" y="157" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kh-fu-KHs">
+                                <rect key="frame" x="83" y="402" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="wVH-ec-UmB" id="gkU-l1-Go2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ad-k2-eft" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1958" y="-121"/>
+            <point key="canvasLocation" x="1957.5999999999999" y="-121.88905547226388"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dIt-Bi-Hhr">
