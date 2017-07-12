@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FacebookLogin
 
 class HomeViewController: UIViewController {
 
@@ -14,6 +15,10 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let loginButton = LoginButton(readPermissions: [ .publicProfile ])
+        loginButton.center = view.center
+        
+        view.addSubview(loginButton)
     }
 
     override func didReceiveMemoryWarning() {
