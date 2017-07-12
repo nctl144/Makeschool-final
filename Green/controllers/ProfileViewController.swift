@@ -21,6 +21,10 @@ class ProfileViewController: UIViewController {
         
         let imageUrl: URL? = URL(string: UserProfile.profilePicUrl)
         
+        UserProfile.getUserData { (result) in
+            print(result)
+        }
+        
         if let imageUrl = imageUrl {
             self.profilePicView.kf.setImage(with: imageUrl)
         }

@@ -53,7 +53,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="Fkk-wN-Wz5"/>
                     <connections>
-                        <outlet property="imageView" destination="op3-UN-mTc" id="Ahb-H7-vYW"/>
                         <outlet property="logOutButton" destination="cca-dx-BmA" id="crm-rj-2yY"/>
                         <outlet property="myLoginButton" destination="V54-gO-tZJ" id="7JD-Zq-PsS"/>
                         <segue destination="ohk-iL-ZXN" kind="show" identifier="toProfilePage" id="F3f-fe-Eyk"/>

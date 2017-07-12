@@ -9,14 +9,12 @@
 import UIKit
 import FacebookCore
 import FacebookLogin
-import Kingfisher
 
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var myLoginButton: UIButton!
     @IBOutlet weak var logOutButton: UIButton!
     
-    @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,7 +48,6 @@ class HomeViewController: UIViewController {
         view.addSubview(myLoginButton)
         view.addSubview(logOutButton)
     }
-    
 
     @IBAction func loginButtonTapped(_ sender: UIButton) {
         let loginManager = LoginManager()
@@ -64,30 +61,6 @@ class HomeViewController: UIViewController {
                 // hide the login button and show the logout button
                 self.logOutButton.alpha = 1
                 self.myLoginButton.alpha = 0
-                
-                let connection = GraphRequestConnection()
-                connection.add(MyProfileRequest()) { response, result in
-                    switch result {
-                    case .success(let response):
-                        print("Custom Graph Request Succeeded: \(response)")
-                        
-                        // set the user profile info
-                        if let userId = response.userId {
-                            UserProfile.userId = userId
-                        }
-                        
-                        if let username = response.username {
-                            UserProfile.username = username
-                        }
-                        let imageUrl = URL(string: UserProfile.profilePicUrl)
-                        
-                        self.imageView.kf.setImage(with: imageUrl)
-                        
-                    case .failed(let error):
-                        print("Custom Graph Request Failed: \(error)")
-                    }
-                }
-                connection.start()
             }
             
             self.performSegue(withIdentifier: "toProfilePage", sender: self)
