@@ -22,7 +22,7 @@ class HomeViewController: UIViewController {
         myLoginButton.center = view.center;
         myLoginButton.setTitle("Start Planting!", for: .normal)
         
-        logOutButton.backgroundColor = UIColor.red
+        logOutButton.backgroundColor = UIColor.darkGray
         logOutButton.frame = CGRect(x: 0, y: 0, width: 180, height: 40);
         logOutButton.center = view.center;
         logOutButton.setTitle("log out", for: .normal)
