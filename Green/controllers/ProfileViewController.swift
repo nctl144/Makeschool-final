@@ -16,8 +16,6 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
         UserProfile.getUserData { (result) in
             print(result)
@@ -27,6 +25,8 @@ class ProfileViewController: UIViewController {
             }
         }
         
+        // styling
+        profilePicView.layer.cornerRadius = profilePicView.frame.height/3
     }
 
     override func didReceiveMemoryWarning() {
