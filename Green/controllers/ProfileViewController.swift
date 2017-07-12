@@ -19,6 +19,11 @@ class ProfileViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        let imageUrl: URL? = URL(string: UserProfile.profilePicUrl)
+        
+        if let imageUrl = imageUrl {
+            self.profilePicView.kf.setImage(with: imageUrl)
+        }
     }
 
     override func didReceiveMemoryWarning() {

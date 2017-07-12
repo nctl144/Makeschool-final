@@ -20,5 +20,6 @@ target 'Green' do
   pod 'FBSDKShareKit', '~> 4.22.1'
   
   pod 'Kingfisher', '~> 3.0'
+  pod 'Alamofire', '~> 4.4'
 
 end

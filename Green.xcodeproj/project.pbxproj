@@ -10,6 +10,7 @@
 		05082B8F1F16A8E800A4415B /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05082B8E1F16A8E800A4415B /* UserProfile.swift */; };
 		05082B911F16C29C00A4415B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05082B901F16C29C00A4415B /* ProfileViewController.swift */; };
 		0536AB8B1F156F7C00A14C6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0536AB891F156F7C00A14C6C /* Main.storyboard */; };
+		05434D541F16D67500BE7CAE /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05434D531F16D67500BE7CAE /* ExternalAccessory.framework */; };
 		05A84CEC1F1571940018C4C4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A84CEB1F1571940018C4C4 /* HomeViewController.swift */; };
 		05A84CEE1F157ED20018C4C4 /* TreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A84CED1F157ED20018C4C4 /* TreeViewController.swift */; };
 		05F4E9541F15572B008159E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F4E9531F15572B008159E9 /* AppDelegate.swift */; };
@@ -22,6 +23,8 @@
 		05082B901F16C29C00A4415B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = controllers/ProfileViewController.swift; sourceTree = "<group>"; };
 		0536AB891F156F7C00A14C6C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = storyboards/Main.storyboard; sourceTree = "<group>"; };
 		0536AB8E1F156F9E00A14C6C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = supporting/Info.plist; sourceTree = "<group>"; };
+		05434D531F16D67500BE7CAE /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		05434D551F16D67500BE7CAE /* Green.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Green.entitlements; sourceTree = "<group>"; };
 		05A84CEB1F1571940018C4C4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = controllers/HomeViewController.swift; sourceTree = "<group>"; };
 		05A84CED1F157ED20018C4C4 /* TreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TreeViewController.swift; path = controllers/TreeViewController.swift; sourceTree = "<group>"; };
 		05F4E9501F15572B008159E9 /* Green.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Green.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05434D541F16D67500BE7CAE /* ExternalAccessory.framework in Frameworks */,
 				877F844B118AEEE5CBA8B4EA /* Pods_Green.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,6 +103,7 @@
 		05F4E9521F15572B008159E9 /* Green */ = {
 			isa = PBXGroup;
 			children = (
+				05434D551F16D67500BE7CAE /* Green.entitlements */,
 				0536AB871F156F6700A14C6C /* supporting */,
 				0536AB851F156F4D00A14C6C /* models */,
 				0536AB841F156F4500A14C6C /* storyboards */,
@@ -112,6 +117,7 @@
 		536DB065B0DD55ED24B101D2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				05434D531F16D67500BE7CAE /* ExternalAccessory.framework */,
 				EC7F489DBDCB1FF058BAB36D /* Pods_Green.framework */,
 			);
 			name = Frameworks;
@@ -163,6 +169,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 988TK7CY2J;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.WAC = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -358,6 +369,7 @@
 			baseConfigurationReference = 4097F313CB34D1712FADACE6 /* Pods-Green.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Green/Green.entitlements;
 				DEVELOPMENT_TEAM = 988TK7CY2J;
 				INFOPLIST_FILE = "$(SRCROOT)/Green/supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -372,6 +384,7 @@
 			baseConfigurationReference = D9D40F12586E7EABE0D9517E /* Pods-Green.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Green/Green.entitlements;
 				DEVELOPMENT_TEAM = 988TK7CY2J;
 				INFOPLIST_FILE = "$(SRCROOT)/Green/supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

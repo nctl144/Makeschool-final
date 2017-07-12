@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.5.0)
   - Bolts (1.8.4):
     - Bolts/AppLinks (= 1.8.4)
     - Bolts/Tasks (= 1.8.4)
@@ -27,6 +28,7 @@ PODS:
   - Kingfisher (3.10.3)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.4)
   - FacebookCore
   - FacebookLogin (~> 0.2)
   - FacebookShare (~> 0.2)
@@ -36,6 +38,7 @@ DEPENDENCIES:
   - Kingfisher (~> 3.0)
 
 SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   FacebookCore: 2cb3f0fbff218e9d3119cec84bae983b232412de
   FacebookLogin: c9d606504735780a9e3002465a615512e0a691a5
@@ -45,6 +48,6 @@ SPEC CHECKSUMS:
   FBSDKShareKit: 1cbd0fdc2bb3277dd3522512855dcf1f4088f734
   Kingfisher: a0ac82dc5bcf0388dd74b294cf2cc13730c63436
 
-PODFILE CHECKSUM: 83538af488960152f91470db27d1eff448a34d60
+PODFILE CHECKSUM: 7c667d2a80cf2a812b24d14682c8cd558c8449f1
 
 COCOAPODS: 1.2.1

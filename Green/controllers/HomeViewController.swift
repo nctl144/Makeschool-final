@@ -12,12 +12,17 @@ import FacebookLogin
 import Kingfisher
 
 class HomeViewController: UIViewController {
-    let myLoginButton = UIButton(type: .custom)
-    let logOutButton = UIButton(type: .custom)
+    
+    @IBOutlet weak var myLoginButton: UIButton!
+    @IBOutlet weak var logOutButton: UIButton!
     
     @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // log the user out for now to test the app
+        let loginManager = LoginManager()
+        loginManager.logOut()
         
         myLoginButton.backgroundColor = UIColor.darkGray
         myLoginButton.frame = CGRect(x: 0, y: 0, width: 180, height: 40);
@@ -32,19 +37,11 @@ class HomeViewController: UIViewController {
         myLoginButton.alpha = 0
         logOutButton.alpha = 0
         
-        logOutButton.addTarget(self, action: #selector(self.logOutButtonTapped), for: .touchUpInside)
-        myLoginButton.addTarget(self, action: #selector(self.loginButtonClicked), for: .touchUpInside)
-        
         // Handle clicks on the button
-        if let accessToken = AccessToken.current {
-            print("logged in")
-            print(accessToken)
+        if AccessToken.current != nil {
             // show the log out button if the user access token has existed
             self.logOutButton.alpha = 1
-//            performSegue(withIdentifier: "toProfilePage", sender: self)
         } else {
-            print("logged out")
-            
             // show the login button if the access token is not set
             myLoginButton.alpha = 1
         }
@@ -54,7 +51,8 @@ class HomeViewController: UIViewController {
         view.addSubview(logOutButton)
     }
     
-    @objc func loginButtonClicked() {
+
+    @IBAction func loginButtonTapped(_ sender: UIButton) {
         let loginManager = LoginManager()
         loginManager.logIn([ .publicProfile ], viewController: self) { loginResult in
             switch loginResult {
@@ -66,11 +64,6 @@ class HomeViewController: UIViewController {
                 // hide the login button and show the logout button
                 self.logOutButton.alpha = 1
                 self.myLoginButton.alpha = 0
-                
-                print("Logged in!")
-                print(grantedPermissions)
-                print(accessToken)
-                
                 
                 let connection = GraphRequestConnection()
                 connection.add(MyProfileRequest()) { response, result in
@@ -96,10 +89,12 @@ class HomeViewController: UIViewController {
                 }
                 connection.start()
             }
+            
+            self.performSegue(withIdentifier: "toProfilePage", sender: self)
         }
     }
     
-    @objc func logOutButtonTapped() {
+    @IBAction func logOutButtonTapped(_ sender: UIButton) {
         print("logging the user out")
         let loginManager = LoginManager()
         
@@ -108,22 +103,12 @@ class HomeViewController: UIViewController {
         self.logOutButton.alpha = 0
         self.myLoginButton.alpha = 1
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toProfilePage" {
-            let profileViewController = segue.destination as! ProfileViewController
-            
-            let imageUrl = URL(string: UserProfile.profilePicUrl)
-            profileViewController.profilePicView.kf.setImage(with: imageUrl)
-        }
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
