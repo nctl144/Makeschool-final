@@ -67,6 +67,30 @@ class HomeViewController: UIViewController {
                 print("Logged in!")
                 print(grantedPermissions)
                 print(accessToken)
+                
+                
+                let connection = GraphRequestConnection()
+                connection.add(MyProfileRequest()) { response, result in
+                    switch result {
+                    case .success(let response):
+                        print("Custom Graph Request Succeeded: \(response)")
+                        
+                        // set the user profile info
+                        if let userId = response.userId {
+                            UserProfile.userId = userId
+                        }
+                        
+                        if let username = response.username {
+                            UserProfile.username = username
+                        }
+                        
+                        performSegue(withIdentifier: toProfilePage, sender: self)
+                        
+                    case .failed(let error):
+                        print("Custom Graph Request Failed: \(error)")
+                    }
+                }
+                connection.start()
             }
         }
     }

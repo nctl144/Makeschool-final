@@ -12,11 +12,13 @@ target 'Green' do
 #  pod 'Firebase/Database'
 #  pod 'Firebase/Storage'
 
-  pod 'FacebookCore', '~> 0.2'
+  pod 'FacebookCore'
   pod 'FacebookLogin', '~> 0.2'
   pod 'FacebookShare', '~> 0.2'
-  pod 'FBSDKCoreKit', '~> 4.22.1'
+  pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit', '~> 4.22.1'
   pod 'FBSDKShareKit', '~> 4.22.1'
+  
+  pod 'Kingfisher', '~> 3.0'
 
 end
