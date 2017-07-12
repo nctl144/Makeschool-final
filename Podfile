@@ -6,10 +6,17 @@ target 'Green' do
   use_frameworks!
 
   # Pods for Green
-  pod 'Firebase/Core'
-  pod 'Firebase/Auth'
-  pod 'FirebaseUI/Auth'
-  pod 'Firebase/Database'
-  pod 'Firebase/Storage'
+#  pod 'Firebase/Core'
+#  pod 'Firebase/Auth'
+#  pod 'FirebaseUI/Auth'
+#  pod 'Firebase/Database'
+#  pod 'Firebase/Storage'
+
+  pod 'FacebookCore', '~> 0.2'
+  pod 'FacebookLogin', '~> 0.2'
+  pod 'FacebookShare', '~> 0.2'
+  pod 'FBSDKCoreKit', '~> 4.22.1'
+  pod 'FBSDKLoginKit', '~> 4.22.1'
+  pod 'FBSDKShareKit', '~> 4.22.1'
 
 end

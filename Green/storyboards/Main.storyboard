@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,14 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Gd-dw-jPU">
-                                <rect key="frame" x="91" y="354" width="192" height="47"/>
-                                <color key="backgroundColor" red="0.96078431372549022" green="0.71372549019607845" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="29"/>
-                                <state key="normal" title="Start planting!">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Plant app" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCp-RL-Grq">
                                 <rect key="frame" x="139" y="135" width="72" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -39,10 +30,6 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.19569729618659329" green="0.53827932131958767" blue="0.56352577917771884" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="1Gd-dw-jPU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GUr-8z-CsU"/>
-                            <constraint firstItem="1Gd-dw-jPU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="354" id="ZRH-lJ-h0I"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="Fkk-wN-Wz5"/>
                     <connections>
