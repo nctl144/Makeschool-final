@@ -28,12 +28,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="op3-UN-mTc">
+                                <rect key="frame" x="87" y="230" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.19569729618659329" green="0.53827932131958767" blue="0.56352577917771884" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="Fkk-wN-Wz5"/>
                     <connections>
-                        <segue destination="ohk-iL-ZXN" kind="show" identifier="toProfilePage" id="A3X-pM-aif"/>
+                        <outlet property="imageView" destination="op3-UN-mTc" id="Ahb-H7-vYW"/>
+                        <segue destination="ohk-iL-ZXN" kind="show" identifier="toProfilePage" id="F3f-fe-Eyk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

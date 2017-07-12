@@ -9,11 +9,13 @@
 import UIKit
 import FacebookCore
 import FacebookLogin
+import Kingfisher
 
 class HomeViewController: UIViewController {
     let myLoginButton = UIButton(type: .custom)
     let logOutButton = UIButton(type: .custom)
     
+    @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,6 +41,7 @@ class HomeViewController: UIViewController {
             print(accessToken)
             // show the log out button if the user access token has existed
             self.logOutButton.alpha = 1
+//            performSegue(withIdentifier: "toProfilePage", sender: self)
         } else {
             print("logged out")
             
@@ -83,8 +86,9 @@ class HomeViewController: UIViewController {
                         if let username = response.username {
                             UserProfile.username = username
                         }
+                        let imageUrl = URL(string: UserProfile.profilePicUrl)
                         
-                        performSegue(withIdentifier: toProfilePage, sender: self)
+                        self.imageView.kf.setImage(with: imageUrl)
                         
                     case .failed(let error):
                         print("Custom Graph Request Failed: \(error)")
@@ -103,6 +107,15 @@ class HomeViewController: UIViewController {
         loginManager.logOut()
         self.logOutButton.alpha = 0
         self.myLoginButton.alpha = 1
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toProfilePage" {
+            let profileViewController = segue.destination as! ProfileViewController
+            
+            let imageUrl = URL(string: UserProfile.profilePicUrl)
+            profileViewController.profilePicView.kf.setImage(with: imageUrl)
+        }
     }
 
     override func didReceiveMemoryWarning() {

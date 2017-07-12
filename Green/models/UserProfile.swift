@@ -37,8 +37,9 @@ struct MyProfileRequest: GraphRequestProtocol {
 }
 
 struct UserProfile {
-    static var userId = String()
-    static var profilePicUrl = "http://graph.facebook.com/\(userId)/picture?type=large"
+    static var userId:String? = String()
     
-    static var username = String()
+    static var profilePicUrl = "http://graph.facebook.com/\(userId!)/picture?type=large"
+    
+    static var username: String? = String()
 }

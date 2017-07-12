@@ -18,8 +18,6 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let imageUrl = URL(string: UserProfile.profilePicUrl)
-        profilePicView.kf.setImage(with: imageUrl)
         
     }
 
