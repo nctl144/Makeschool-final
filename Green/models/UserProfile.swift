@@ -37,10 +37,6 @@ struct MyProfileRequest: GraphRequestProtocol {
 }
 
 struct UserProfile {
-    static var userId:String? = String()
-    static var profilePicUrl = "https://graph.facebook.com/\(userId!)/picture?type=large"
-    
-    static var username: String? = String()
     
     static func getUserData(completion: @escaping ([String]) -> Void) {
         let connection = GraphRequestConnection()
@@ -53,8 +49,6 @@ struct UserProfile {
                 // set the user profile info
                 if let userId = response.userId,
                     let username = response.username {
-                    UserProfile.userId = userId
-                    UserProfile.username = username
                     completion([userId, username])
                 }
                 

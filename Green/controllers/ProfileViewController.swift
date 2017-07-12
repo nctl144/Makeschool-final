@@ -19,15 +19,14 @@ class ProfileViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        let imageUrl: URL? = URL(string: UserProfile.profilePicUrl)
-        
         UserProfile.getUserData { (result) in
             print(result)
+            DispatchQueue.main.async {
+                self.usernameLabel.text = result[1]
+                self.profilePicView.kf.setImage(with: URL(string: "https://graph.facebook.com/\(result[0])/picture?type=large"))
+            }
         }
         
-        if let imageUrl = imageUrl {
-            self.profilePicView.kf.setImage(with: imageUrl)
-        }
     }
 
     override func didReceiveMemoryWarning() {
