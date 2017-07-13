@@ -108,11 +108,13 @@
             </objects>
             <point key="canvasLocation" x="456" y="-898"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar View Controller-->
         <scene sceneID="M5H-El-RK7">
             <objects>
-                <tabBarController id="6qO-Fe-cwM" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="hdL-gy-glR">
+                <tabBarController id="6qO-Fe-cwM" customClass="MainTabBarViewController" customModule="Green" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="hdL-gy-glR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -121,13 +123,14 @@
                         <segue destination="ohk-iL-ZXN" kind="relationship" relationship="viewControllers" id="bAl-ND-xbk"/>
                         <segue destination="vSO-EQ-eOs" kind="relationship" relationship="viewControllers" id="cVa-RG-hre"/>
                         <segue destination="bVE-Oq-B79" kind="relationship" relationship="viewControllers" id="Pda-IO-TDa"/>
+                        <segue destination="lf7-0e-crK" kind="relationship" relationship="viewControllers" id="ezw-Gl-4GO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O4e-Qt-swC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1433" y="-897"/>
         </scene>
-        <!--Profile-->
+        <!--Profile View Controller-->
         <scene sceneID="4Gh-Ou-fph">
             <objects>
                 <viewController id="ohk-iL-ZXN" customClass="ProfileViewController" customModule="Green" customModuleProvider="target" sceneMemberID="viewController">
@@ -136,7 +139,7 @@
                         <viewControllerLayoutGuide type="bottom" id="YYj-mT-dBD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Teg-Cn-Wpx">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E4c-ru-3MK">
@@ -155,7 +158,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="E4c-ru-3MK" firstAttribute="centerX" secondItem="Teg-Cn-Wpx" secondAttribute="centerX" id="1ry-Mh-0yc"/>
                             <constraint firstItem="E4c-ru-3MK" firstAttribute="width" secondItem="Teg-Cn-Wpx" secondAttribute="width" multiplier="0.6" id="8LE-qp-epj"/>
@@ -165,7 +168,10 @@
                             <constraint firstItem="E4c-ru-3MK" firstAttribute="top" secondItem="cXC-IC-IcT" secondAttribute="bottom" multiplier="2" id="z2R-NX-0aq"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="jy6-6a-hJT"/>
+                    <tabBarItem key="tabBarItem" title="" image="tab_home_black" id="jy6-6a-hJT">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="profilePicView" destination="E4c-ru-3MK" id="dgZ-1V-QhU"/>
                         <outlet property="usernameLabel" destination="PjR-vc-akL" id="yk7-Q7-yht"/>
@@ -175,7 +181,7 @@
             </objects>
             <point key="canvasLocation" x="2527.5" y="-1346.8309859154929"/>
         </scene>
-        <!--Trees-->
+        <!--Tree View Controller-->
         <scene sceneID="oWB-9m-27b">
             <objects>
                 <viewController id="vSO-EQ-eOs" customClass="TreeViewController" customModule="Green" customModuleProvider="target" sceneMemberID="viewController">
@@ -184,7 +190,7 @@
                         <viewControllerLayoutGuide type="bottom" id="PuI-e0-TwW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uRM-a3-NQe">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NNf-w7-Jdv">
@@ -228,7 +234,9 @@
                             <constraint firstItem="7kh-fu-KHs" firstAttribute="width" secondItem="uRM-a3-NQe" secondAttribute="width" multiplier="0.8" id="owM-Bs-IKL"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="1" title="Trees" id="fcN-fR-z2V"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="" image="tree" id="fcN-fR-z2V">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="treePhoto" destination="NNf-w7-Jdv" id="Wvt-1M-uFE"/>
                         <outlet property="treePhotoCartoon" destination="LaV-Jj-DgY" id="ncL-0G-sZa"/>
@@ -238,7 +246,7 @@
             </objects>
             <point key="canvasLocation" x="2527.5" y="-546.12676056338034"/>
         </scene>
-        <!--Photo-->
+        <!--View Controller-->
         <scene sceneID="ynW-Rz-v1o">
             <objects>
                 <viewController id="bVE-Oq-B79" sceneMemberID="viewController">
@@ -247,18 +255,48 @@
                         <viewControllerLayoutGuide type="bottom" id="F5p-g5-U6s"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aZF-jW-CHd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="3" title="Photo" id="WJj-93-XfQ"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="" image="camera" id="WJj-93-XfQ">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ynm-kk-bjv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2528" y="349"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="hPp-Vj-xR7">
+            <objects>
+                <viewController id="lf7-0e-crK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Brz-Wz-Bfo"/>
+                        <viewControllerLayoutGuide type="bottom" id="WNI-mj-I8W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wf0-DM-33N">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="btn_heart_red_solid" id="Jd2-7f-ubn">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ifI-wX-KKe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1433" y="204"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="btn_heart_red_solid" width="24" height="24"/>
+        <image name="camera" width="25" height="25"/>
+        <image name="tab_home_black" width="25" height="25"/>
+        <image name="tree" width="25" height="25"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Mfo-NL-GnK"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

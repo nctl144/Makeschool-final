@@ -13,6 +13,7 @@
 		05434D541F16D67500BE7CAE /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05434D531F16D67500BE7CAE /* ExternalAccessory.framework */; };
 		05A84CEC1F1571940018C4C4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A84CEB1F1571940018C4C4 /* HomeViewController.swift */; };
 		05A84CEE1F157ED20018C4C4 /* TreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A84CED1F157ED20018C4C4 /* TreeViewController.swift */; };
+		05F0383F1F17FA31004C335D /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0383E1F17FA31004C335D /* MainTabBarViewController.swift */; };
 		05F4E9541F15572B008159E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F4E9531F15572B008159E9 /* AppDelegate.swift */; };
 		05F4E95B1F15572B008159E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05F4E95A1F15572B008159E9 /* Assets.xcassets */; };
 		877F844B118AEEE5CBA8B4EA /* Pods_Green.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7F489DBDCB1FF058BAB36D /* Pods_Green.framework */; };
@@ -27,6 +28,7 @@
 		05434D551F16D67500BE7CAE /* Green.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Green.entitlements; sourceTree = "<group>"; };
 		05A84CEB1F1571940018C4C4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = controllers/HomeViewController.swift; sourceTree = "<group>"; };
 		05A84CED1F157ED20018C4C4 /* TreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TreeViewController.swift; path = controllers/TreeViewController.swift; sourceTree = "<group>"; };
+		05F0383E1F17FA31004C335D /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarViewController.swift; path = controllers/MainTabBarViewController.swift; sourceTree = "<group>"; };
 		05F4E9501F15572B008159E9 /* Green.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Green.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05F4E9531F15572B008159E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05F4E95A1F15572B008159E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 				05A84CEB1F1571940018C4C4 /* HomeViewController.swift */,
 				05A84CED1F157ED20018C4C4 /* TreeViewController.swift */,
 				05082B901F16C29C00A4415B /* ProfileViewController.swift */,
+				05F0383E1F17FA31004C335D /* MainTabBarViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				05082B8F1F16A8E800A4415B /* UserProfile.swift in Sources */,
 				05F4E9541F15572B008159E9 /* AppDelegate.swift in Sources */,
 				05082B911F16C29C00A4415B /* ProfileViewController.swift in Sources */,
+				05F0383F1F17FA31004C335D /* MainTabBarViewController.swift in Sources */,
 				05A84CEE1F157ED20018C4C4 /* TreeViewController.swift in Sources */,
 				05A84CEC1F1571940018C4C4 /* HomeViewController.swift in Sources */,
 			);
