@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Firebase
 import FBSDKCoreKit
 import FBSDKLoginKit
 
@@ -18,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     public func application(_ application: UIApplication,  didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     
