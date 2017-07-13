@@ -20,18 +20,11 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.view.addBackground(imageName: "background4.png", contentMode: .scaleAspectFill)
+        // self.view.addBackground(imageName: "background4.png", contentMode: .scaleAspectFill)
         
         iconImageView.image = UIImage(named: "icon.png")
         
-        myLoginButton.backgroundColor = UIColor.darkGray
-        myLoginButton.frame = CGRect(x: 0, y: 0, width: 180, height: 40);
-        myLoginButton.center = view.center;
         myLoginButton.setTitle("Start Planting!", for: .normal)
-        
-        logOutButton.backgroundColor = UIColor.darkGray
-        logOutButton.frame = CGRect(x: 0, y: 0, width: 180, height: 40);
-        logOutButton.center = view.center;
         logOutButton.setTitle("log out", for: .normal)
         
         // Handle clicks on the button
@@ -106,13 +99,13 @@ extension UIView {
         self.insertSubview(imageViewBackground, at: 0)
         
         self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "|[imageViewBackground]|",
-                                                                           options: [],
-                                                                           metrics: nil,
-                                                                           views: ["imageViewBackground": imageViewBackground]))
+                                                           options: [],
+                                                           metrics: nil,
+                                                           views: ["imageViewBackground": imageViewBackground]))
         self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[imageViewBackground]|",
-                                                                           options: [],
-                                                                           metrics: nil,
-                                                                           views: ["imageViewBackground": imageViewBackground]))
+                                                           options: [],
+                                                           metrics: nil,
+                                                           views: ["imageViewBackground": imageViewBackground]))
     }
 }
 
