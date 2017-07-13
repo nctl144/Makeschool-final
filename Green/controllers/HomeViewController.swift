@@ -14,11 +14,15 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var myLoginButton: UIButton!
     @IBOutlet weak var logOutButton: UIButton!
+    @IBOutlet weak var gotoProfileButton: UIButton!
+    @IBOutlet weak var iconImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.addBackground(imageName: "background3.jpg", contentMode: .scaleAspectFill)
+//        self.view.addBackground(imageName: "background4.png", contentMode: .scaleAspectFill)
+        
+        iconImageView.image = UIImage(named: "icon.png")
         
         myLoginButton.backgroundColor = UIColor.darkGray
         myLoginButton.frame = CGRect(x: 0, y: 0, width: 180, height: 40);
@@ -30,16 +34,13 @@ class HomeViewController: UIViewController {
         logOutButton.center = view.center;
         logOutButton.setTitle("log out", for: .normal)
         
-        myLoginButton.alpha = 0
-        logOutButton.alpha = 0
-        
         // Handle clicks on the button
         if AccessToken.current != nil {
             // show the log out button if the user access token has existed
-            self.logOutButton.alpha = 1
+            self.logOutButton.isHidden = false
         } else {
             // show the login button if the access token is not set
-            myLoginButton.alpha = 1
+            myLoginButton.isHidden = false
         }
         
         // Add the button to the view
@@ -57,8 +58,8 @@ class HomeViewController: UIViewController {
                 print("User cancelled login.")
             case .success(let grantedPermissions, let declinedPermissions, let accessToken):
                 // hide the login button and show the logout button
-                self.logOutButton.alpha = 1
-                self.myLoginButton.alpha = 0
+                self.logOutButton.isHidden = false
+                self.myLoginButton.isHidden = true
             }
             
             self.performSegue(withIdentifier: "toProfilePage", sender: self)
@@ -71,8 +72,8 @@ class HomeViewController: UIViewController {
         
         // log the user out
         loginManager.logOut()
-        self.logOutButton.alpha = 0
-        self.myLoginButton.alpha = 1
+        self.logOutButton.isHidden = true
+        self.myLoginButton.isHidden = false
     }
 
     override func didReceiveMemoryWarning() {
