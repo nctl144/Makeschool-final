@@ -15,6 +15,10 @@ class MainTabBarViewController: UITabBarController {
         super.viewDidLoad()
         
         delegate = self
+        
+        photoHelper.completionHandler = { image in
+            TreeInfo.treeImage = image
+        }
 
         // Do any additional setup after loading the view.
         self.tabBar.barTintColor = UIColor(hexString: "26272b")

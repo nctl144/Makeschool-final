@@ -17,6 +17,10 @@ class TreeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         treePhotoCartoon.image = UIImage(named: "dying-tree.png")
+        // update the tree image
+        DispatchQueue.main.async {
+            self.treePhoto.image = TreeInfo.treeImage
+        }
     }
 
     override func didReceiveMemoryWarning() {
