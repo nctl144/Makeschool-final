@@ -9,12 +9,14 @@
 import UIKit
 
 class TreeViewController: UIViewController {
-    @IBOutlet weak var cameraButton: UIButton!
+    @IBOutlet weak var treePhoto: UIImageView!
+    @IBOutlet weak var treePhotoCartoon: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        treePhotoCartoon.image = UIImage(named: "dying-tree.png")
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,8 +34,5 @@ class TreeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    @IBAction func cameraButtonTapped(_ sender: UIButton) {
-        print("camera button tapped")
-    }
 
 }

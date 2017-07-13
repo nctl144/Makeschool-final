@@ -229,6 +229,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="Trees" id="fcN-fR-z2V"/>
+                    <connections>
+                        <outlet property="treePhoto" destination="NNf-w7-Jdv" id="Wvt-1M-uFE"/>
+                        <outlet property="treePhotoCartoon" destination="LaV-Jj-DgY" id="ncL-0G-sZa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ad-k2-eft" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
