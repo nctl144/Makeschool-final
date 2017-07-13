@@ -18,10 +18,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // log the user out for now to test the app
-        let loginManager = LoginManager()
-        loginManager.logOut()
-        
         myLoginButton.backgroundColor = UIColor.darkGray
         myLoginButton.frame = CGRect(x: 0, y: 0, width: 180, height: 40);
         myLoginButton.center = view.center;
