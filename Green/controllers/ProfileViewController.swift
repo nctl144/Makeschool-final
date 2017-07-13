@@ -26,7 +26,7 @@ class ProfileViewController: UIViewController {
         }
         
         // styling
-        profilePicView.layer.cornerRadius = profilePicView.frame.height/3
+        profilePicView.layer.cornerRadius = profilePicView.frame.height/2
     }
 
     override func didReceiveMemoryWarning() {
