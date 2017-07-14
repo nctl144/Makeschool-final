@@ -10,6 +10,9 @@ import UIKit
 import FacebookCore
 import FacebookLogin
 
+import FirebaseAuth
+import FirebaseCore
+
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var myLoginButton: UIButton!
@@ -30,9 +33,19 @@ class HomeViewController: UIViewController {
         // Handle clicks on the button
         if AccessToken.current != nil {
             // show the log out button if the user access token has existed
+            let credential = FacebookAuthProvider.credential(withAccessToken: (AccessToken.current?.authenticationToken)!)
+            
+            Auth.auth().signIn(with: credential) { (user, error) in
+                print("User logged in the firebase")
+            }
             self.logOutButton.isHidden = false
         } else {
             // show the login button if the access token is not set
+            do {
+                try Auth.auth().signOut()
+            } catch let signOutError as NSError {
+                print("error signing in \(signOutError)")
+            }
             myLoginButton.isHidden = false
         }
         
@@ -50,6 +63,12 @@ class HomeViewController: UIViewController {
             case .cancelled:
                 print("User cancelled login.")
             case .success(let grantedPermissions, let declinedPermissions, let accessToken):
+                let credential = FacebookAuthProvider.credential(withAccessToken: (AccessToken.current?.authenticationToken)!)
+                
+                Auth.auth().signIn(with: credential) { (user, error) in
+                    print("User logged in the firebase")
+                }
+                
                 // hide the login button and show the logout button
                 self.logOutButton.isHidden = false
                 self.myLoginButton.isHidden = true
@@ -65,6 +84,11 @@ class HomeViewController: UIViewController {
         
         // log the user out
         loginManager.logOut()
+        do {
+            try Auth.auth().signOut()
+        } catch let signOutError as NSError {
+            print("error signing in \(signOutError)")
+        }
         self.logOutButton.isHidden = true
         self.myLoginButton.isHidden = false
     }
