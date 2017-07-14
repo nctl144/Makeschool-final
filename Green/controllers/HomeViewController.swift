@@ -10,6 +10,9 @@ import UIKit
 import FacebookCore
 import FacebookLogin
 
+import FirebaseAuth
+import FirebaseCore
+
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var myLoginButton: UIButton!
@@ -50,6 +53,12 @@ class HomeViewController: UIViewController {
             case .cancelled:
                 print("User cancelled login.")
             case .success(let grantedPermissions, let declinedPermissions, let accessToken):
+                let credential = FacebookAuthProvider.credential(withAccessToken: (AccessToken.current?.authenticationToken)!)
+                
+                Auth.auth().signIn(with: credential) { (user, error) in
+                    print("User logged in the firebase")
+                }
+                
                 // hide the login button and show the logout button
                 self.logOutButton.isHidden = false
                 self.myLoginButton.isHidden = true
