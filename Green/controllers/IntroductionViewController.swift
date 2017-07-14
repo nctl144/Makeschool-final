@@ -29,14 +29,18 @@ class IntroductionViewController: UIPageViewController {
     }
     
     private(set) lazy var orderedViewControllers: [UIViewController] = {
-        return [self.newColoredViewController(color: "Green"),
-                self.newColoredViewController(color: "Red"),
-                self.newColoredViewController(color: "Blue")]
+        return [self.newColoredViewController(num: "1"),
+                self.newColoredViewController(num: "2"),
+                self.newColoredViewController(num: "3"),
+                self.newColoredViewController(num: "4"),
+                self.newColoredViewController(num: "5"),
+                self.newColoredViewController(num: "6"),
+                self.newColoredViewController(num: "7")]
     }()
     
-    private func newColoredViewController(color: String) -> UIViewController {
+    private func newColoredViewController(num: String) -> UIViewController {
         return UIStoryboard(name: "Main", bundle: nil) .
-            instantiateViewController(withIdentifier: "\(color)ViewController")
+            instantiateViewController(withIdentifier: "IntroStep\(num)")
     }
 }
 
@@ -81,16 +85,18 @@ extension IntroductionViewController: UIPageViewControllerDataSource {
         return orderedViewControllers[nextIndex]
     }
     
-    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return orderedViewControllers.count
-    }
-    
-    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
-        guard let firstViewController = viewControllers?.first,
-            let firstViewControllerIndex = orderedViewControllers.index(of: firstViewController) else {
-                return 0
-        }
-        
-        return firstViewControllerIndex
-    }
+// uncomment if we need the dots
+//    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
+//        return orderedViewControllers.count
+//    }
+//    
+//    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
+//        guard let firstViewController = viewControllers?.first,
+//            let firstViewControllerIndex = orderedViewControllers.index(of: firstViewController) else {
+//                return 0
+//        }
+//        
+//        return firstViewControllerIndex
+//    }
+
 }

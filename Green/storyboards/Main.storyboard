@@ -270,7 +270,7 @@
         <!--View Controller-->
         <scene sceneID="EHT-L8-LYE">
             <objects>
-                <viewController storyboardIdentifier="GreenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cCd-dc-Ii5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IntroStep1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cCd-dc-Ii5" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TVw-B8-rbF"/>
                         <viewControllerLayoutGuide type="bottom" id="Sdk-nt-P1W"/>
@@ -278,48 +278,49 @@
                     <view key="view" contentMode="scaleToFill" id="JSO-fC-6Iu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1xG-GC-i4n">
+                                <rect key="frame" x="48" y="40" width="224" height="168"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1xG-GC-i4n" secondAttribute="height" multiplier="4:3" id="yTb-eW-0Lt"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="step 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2j-4t-5Hv">
+                                <rect key="frame" x="32" y="249.5" width="256" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPd-Ks-fhS">
+                                <rect key="frame" x="32" y="324.5" width="256" height="101.5"/>
+                                <string key="text">Dig a hole 3 to 4 times wider than the container. The hole should have sloping sides like a saucer to allow for proper root growth</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fib-4F-ymE">
+                                <rect key="frame" x="274" y="294" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&gt;"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92941176470588238" green="0.4823529411764706" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="lPd-Ks-fhS" firstAttribute="centerX" secondItem="JSO-fC-6Iu" secondAttribute="centerX" id="7lE-wm-Q02"/>
+                            <constraint firstItem="w2j-4t-5Hv" firstAttribute="top" secondItem="1xG-GC-i4n" secondAttribute="bottom" multiplier="1.2" id="AOz-jH-luG"/>
+                            <constraint firstItem="1xG-GC-i4n" firstAttribute="top" secondItem="TVw-B8-rbF" secondAttribute="bottom" multiplier="2" id="AXv-Ke-wWk"/>
+                            <constraint firstItem="1xG-GC-i4n" firstAttribute="centerX" secondItem="JSO-fC-6Iu" secondAttribute="centerX" id="Jcx-vf-2kC"/>
+                            <constraint firstItem="lPd-Ks-fhS" firstAttribute="top" secondItem="w2j-4t-5Hv" secondAttribute="bottom" constant="54" id="KTL-78-sio"/>
+                            <constraint firstItem="w2j-4t-5Hv" firstAttribute="centerX" secondItem="JSO-fC-6Iu" secondAttribute="centerX" id="Mxh-oS-fdd"/>
+                            <constraint firstItem="lPd-Ks-fhS" firstAttribute="width" secondItem="w2j-4t-5Hv" secondAttribute="width" id="c9N-qG-9Bp"/>
+                            <constraint firstItem="w2j-4t-5Hv" firstAttribute="width" secondItem="JSO-fC-6Iu" secondAttribute="width" multiplier="0.8" id="gae-0V-deB"/>
+                            <constraint firstItem="1xG-GC-i4n" firstAttribute="width" secondItem="JSO-fC-6Iu" secondAttribute="width" multiplier="0.7" id="s91-yN-Hwj"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7E6-PS-fbz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1876" y="1093"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="itW-XZ-pai">
-            <objects>
-                <viewController storyboardIdentifier="RedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TFJ-0z-3AC" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="HWW-GB-Vh8"/>
-                        <viewControllerLayoutGuide type="bottom" id="8C6-X9-V8E"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0yD-5i-ctf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dVB-W0-KKm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2674" y="1110"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="4Q9-eQ-MbG">
-            <objects>
-                <viewController storyboardIdentifier="BlueViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Lsy-9f-w7S" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="UZe-on-jom"/>
-                        <viewControllerLayoutGuide type="bottom" id="j4m-yR-7bs"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1qz-c3-M5T">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.59999999999999998" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xeK-oj-fM2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3464" y="1117"/>
+            <point key="canvasLocation" x="-129" y="1087"/>
         </scene>
         <!--Item-->
         <scene sceneID="oEp-rq-Ufr">
@@ -330,6 +331,336 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rsi-45-4CG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2381" y="250"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9SA-l7-umN">
+            <objects>
+                <viewController storyboardIdentifier="IntroStep2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dkg-mY-Rym" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ehj-1x-z27"/>
+                        <viewControllerLayoutGuide type="bottom" id="oD5-hc-PH4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P9a-uk-IGp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="99T-Ay-h8t">
+                                <rect key="frame" x="48" y="40" width="224" height="168"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="99T-Ay-h8t" secondAttribute="height" multiplier="4:3" id="SV1-zj-kph"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="step 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41L-go-q1S">
+                                <rect key="frame" x="32" y="249.5" width="256" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctM-af-mpb">
+                                <rect key="frame" x="32" y="324.5" width="256" height="183"/>
+                                <string key="text">Carefully remove the tree from the container keeping the soil around the roots intact. It helps to tap the outside of the container to loosen the edge. Carefully slide the tree from the container. Don't yank the tree out of the container as this can separate the roots from the tree.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsA-3q-QIB">
+                                <rect key="frame" x="274" y="294" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&gt;"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0018232304137200117" green="0.51453834772109985" blue="0.52447956800460815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="99T-Ay-h8t" firstAttribute="centerX" secondItem="P9a-uk-IGp" secondAttribute="centerX" id="3m9-QZ-hCp"/>
+                            <constraint firstItem="ctM-af-mpb" firstAttribute="centerX" secondItem="P9a-uk-IGp" secondAttribute="centerX" id="6qM-7C-eeQ"/>
+                            <constraint firstItem="41L-go-q1S" firstAttribute="width" secondItem="P9a-uk-IGp" secondAttribute="width" multiplier="0.8" id="DVj-CC-FZn"/>
+                            <constraint firstItem="ctM-af-mpb" firstAttribute="width" secondItem="41L-go-q1S" secondAttribute="width" id="KSZ-mz-62P"/>
+                            <constraint firstItem="41L-go-q1S" firstAttribute="top" secondItem="99T-Ay-h8t" secondAttribute="bottom" multiplier="1.2" id="UOc-vE-m42"/>
+                            <constraint firstItem="99T-Ay-h8t" firstAttribute="top" secondItem="ehj-1x-z27" secondAttribute="bottom" multiplier="2" id="pET-hN-Fdu"/>
+                            <constraint firstItem="41L-go-q1S" firstAttribute="centerX" secondItem="P9a-uk-IGp" secondAttribute="centerX" id="r4Z-O8-Xb9"/>
+                            <constraint firstItem="99T-Ay-h8t" firstAttribute="width" secondItem="P9a-uk-IGp" secondAttribute="width" multiplier="0.7" id="scy-8f-rhg"/>
+                            <constraint firstItem="ctM-af-mpb" firstAttribute="top" secondItem="41L-go-q1S" secondAttribute="bottom" constant="54" id="zt6-hc-zvZ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q7q-Qb-a99" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="810" y="1087"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Zek-qu-bpd">
+            <objects>
+                <viewController storyboardIdentifier="IntroStep3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="udk-7v-05v" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WDw-Nx-ktq"/>
+                        <viewControllerLayoutGuide type="bottom" id="nfn-md-aSn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E8z-Ar-qD3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hSV-7F-pOn">
+                                <rect key="frame" x="48" y="40" width="224" height="168"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hSV-7F-pOn" secondAttribute="height" multiplier="4:3" id="I7J-7J-z7k"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="step 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bmh-iP-SzY">
+                                <rect key="frame" x="32" y="249.5" width="256" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHu-V2-cAp">
+                                <rect key="frame" x="32" y="324.5" width="256" height="162.5"/>
+                                <string key="text">Sometimes containerized trees become root-bound or the roots look like they're about to circle the root ball. If your tree is like this, cut an X across the bottom of the root ball and four vertical slices along the sides of the root ball with a sharp knife.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ChS-nj-fNO">
+                                <rect key="frame" x="274" y="294" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&gt;"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.48838376998901367" green="0.55349743366241455" blue="0.537242591381073" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Bmh-iP-SzY" firstAttribute="centerX" secondItem="E8z-Ar-qD3" secondAttribute="centerX" id="6gP-wu-eI7"/>
+                            <constraint firstItem="hSV-7F-pOn" firstAttribute="width" secondItem="E8z-Ar-qD3" secondAttribute="width" multiplier="0.7" id="GXC-je-KqB"/>
+                            <constraint firstItem="hSV-7F-pOn" firstAttribute="top" secondItem="WDw-Nx-ktq" secondAttribute="bottom" multiplier="2" id="NGQ-Q8-s9S"/>
+                            <constraint firstItem="Bmh-iP-SzY" firstAttribute="top" secondItem="hSV-7F-pOn" secondAttribute="bottom" multiplier="1.2" id="RBg-Xn-iGu"/>
+                            <constraint firstItem="hSV-7F-pOn" firstAttribute="centerX" secondItem="E8z-Ar-qD3" secondAttribute="centerX" id="Re4-ht-Hvi"/>
+                            <constraint firstItem="dHu-V2-cAp" firstAttribute="width" secondItem="Bmh-iP-SzY" secondAttribute="width" id="ZWq-ux-LMW"/>
+                            <constraint firstItem="Bmh-iP-SzY" firstAttribute="width" secondItem="E8z-Ar-qD3" secondAttribute="width" multiplier="0.8" id="gKA-zy-6Xk"/>
+                            <constraint firstItem="dHu-V2-cAp" firstAttribute="centerX" secondItem="E8z-Ar-qD3" secondAttribute="centerX" id="mv7-nT-nlX"/>
+                            <constraint firstItem="dHu-V2-cAp" firstAttribute="top" secondItem="Bmh-iP-SzY" secondAttribute="bottom" constant="54" id="pzh-3d-snZ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ljW-8a-gCg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1631" y="1087"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="a6v-xR-PR9">
+            <objects>
+                <viewController storyboardIdentifier="IntroStep4" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3lH-jy-UAP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hmO-ls-IgQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="mSL-0W-Qas"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gwo-7N-DAl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eOf-uF-QhD">
+                                <rect key="frame" x="48" y="40" width="224" height="168"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eOf-uF-QhD" secondAttribute="height" multiplier="4:3" id="RsX-KZ-JF0"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="step 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTS-2b-ynZ">
+                                <rect key="frame" x="32" y="249.5" width="256" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDi-cI-VHM">
+                                <rect key="frame" x="32" y="324.5" width="256" height="203"/>
+                                <string key="text">Set the tree in the middle of the hole. Avoid planting the tree too deep. If the root collar sits below the top of the hole, compact some soil under the tree so that the root flare at the base of the trunk is slightly above ground level. Using some soil, secure the tree in a straight position, then fill and firmly pack the hole with the original soil, making sure there aren't any air pockets. Keep backfilling until the soil is just below the root collar.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDT-Yj-Lt7">
+                                <rect key="frame" x="274" y="294" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&gt;"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.46776902675628662" blue="0.40436249971389771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jDi-cI-VHM" firstAttribute="top" secondItem="dTS-2b-ynZ" secondAttribute="bottom" constant="54" id="85s-bx-BtM"/>
+                            <constraint firstItem="jDi-cI-VHM" firstAttribute="centerX" secondItem="gwo-7N-DAl" secondAttribute="centerX" id="Kfp-UU-y6Q"/>
+                            <constraint firstItem="eOf-uF-QhD" firstAttribute="width" secondItem="gwo-7N-DAl" secondAttribute="width" multiplier="0.7" id="MzD-8Z-mwd"/>
+                            <constraint firstItem="jDi-cI-VHM" firstAttribute="width" secondItem="dTS-2b-ynZ" secondAttribute="width" id="NEL-AF-sXM"/>
+                            <constraint firstItem="eOf-uF-QhD" firstAttribute="centerX" secondItem="gwo-7N-DAl" secondAttribute="centerX" id="Yj5-S4-W43"/>
+                            <constraint firstItem="dTS-2b-ynZ" firstAttribute="top" secondItem="eOf-uF-QhD" secondAttribute="bottom" multiplier="1.2" id="fAb-pM-KdR"/>
+                            <constraint firstItem="eOf-uF-QhD" firstAttribute="top" secondItem="hmO-ls-IgQ" secondAttribute="bottom" multiplier="2" id="j0c-6M-8KA"/>
+                            <constraint firstItem="dTS-2b-ynZ" firstAttribute="width" secondItem="gwo-7N-DAl" secondAttribute="width" multiplier="0.8" id="jpe-3B-vLD"/>
+                            <constraint firstItem="dTS-2b-ynZ" firstAttribute="centerX" secondItem="gwo-7N-DAl" secondAttribute="centerX" id="kXc-oZ-rox"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YGA-kF-1TJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2419" y="1101"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VhC-Lo-OO6">
+            <objects>
+                <viewController storyboardIdentifier="IntroStep5" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iZI-CO-5lo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9xp-7B-WTs"/>
+                        <viewControllerLayoutGuide type="bottom" id="gFy-MX-Rzh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OfA-ZS-n38">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0bh-0t-h6Q">
+                                <rect key="frame" x="48" y="40" width="224" height="168"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0bh-0t-h6Q" secondAttribute="height" multiplier="4:3" id="ObY-oV-WIq"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="step 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOn-FU-sTB">
+                                <rect key="frame" x="32" y="249.5" width="256" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n86-Iw-38P">
+                                <rect key="frame" x="32" y="324.5" width="256" height="162.5"/>
+                                <string key="text">Create a water-holding basin around the hole and give the tree a good watering. After the water has soaked in, spread protective mulch 2–4 inches deep in a 3-foot diameter area around the base of the tree, but not touching the trunk.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXt-7e-2Ir">
+                                <rect key="frame" x="274" y="294" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&gt;"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.63502418994903564" green="0.77277928590774536" blue="0.79013615846633911" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0bh-0t-h6Q" firstAttribute="width" secondItem="OfA-ZS-n38" secondAttribute="width" multiplier="0.7" id="2Ss-7F-Ysu"/>
+                            <constraint firstItem="n86-Iw-38P" firstAttribute="centerX" secondItem="OfA-ZS-n38" secondAttribute="centerX" id="ShX-ZE-2EM"/>
+                            <constraint firstItem="GOn-FU-sTB" firstAttribute="centerX" secondItem="OfA-ZS-n38" secondAttribute="centerX" id="WWS-6f-eO2"/>
+                            <constraint firstItem="0bh-0t-h6Q" firstAttribute="centerX" secondItem="OfA-ZS-n38" secondAttribute="centerX" id="fj9-4Z-tpy"/>
+                            <constraint firstItem="GOn-FU-sTB" firstAttribute="width" secondItem="OfA-ZS-n38" secondAttribute="width" multiplier="0.8" id="gfL-eH-8TO"/>
+                            <constraint firstItem="n86-Iw-38P" firstAttribute="top" secondItem="GOn-FU-sTB" secondAttribute="bottom" constant="54" id="hYJ-bl-Qud"/>
+                            <constraint firstItem="GOn-FU-sTB" firstAttribute="top" secondItem="0bh-0t-h6Q" secondAttribute="bottom" multiplier="1.2" id="jIq-5h-53d"/>
+                            <constraint firstItem="0bh-0t-h6Q" firstAttribute="top" secondItem="9xp-7B-WTs" secondAttribute="bottom" multiplier="2" id="kIS-Vd-I1j"/>
+                            <constraint firstItem="n86-Iw-38P" firstAttribute="width" secondItem="GOn-FU-sTB" secondAttribute="width" id="we2-QQ-CCy"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b9n-xD-0Zs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3178" y="1101"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cI2-YB-RdD">
+            <objects>
+                <viewController storyboardIdentifier="IntroStep6" useStoryboardIdentifierAsRestorationIdentifier="YES" id="E3I-yg-fbk" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w56-MY-tdB"/>
+                        <viewControllerLayoutGuide type="bottom" id="wep-sN-Wds"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sEc-oY-O4N">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ojc-iS-NWd">
+                                <rect key="frame" x="48" y="40" width="224" height="168"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ojc-iS-NWd" secondAttribute="height" multiplier="4:3" id="OAq-zX-sOE"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="step 6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1i-VS-hCK">
+                                <rect key="frame" x="32" y="249.5" width="256" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9HH-aD-cuU">
+                                <rect key="frame" x="32" y="325" width="256" height="122"/>
+                                <string key="text">The soil and mulch around your trees should be kept moist but not soggy. During dry weather, generously water the tree every 7 to 10 days during the first year. Water slowly at the dripline.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ff6-G0-ght">
+                                <rect key="frame" x="274" y="294" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&gt;"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93864041566848755" green="0.34813147783279419" blue="0.5097690224647522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ojc-iS-NWd" firstAttribute="width" secondItem="sEc-oY-O4N" secondAttribute="width" multiplier="0.7" id="Eip-24-ptl"/>
+                            <constraint firstItem="ojc-iS-NWd" firstAttribute="top" secondItem="w56-MY-tdB" secondAttribute="bottom" multiplier="2" id="HHw-NI-hmE"/>
+                            <constraint firstItem="M1i-VS-hCK" firstAttribute="top" secondItem="ojc-iS-NWd" secondAttribute="bottom" multiplier="1.2" id="LIV-Vx-AwO"/>
+                            <constraint firstItem="9HH-aD-cuU" firstAttribute="centerX" secondItem="sEc-oY-O4N" secondAttribute="centerX" id="NMz-4r-2AO"/>
+                            <constraint firstItem="9HH-aD-cuU" firstAttribute="width" secondItem="M1i-VS-hCK" secondAttribute="width" id="QMG-bQ-1L1"/>
+                            <constraint firstItem="M1i-VS-hCK" firstAttribute="width" secondItem="sEc-oY-O4N" secondAttribute="width" multiplier="0.8" id="SXI-ku-QBY"/>
+                            <constraint firstItem="M1i-VS-hCK" firstAttribute="centerX" secondItem="sEc-oY-O4N" secondAttribute="centerX" id="Ux6-e1-1uO"/>
+                            <constraint firstItem="9HH-aD-cuU" firstAttribute="top" secondItem="M1i-VS-hCK" secondAttribute="bottom" constant="54" id="Zhf-7N-VA4"/>
+                            <constraint firstItem="ojc-iS-NWd" firstAttribute="centerX" secondItem="sEc-oY-O4N" secondAttribute="centerX" id="tNp-EK-jsV"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N9N-v4-Ply" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3993.75" y="1086.9718309859154"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gE6-GX-jsE">
+            <objects>
+                <viewController storyboardIdentifier="IntroStep7" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wI6-Oj-vZy" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8EE-vb-8kV"/>
+                        <viewControllerLayoutGuide type="bottom" id="ojQ-Fx-4vj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cIV-3Q-dCX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hW4-DR-bMv">
+                                <rect key="frame" x="48" y="40" width="224" height="168"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hW4-DR-bMv" secondAttribute="height" multiplier="4:3" id="PVr-7d-52s"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="step 7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="og5-67-SVB">
+                                <rect key="frame" x="32" y="249.5" width="256" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAM-0g-qHl">
+                                <rect key="frame" x="32" y="324.5" width="256" height="101.5"/>
+                                <string key="text">Remove any tags and labels from the tree as these will affect the tree as it grows. You may need to prune any broken or dead branches</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nM2-gT-HiF">
+                                <rect key="frame" x="274" y="294" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&gt;"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.38037276268005371" green="0.71050649881362915" blue="0.44112873077392578" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hW4-DR-bMv" firstAttribute="centerX" secondItem="cIV-3Q-dCX" secondAttribute="centerX" id="1xJ-WU-PXO"/>
+                            <constraint firstItem="og5-67-SVB" firstAttribute="width" secondItem="cIV-3Q-dCX" secondAttribute="width" multiplier="0.8" id="Cb6-ut-quV"/>
+                            <constraint firstItem="og5-67-SVB" firstAttribute="top" secondItem="hW4-DR-bMv" secondAttribute="bottom" multiplier="1.2" id="GYL-7j-5TV"/>
+                            <constraint firstItem="kAM-0g-qHl" firstAttribute="width" secondItem="og5-67-SVB" secondAttribute="width" id="GhL-2n-i82"/>
+                            <constraint firstItem="kAM-0g-qHl" firstAttribute="centerX" secondItem="cIV-3Q-dCX" secondAttribute="centerX" id="P4z-9v-VcY"/>
+                            <constraint firstItem="og5-67-SVB" firstAttribute="centerX" secondItem="cIV-3Q-dCX" secondAttribute="centerX" id="WX0-TB-xUl"/>
+                            <constraint firstItem="kAM-0g-qHl" firstAttribute="top" secondItem="og5-67-SVB" secondAttribute="bottom" constant="54" id="h6F-36-p2q"/>
+                            <constraint firstItem="hW4-DR-bMv" firstAttribute="width" secondItem="cIV-3Q-dCX" secondAttribute="width" multiplier="0.7" id="nrg-wz-EZX"/>
+                            <constraint firstItem="hW4-DR-bMv" firstAttribute="top" secondItem="8EE-vb-8kV" secondAttribute="bottom" multiplier="2" id="yvK-7Y-60v"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uGR-lp-Ery" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4866" y="1087"/>
         </scene>
     </scenes>
     <resources>
