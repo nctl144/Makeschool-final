@@ -33,9 +33,19 @@ class HomeViewController: UIViewController {
         // Handle clicks on the button
         if AccessToken.current != nil {
             // show the log out button if the user access token has existed
+            let credential = FacebookAuthProvider.credential(withAccessToken: (AccessToken.current?.authenticationToken)!)
+            
+            Auth.auth().signIn(with: credential) { (user, error) in
+                print("User logged in the firebase")
+            }
             self.logOutButton.isHidden = false
         } else {
             // show the login button if the access token is not set
+            do {
+                try Auth.auth().signOut()
+            } catch let signOutError as NSError {
+                print("error signing in \(signOutError)")
+            }
             myLoginButton.isHidden = false
         }
         
@@ -74,6 +84,11 @@ class HomeViewController: UIViewController {
         
         // log the user out
         loginManager.logOut()
+        do {
+            try Auth.auth().signOut()
+        } catch let signOutError as NSError {
+            print("error signing in \(signOutError)")
+        }
         self.logOutButton.isHidden = true
         self.myLoginButton.isHidden = false
     }
