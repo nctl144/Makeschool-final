@@ -17,7 +17,7 @@ class MainTabBarViewController: UITabBarController {
         delegate = self
         
         photoHelper.completionHandler = { image in
-            TreeService.uploadImage(for: image)
+            TreeService.createImageUrl(for: image)
         }
 
         // Do any additional setup after loading the view.
