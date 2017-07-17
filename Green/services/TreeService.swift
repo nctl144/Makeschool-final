@@ -43,7 +43,7 @@ struct TreeService {
     
         let ref = Database.database().reference()
         
-        ref.child("posts").child(userUid).observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child("posts").child(userUid).observe(DataEventType.value, with: { (snapshot) in
             if let dictionary = snapshot.value as? NSDictionary {
                 let imageUrl = dictionary["postImageUrl"] as? String
                 completion(imageUrl!)

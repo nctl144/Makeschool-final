@@ -18,6 +18,7 @@ class MainTabBarViewController: UITabBarController {
         
         photoHelper.completionHandler = { image in
             TreeService.createImageUrl(for: image)
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "upload"), object: self)
         }
 
         // Do any additional setup after loading the view.

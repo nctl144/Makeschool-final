@@ -15,7 +15,9 @@ class TreeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadTimeline), name: NSNotification.Name(rawValue: "upload"), object: nil)
+        
         // Do any additional setup after loading the view.
         treePhotoCartoon.image = UIImage(named: "dying-tree.png")
         // update the tree image
@@ -23,6 +25,12 @@ class TreeViewController: UIViewController {
             self.treePhoto.kf.setImage(with: URL(string: imageUrl))
         }
 
+    }
+    
+    func reloadTimeline() {
+        TreeService.retrieveImage { imageUrl in
+            self.treePhoto.kf.setImage(with: URL(string: imageUrl))
+        }
     }
 
     override func didReceiveMemoryWarning() {
