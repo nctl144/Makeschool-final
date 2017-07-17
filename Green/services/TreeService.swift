@@ -9,7 +9,8 @@
 import Foundation
 import UIKit
 import FirebaseStorage
-import FirebaseDatabase
+import FirebaseDatabase.FIRDataSnapshot
+import FirebaseAuth
 
 struct TreeService {
     static let dateFormatter = ISO8601DateFormatter()
@@ -17,15 +18,40 @@ struct TreeService {
     static func createImageUrl(for image: UIImage) {
         let imageRef = StorageReference.newPostImageReference()
         let ref = Database.database().reference()
-        let key = ref.child("posts").childByAutoId().key
+        
+        guard let userUid = Auth.auth().currentUser?.uid
+        else {
+            return
+        }
+        
         StorageService.uploadImage(image, at: imageRef) { (downloadURL) in
             guard let downloadURL = downloadURL else {
                 return
             }
             
             let urlString = downloadURL.absoluteString
-            let childUpdates = ["posts/\(key)": urlString]
+            let childUpdates = ["posts/\(userUid)/postImageUrl": urlString]
             ref.updateChildValues(childUpdates)
+        }
+    }
+    
+    static func retrieveImage(completion: @escaping (String) -> Void) {
+        guard let userUid = Auth.auth().currentUser?.uid
+        else {
+            return
+        }
+    
+        let ref = Database.database().reference()
+        
+        ref.child("posts").child(userUid).observeSingleEvent(of: .value, with: { (snapshot) in
+            if let dictionary = snapshot.value as? NSDictionary {
+                let imageUrl = dictionary["postImageUrl"] as? String
+                completion(imageUrl!)
+            }
+            
+            
+        }) { (error) in
+            print(error.localizedDescription)
         }
     }
 }
