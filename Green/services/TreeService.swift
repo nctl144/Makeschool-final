@@ -14,16 +14,18 @@ import FirebaseDatabase
 struct TreeService {
     static let dateFormatter = ISO8601DateFormatter()
     
-    static func uploadImage(for image: UIImage) {
-        let timestamp = dateFormatter.string(from: Date())
-        let imageRef = Storage.storage().reference().child("treeimages/\(timestamp).jpg")
+    static func createImageUrl(for image: UIImage) {
+        let imageRef = StorageReference.newPostImageReference()
+        let ref = Database.database().reference()
+        let key = ref.child("posts").childByAutoId().key
         StorageService.uploadImage(image, at: imageRef) { (downloadURL) in
             guard let downloadURL = downloadURL else {
                 return
             }
             
             let urlString = downloadURL.absoluteString
-            print("image url: \(urlString)")
+            let childUpdates = ["posts/\(key)": urlString]
+            ref.updateChildValues(childUpdates)
         }
     }
 }
