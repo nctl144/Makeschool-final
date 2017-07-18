@@ -320,13 +320,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rac-Fy-3uZ">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="751"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kE6-eu-beY">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kE6-eu-beY">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="kE6-eu-beY" secondAttribute="height" multiplier="16:9" id="lNP-gx-7Nz"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z0X-fo-ZhK">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z0X-fo-ZhK">
                                                 <rect key="frame" x="0.0" y="180" width="320" height="183"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="z0X-fo-ZhK" secondAttribute="height" multiplier="7:4" id="5L7-Lm-hsh"/>
@@ -338,7 +338,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A dry plant is not good! You need to water your plant within 5 hours!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2q-3x-XXM">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A dry plant is not good! You need to water your plant within 5 hours!" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2q-3x-XXM">
                                                 <rect key="frame" x="16" y="534" width="288" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="mQy-xR-sYF"/>
@@ -355,6 +355,9 @@
                                                     <constraint firstAttribute="height" constant="44" id="tZb-Xs-st0"/>
                                                 </constraints>
                                                 <state key="normal" title="Share on Facebook"/>
+                                                <connections>
+                                                    <action selector="shareButtonTapped:" destination="vSO-EQ-eOs" eventType="touchUpInside" id="UQE-kv-Fq7"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -402,6 +405,7 @@
                     <connections>
                         <outlet property="contentView" destination="kN9-g2-yWv" id="IuN-ag-4uA"/>
                         <outlet property="scrollView" destination="TVU-hu-WQt" id="5UH-15-AW3"/>
+                        <outlet property="shareButton" destination="8IQ-zM-gK1" id="Vgw-dw-m8O"/>
                         <outlet property="treePhoto" destination="kE6-eu-beY" id="SZ6-bB-UMB"/>
                         <outlet property="treePhotoCartoon" destination="z0X-fo-ZhK" id="mXh-pd-Ccb"/>
                     </connections>

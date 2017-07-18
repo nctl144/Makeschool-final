@@ -8,6 +8,8 @@
 
 import UIKit
 import FirebaseDatabase
+import AlamofireImage
+import FacebookShare
 
 class TreeViewController: UIViewController {
 
@@ -15,6 +17,7 @@ class TreeViewController: UIViewController {
     @IBOutlet weak var treePhotoCartoon: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet var contentView: UIView!
+    @IBOutlet weak var shareButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,4 +44,23 @@ class TreeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func shareButtonTapped(_ sender: UIButton) {
+        TreeService.retrieveImage { imageUrl in
+            print(imageUrl)
+            
+            // we know that the image always exists so we can unwrap it
+            let url = URL(string: imageUrl)
+            let data = try? Data(contentsOf: url!)
+            let image: UIImage = UIImage(data: data!)!
+            
+            let photo = Photo(image: image, userGenerated: true)
+            let content = PhotoShareContent(photos: [photo])
+            do {
+                try ShareDialog.show(from: self, content: content)
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
 }
