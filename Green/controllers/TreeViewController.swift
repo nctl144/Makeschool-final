@@ -10,8 +10,11 @@ import UIKit
 import FirebaseDatabase
 
 class TreeViewController: UIViewController {
+
     @IBOutlet weak var treePhoto: UIImageView!
     @IBOutlet weak var treePhotoCartoon: UIImageView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet var contentView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
