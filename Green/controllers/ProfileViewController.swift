@@ -8,12 +8,16 @@
 
 import UIKit
 import Kingfisher
+import FirebaseAuth
+import FacebookCore
+import FacebookLogin
 
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var userInfoView: UIView!
     @IBOutlet weak var profilePicView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var logoutButton: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,4 +40,17 @@ class ProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func logOutButtonTapped(_ sender: UIButton) {
+        let loginManager = LoginManager()
+        
+        // log the user out
+        loginManager.logOut()
+        do {
+            try Auth.auth().signOut()
+        } catch let signOutError as NSError {
+            print("error signing in \(signOutError)")
+        }
+        
+        performSegue(withIdentifier: "toHomePage", sender: self)
+    }
 }

@@ -37,6 +37,7 @@ class HomeViewController: UIViewController {
             
             Auth.auth().signIn(with: credential) { (user, error) in
                 print("User logged in the firebase")
+                self.performSegue(withIdentifier: "toProfilePage", sender: self)
             }
             self.logOutButton.isHidden = false
         } else {
