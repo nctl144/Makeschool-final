@@ -17,8 +17,20 @@ class MainTabBarViewController: UITabBarController {
         delegate = self
         
         photoHelper.completionHandler = { image in
-            TreeService.createImageUrl(for: image)
-            NotificationCenter.default.post(name: Notification.Name(rawValue: "upload"), object: self)
+            var flag = false
+            let binaryImageData = TreeVerifier.base64EncodeImage(image)
+            TreeVerifier.createRequest(with: binaryImageData, url: TreeVerifier.googleURL, completion: { (result) in
+                print(result)
+                
+                if result.contains("tree") || result.contains("woody plant") || result.contains("plant") {
+                    flag = true
+                }
+            })
+            print(flag)
+            if flag == true {
+                TreeService.createImageUrl(for: image)
+                NotificationCenter.default.post(name: Notification.Name(rawValue: "upload"), object: self)
+            }
         }
 
         // Do any additional setup after loading the view.

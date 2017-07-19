@@ -80,7 +80,40 @@ class TreeVerifier {
         request.httpBody = data
         
         Alamofire.request(request).responseJSON(queue: .global(), options: []) { response in
-            print(response)
+            let dataToParse = response.data!
+            var labels: Array<String> = []
+            // Use swifty json to parse the result
+            
+            let json = JSON(data: dataToParse)
+            let errorObj: JSON = json["error"]
+            
+            if (errorObj.dictionaryValue != [:]) {
+                print("Error code \(errorObj["code"]): \(errorObj["message"])")
+            } else {
+                // print the json to the console
+                print(json)
+                
+                let response: JSON = json["responses"][0]
+                
+                // get label annotation
+                let labelAnnotation: JSON = response["labelAnnotations"]
+                let numLabel = labelAnnotation.count
+                
+                
+                
+                if numLabel > 0 {
+                    
+                    for index in 0..<numLabel {
+                        let label = labelAnnotation[index]["description"].stringValue
+                        labels.append(label)
+                    }
+                    
+                } else {
+                    print("no labels found")
+                }
+            }
+            
+            completion(labels)
         }
     }
 }
