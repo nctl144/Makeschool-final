@@ -90,9 +90,6 @@ class TreeVerifier {
             if (errorObj.dictionaryValue != [:]) {
                 print("Error code \(errorObj["code"]): \(errorObj["message"])")
             } else {
-                // print the json to the console
-                print(json)
-                
                 let response: JSON = json["responses"][0]
                 
                 // get label annotation

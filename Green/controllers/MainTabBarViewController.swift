@@ -22,15 +22,15 @@ class MainTabBarViewController: UITabBarController {
             TreeVerifier.createRequest(with: binaryImageData, url: TreeVerifier.googleURL, completion: { (result) in
                 print(result)
                 
-                if result.contains("tree") || result.contains("woody plant") || result.contains("plant") {
+                if (result.contains("tree") || result.contains("woody plant") || result.contains("plant")) {
                     flag = true
                 }
+                
+                if flag == true {
+                    TreeService.createImageUrl(for: image)
+                    NotificationCenter.default.post(name: Notification.Name(rawValue: "upload"), object: self)
+                }
             })
-            print(flag)
-            if flag == true {
-                TreeService.createImageUrl(for: image)
-                NotificationCenter.default.post(name: Notification.Name(rawValue: "upload"), object: self)
-            }
         }
 
         // Do any additional setup after loading the view.

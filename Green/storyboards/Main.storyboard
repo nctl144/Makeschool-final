@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -106,7 +106,7 @@
                     <connections>
                         <segue destination="H6U-BN-d2H" kind="relationship" relationship="viewControllers" id="To8-jC-6cP"/>
                         <segue destination="vSO-EQ-eOs" kind="relationship" relationship="viewControllers" id="cVa-RG-hre"/>
-                        <segue destination="NBh-He-BCQ" kind="relationship" relationship="viewControllers" id="Pda-IO-TDa"/>
+                        <segue destination="AP5-M9-ksO" kind="relationship" relationship="viewControllers" id="L1u-GX-5hI"/>
                         <segue destination="ohk-iL-ZXN" kind="relationship" relationship="viewControllers" id="bAl-ND-xbk"/>
                     </connections>
                 </tabBarController>
@@ -472,16 +472,6 @@
             </objects>
             <point key="canvasLocation" x="2439" y="250"/>
         </scene>
-        <!--UIViewController-bVE-Oq-B79-->
-        <scene sceneID="xpO-pK-Xai">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Introduction" referencedIdentifier="UIViewController-bVE-Oq-B79" id="NBh-He-BCQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Soc-h3-FP0"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x26-Id-L2E" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1433" y="251"/>
-        </scene>
         <!--IntroStep5-->
         <scene sceneID="AsQ-CB-oBl">
             <objects>
@@ -538,9 +528,32 @@
             </objects>
             <point key="canvasLocation" x="810" y="1087"/>
         </scene>
+        <!--Introduction View -->
+        <scene sceneID="MJ1-Cj-1YH">
+            <objects>
+                <viewController storyboardIdentifier="photoController" title="Introduction View " id="AP5-M9-ksO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BDf-QP-VKV"/>
+                        <viewControllerLayoutGuide type="bottom" id="kO7-eO-138"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6sB-7x-Ir4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="3" title="Take Photo" image="camera" id="sA2-T9-PsP"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO">
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </simulatedTabBarMetrics>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j4C-cL-f45" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1421" y="249"/>
+        </scene>
     </scenes>
     <resources>
         <image name="btn_heart_red_solid" width="24" height="24"/>
+        <image name="camera" width="25" height="25"/>
         <image name="facebook-icon" width="48" height="48"/>
         <image name="facebook-icon-1" width="512" height="512"/>
         <image name="messenger-icon-1" width="252" height="252"/>
