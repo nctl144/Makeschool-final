@@ -110,27 +110,3 @@ class HomeViewController: UIViewController {
     */
 
 }
-
-extension UIView {
-    func addBackground(imageName: String, contentMode: UIViewContentMode) {
-        let imageViewBackground = UIImageView()
-        imageViewBackground.image = UIImage(named: imageName)
-        
-        // you can change the content mode:
-        imageViewBackground.contentMode = contentMode
-        imageViewBackground.clipsToBounds = true
-        imageViewBackground.translatesAutoresizingMaskIntoConstraints = false
-        
-        self.insertSubview(imageViewBackground, at: 0)
-        
-        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "|[imageViewBackground]|",
-                                                           options: [],
-                                                           metrics: nil,
-                                                           views: ["imageViewBackground": imageViewBackground]))
-        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[imageViewBackground]|",
-                                                           options: [],
-                                                           metrics: nil,
-                                                           views: ["imageViewBackground": imageViewBackground]))
-    }
-}
-
