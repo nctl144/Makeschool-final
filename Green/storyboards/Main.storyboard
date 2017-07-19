@@ -114,7 +114,7 @@
             </objects>
             <point key="canvasLocation" x="1433" y="-897"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Profile-->
         <scene sceneID="4Gh-Ou-fph">
             <objects>
                 <viewController id="ohk-iL-ZXN" customClass="ProfileViewController" customModule="Green" customModuleProvider="target" sceneMemberID="viewController">
@@ -285,8 +285,7 @@
                             <constraint firstItem="INI-Tc-cTd" firstAttribute="width" secondItem="xPz-bv-ANV" secondAttribute="width" id="uKx-8R-dmc"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="tab_home_black" id="jy6-6a-hJT">
-                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="tab_home_black" id="jy6-6a-hJT">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -294,6 +293,7 @@
                     <connections>
                         <outlet property="logoutButton" destination="INI-Tc-cTd" id="90W-uw-ht7"/>
                         <outlet property="profilePicView" destination="A0f-5G-jAO" id="DJa-iN-gsK"/>
+                        <outlet property="tableView" destination="Xr2-LR-6Dg" id="Emd-Xx-OxV"/>
                         <outlet property="userInfoView" destination="J65-r6-0tO" id="esl-57-XVE"/>
                         <outlet property="usernameLabel" destination="8dS-bu-1T6" id="1Qo-hw-Eil"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="toHomePage" id="lRB-oj-Ej5"/>
@@ -303,7 +303,7 @@
             </objects>
             <point key="canvasLocation" x="2538.75" y="-1826.4084507042253"/>
         </scene>
-        <!--Tree View Controller-->
+        <!--Your trees-->
         <scene sceneID="oWB-9m-27b">
             <objects>
                 <viewController storyboardIdentifier="treeController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vSO-EQ-eOs" customClass="TreeViewController" customModule="Green" customModuleProvider="target" sceneMemberID="viewController">
@@ -446,9 +446,7 @@
                             <constraint firstItem="TVU-hu-WQt" firstAttribute="width" secondItem="kN9-g2-yWv" secondAttribute="width" id="tTt-l2-Jq0"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="1" title="" image="tree" id="fcN-fR-z2V">
-                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" tag="1" title="Your trees" image="tree" id="fcN-fR-z2V"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="800"/>
                     <connections>
@@ -464,13 +462,11 @@
             </objects>
             <point key="canvasLocation" x="2756.25" y="-719.36619718309862"/>
         </scene>
-        <!--Introduction View Controller-->
+        <!--Introduction-->
         <scene sceneID="oEp-rq-Ufr">
             <objects>
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="H6U-BN-d2H" customClass="IntroductionViewController" customModule="Green" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="btn_heart_red_solid" id="Uje-Us-g3T">
-                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Introduction" image="btn_heart_red_solid" id="Uje-Us-g3T"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rsi-45-4CG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
