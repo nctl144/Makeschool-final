@@ -95,7 +95,7 @@
         <!--Main Tab Bar View Controller-->
         <scene sceneID="M5H-El-RK7">
             <objects>
-                <tabBarController id="6qO-Fe-cwM" customClass="MainTabBarViewController" customModule="Green" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6qO-Fe-cwM" customClass="MainTabBarViewController" customModule="Green" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="hdL-gy-glR">
@@ -306,7 +306,7 @@
         <!--Tree View Controller-->
         <scene sceneID="oWB-9m-27b">
             <objects>
-                <viewController id="vSO-EQ-eOs" customClass="TreeViewController" customModule="Green" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="treeController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vSO-EQ-eOs" customClass="TreeViewController" customModule="Green" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fZ3-10-ljP"/>
                         <viewControllerLayoutGuide type="bottom" id="JA4-Um-emJ"/>
@@ -328,16 +328,16 @@
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z0X-fo-ZhK">
-                                                <rect key="frame" x="0.0" y="180" width="320" height="183"/>
+                                                <rect key="frame" x="0.0" y="190" width="320" height="183"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="z0X-fo-ZhK" secondAttribute="height" multiplier="7:4" id="5L7-Lm-hsh"/>
                                                 </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Awe-Mb-RKa" userLabel="facebook share view">
-                                                <rect key="frame" x="0.0" y="363" width="320" height="128"/>
+                                                <rect key="frame" x="0.0" y="373" width="320" height="128"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P7B-ZJ-gM6" userLabel="share icons">
-                                                        <rect key="frame" x="182" y="51" width="128" height="50"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="P7B-ZJ-gM6" userLabel="share icons">
+                                                        <rect key="frame" x="20" y="51" width="110" height="50"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eU2-Hm-LL9">
                                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -346,23 +346,29 @@
                                                                     <constraint firstAttribute="width" constant="50" id="4AC-XM-ktQ"/>
                                                                     <constraint firstAttribute="height" constant="50" id="jh1-4b-4I6"/>
                                                                 </constraints>
-                                                                <state key="normal" image="messenger-icon2"/>
+                                                                <state key="normal" image="messenger-icon-1"/>
                                                                 <connections>
                                                                     <action selector="messengerShareButtonTapped:" destination="vSO-EQ-eOs" eventType="touchUpInside" id="NuP-kp-1w9"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8IQ-zM-gK1">
-                                                                <rect key="frame" x="50" y="0.0" width="78" height="50"/>
+                                                                <rect key="frame" x="60" y="0.0" width="50" height="50"/>
                                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <state key="normal" image="facebook-icon"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="50" id="xRh-rh-XcT"/>
+                                                                </constraints>
+                                                                <state key="normal" image="facebook-icon-1"/>
                                                                 <connections>
                                                                     <action selector="shareButtonTapped:" destination="vSO-EQ-eOs" eventType="touchUpInside" id="UQE-kv-Fq7"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="110" id="1fc-cK-i7G"/>
+                                                        </constraints>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share on your Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYu-tO-Ve1">
-                                                        <rect key="frame" x="66.5" y="20" width="233.5" height="23"/>
+                                                        <rect key="frame" x="20" y="20" width="233.5" height="23"/>
                                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -370,16 +376,15 @@
                                                 </subviews>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstItem="P7B-ZJ-gM6" firstAttribute="leading" secondItem="Awe-Mb-RKa" secondAttribute="leading" constant="20" id="1r3-4A-MTc"/>
                                                     <constraint firstAttribute="height" constant="128" id="46p-tk-4g8"/>
-                                                    <constraint firstAttribute="trailing" secondItem="P7B-ZJ-gM6" secondAttribute="trailing" constant="10" id="Agf-YQ-jn6"/>
-                                                    <constraint firstAttribute="trailing" secondItem="nYu-tO-Ve1" secondAttribute="trailing" constant="20" id="SFj-96-jbm"/>
                                                     <constraint firstItem="P7B-ZJ-gM6" firstAttribute="top" secondItem="nYu-tO-Ve1" secondAttribute="bottom" constant="8" symbolic="YES" id="VfG-gp-btK"/>
-                                                    <constraint firstItem="P7B-ZJ-gM6" firstAttribute="width" secondItem="Awe-Mb-RKa" secondAttribute="width" multiplier="0.4" id="ibP-0J-vXG"/>
+                                                    <constraint firstItem="nYu-tO-Ve1" firstAttribute="leading" secondItem="Awe-Mb-RKa" secondAttribute="leading" constant="20" id="WdF-p3-rBa"/>
                                                     <constraint firstItem="nYu-tO-Ve1" firstAttribute="top" secondItem="Awe-Mb-RKa" secondAttribute="top" constant="20" id="ibb-o1-c1x"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5uD-aV-lLz" userLabel="plant description View">
-                                                <rect key="frame" x="0.0" y="491" width="320" height="260"/>
+                                                <rect key="frame" x="0.0" y="501" width="320" height="250"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your plant is dead" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vh-V6-5hm">
                                                         <rect key="frame" x="16" y="40" width="288" height="32.5"/>
@@ -409,9 +414,8 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="5uD-aV-lLz" secondAttribute="trailing" id="8Zq-3I-mIY"/>
                                             <constraint firstItem="Awe-Mb-RKa" firstAttribute="leading" secondItem="rac-Fy-3uZ" secondAttribute="leading" id="BaY-Yj-3Zj"/>
-                                            <constraint firstItem="kE6-eu-beY" firstAttribute="top" secondItem="rac-Fy-3uZ" secondAttribute="top" id="ELG-6T-ATJ"/>
                                             <constraint firstAttribute="trailing" secondItem="kE6-eu-beY" secondAttribute="trailing" id="GhZ-5J-6ns"/>
-                                            <constraint firstItem="z0X-fo-ZhK" firstAttribute="top" secondItem="kE6-eu-beY" secondAttribute="bottom" id="PF8-Ou-CDG"/>
+                                            <constraint firstItem="z0X-fo-ZhK" firstAttribute="top" secondItem="kE6-eu-beY" secondAttribute="bottom" constant="10" id="PF8-Ou-CDG"/>
                                             <constraint firstItem="5uD-aV-lLz" firstAttribute="top" secondItem="Awe-Mb-RKa" secondAttribute="bottom" id="Pqo-ML-PBj"/>
                                             <constraint firstItem="z0X-fo-ZhK" firstAttribute="centerX" secondItem="rac-Fy-3uZ" secondAttribute="centerX" id="TMA-42-Lwb"/>
                                             <constraint firstAttribute="trailing" secondItem="Awe-Mb-RKa" secondAttribute="trailing" id="WBC-WC-d8f"/>
@@ -419,6 +423,7 @@
                                             <constraint firstItem="z0X-fo-ZhK" firstAttribute="leading" secondItem="kE6-eu-beY" secondAttribute="leading" id="enn-7Z-TQi"/>
                                             <constraint firstItem="5uD-aV-lLz" firstAttribute="leading" secondItem="rac-Fy-3uZ" secondAttribute="leading" id="nNj-qc-6mk"/>
                                             <constraint firstAttribute="height" constant="751" id="p8s-hl-lIp"/>
+                                            <constraint firstItem="kE6-eu-beY" firstAttribute="top" secondItem="rac-Fy-3uZ" secondAttribute="top" id="sa9-XX-lTc"/>
                                             <constraint firstAttribute="bottom" secondItem="5uD-aV-lLz" secondAttribute="bottom" id="ykG-VT-m2p"/>
                                         </constraints>
                                     </view>
@@ -541,7 +546,8 @@
     <resources>
         <image name="btn_heart_red_solid" width="24" height="24"/>
         <image name="facebook-icon" width="48" height="48"/>
-        <image name="messenger-icon2" width="528" height="528"/>
+        <image name="facebook-icon-1" width="512" height="512"/>
+        <image name="messenger-icon-1" width="252" height="252"/>
         <image name="tab_home_black" width="25" height="25"/>
         <image name="tree" width="25" height="25"/>
     </resources>
