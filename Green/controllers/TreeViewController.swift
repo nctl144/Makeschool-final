@@ -18,7 +18,8 @@ class TreeViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var shareButton: UIButton!
-
+    @IBOutlet weak var messengerShareButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,7 +47,6 @@ class TreeViewController: UIViewController {
 
     @IBAction func shareButtonTapped(_ sender: UIButton) {
         TreeService.retrieveImage { imageUrl in
-            print(imageUrl)
             
             // we know that the image always exists so we can unwrap it
             let url = URL(string: imageUrl)
@@ -63,4 +63,25 @@ class TreeViewController: UIViewController {
         }
     }
     
+    @IBAction func messengerShareButtonTapped(_ sender: UIButton) {
+        TreeService.retrieveImage { imageUrl in
+            // we know that the image always exists so we can unwrap it
+            let url = URL(string: imageUrl)
+            let data = try? Data(contentsOf: url!)
+            let image: UIImage = UIImage(data: data!)!
+            
+            let photo = Photo(image: image, userGenerated: true)
+            let content = PhotoShareContent(photos: [photo])
+            let shareDialog = MessageDialog(content: content)
+            do {
+                shareDialog.completion = { result in
+                    // Handle share results
+                }
+                
+                try shareDialog.show() 
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        }
+    }
 }
