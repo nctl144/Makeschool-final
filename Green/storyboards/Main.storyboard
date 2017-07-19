@@ -80,6 +80,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="Home" id="tGd-d0-hvG"/>
                     <navigationItem key="navigationItem" title="Home" id="Fkk-wN-Wz5"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="iconImageView" destination="gz3-wD-Q91" id="3JW-Pg-Vox"/>
                         <outlet property="logOutButton" destination="cca-dx-BmA" id="crm-rj-2yY"/>

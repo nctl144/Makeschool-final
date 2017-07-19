@@ -23,7 +23,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // self.view.addBackground(imageName: "background4.png", contentMode: .scaleAspectFill)
+        self.view.addBackground(imageName: "another-background.jpg", contentMode: .scaleAspectFill)
         
         iconImageView.image = UIImage(named: "icon.png")
         
