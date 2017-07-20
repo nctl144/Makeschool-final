@@ -16,89 +16,107 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Green" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="AEh-E9-hx4"/>
+                        <viewControllerLayoutGuide type="bottom" id="60d-PX-HZs"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="951"/>
+                    <view key="view" contentMode="scaleToFill" id="K8H-hK-MXN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plant app" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCp-RL-Grq">
-                                <rect key="frame" x="48" y="227.5" width="224" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V54-gO-tZJ">
-                                <rect key="frame" x="48.5" y="453.5" width="224" height="44"/>
-                                <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="300" translatesAutoresizingMaskIntoConstraints="NO" id="yUo-YU-dW0" customClass="Card" customModule="Material">
+                                <rect key="frame" x="0.0" y="200" width="320" height="300"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RLz-f2-hVj" customClass="Toolbar" customModule="Material">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Green"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="detail" value="Let's plant some trees!"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZDp-wy-lLs">
+                                        <rect key="frame" x="48" y="119" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICd-rS-CUU">
+                                                <rect key="frame" x="72" y="31" width="39" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pC6-Eq-6lG" customClass="Bar" customModule="Material">
+                                        <rect key="frame" x="0.0" y="224" width="320" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOp-sY-L2N" customClass="FlatButton" customModule="Material">
+                                                <rect key="frame" x="64" y="4" width="192" height="48"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button" image="facebook-icon"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Login with Facebook"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="pulseColor">
+                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                        <color key="value" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uOD-SZ-iNW">
+                                <rect key="frame" x="80" y="40" width="160" height="160"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="oT3-2v-llm"/>
-                                </constraints>
-                                <state key="normal" title="Log in button" image="facebook-icon">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="loginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dqL-uh-tUw"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cca-dx-BmA">
-                                <rect key="frame" x="48.5" y="453.5" width="224" height="44"/>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="vpB-Dk-E9x"/>
-                                </constraints>
-                                <state key="normal" title="Log out button" image="facebook-icon">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="logOutButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y3r-oL-1zQ"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gz3-wD-Q91">
-                                <rect key="frame" x="96" y="60" width="128" height="127.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="gz3-wD-Q91" secondAttribute="height" multiplier="1:1" id="Tdv-bk-DNW"/>
+                                    <constraint firstAttribute="width" secondItem="uOD-SZ-iNW" secondAttribute="height" multiplier="1:1" id="xch-fA-jG9"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.33756102664225723" blue="0.34095242042440321" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="gz3-wD-Q91" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="1rT-Kf-6GS"/>
-                            <constraint firstItem="cca-dx-BmA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7mV-yF-0J8"/>
-                            <constraint firstItem="ZCp-RL-Grq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9P0-pV-rQX"/>
-                            <constraint firstItem="ZCp-RL-Grq" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="RLA-jO-76A"/>
-                            <constraint firstItem="V54-gO-tZJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z4n-5D-PWH"/>
-                            <constraint firstItem="V54-gO-tZJ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="Z9S-VX-9AL"/>
-                            <constraint firstItem="gz3-wD-Q91" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b8s-hx-mdp"/>
-                            <constraint firstItem="cca-dx-BmA" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="l33-Wf-FuL"/>
-                            <constraint firstItem="gz3-wD-Q91" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" multiplier="3" id="lrH-I7-4xG"/>
-                            <constraint firstItem="ZCp-RL-Grq" firstAttribute="top" secondItem="gz3-wD-Q91" secondAttribute="bottom" constant="40" id="onA-Td-Jci"/>
-                            <constraint firstItem="V54-gO-tZJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rP4-V7-KT3"/>
-                            <constraint firstItem="cca-dx-BmA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zBv-Mb-AoX"/>
+                            <constraint firstItem="yUo-YU-dW0" firstAttribute="top" secondItem="AEh-E9-hx4" secondAttribute="bottom" multiplier="10" id="F6u-x3-1cR"/>
+                            <constraint firstItem="yUo-YU-dW0" firstAttribute="centerX" secondItem="K8H-hK-MXN" secondAttribute="centerX" id="LDv-fT-ZdM"/>
+                            <constraint firstItem="uOD-SZ-iNW" firstAttribute="centerX" secondItem="K8H-hK-MXN" secondAttribute="centerX" id="Mah-hu-5az"/>
+                            <constraint firstItem="uOD-SZ-iNW" firstAttribute="width" secondItem="K8H-hK-MXN" secondAttribute="width" multiplier="0.5" id="SP2-UE-2Jo"/>
+                            <constraint firstItem="yUo-YU-dW0" firstAttribute="width" secondItem="K8H-hK-MXN" secondAttribute="width" id="YYj-7D-Osp"/>
+                            <constraint firstItem="uOD-SZ-iNW" firstAttribute="top" secondItem="AEh-E9-hx4" secondAttribute="bottom" constant="20" id="iOF-2Y-nCm"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="Home" id="tGd-d0-hvG"/>
                     <navigationItem key="navigationItem" title="Home" id="Fkk-wN-Wz5"/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
-                        <outlet property="iconImageView" destination="gz3-wD-Q91" id="3JW-Pg-Vox"/>
-                        <outlet property="logOutButton" destination="cca-dx-BmA" id="crm-rj-2yY"/>
-                        <outlet property="myLoginButton" destination="V54-gO-tZJ" id="7JD-Zq-PsS"/>
+                        <outlet property="bottomBar" destination="pC6-Eq-6lG" id="V0X-ll-JeB"/>
+                        <outlet property="button" destination="YOp-sY-L2N" id="Ndx-9b-syJ"/>
+                        <outlet property="card" destination="yUo-YU-dW0" id="faC-Tb-Hk8"/>
+                        <outlet property="contentView" destination="ZDp-wy-lLs" id="UCh-Cs-FQL"/>
+                        <outlet property="logoImage" destination="uOD-SZ-iNW" id="O7S-E0-uqU"/>
+                        <outlet property="toolbar" destination="RLz-f2-hVj" id="ent-O0-WAZ"/>
                         <segue destination="6qO-Fe-cwM" kind="show" identifier="toProfilePage" id="tqq-Sw-Eeg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="456" y="-898"/>
+            <point key="canvasLocation" x="455.625" y="-898.94366197183103"/>
         </scene>
         <!--Main Tab Bar View Controller-->
         <scene sceneID="M5H-El-RK7">
             <objects>
                 <tabBarController storyboardIdentifier="tabBarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6qO-Fe-cwM" customClass="MainTabBarViewController" customModule="Green" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="hdL-gy-glR">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="hdL-gy-glR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -153,13 +171,30 @@
                                                         <color key="textColor" red="0.3213801315" green="0.36417233090000001" blue="0.35504028580000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yT7-2B-kR6">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yT7-2B-kR6" customClass="RaisedButton" customModule="Material">
                                                         <rect key="frame" x="64" y="400" width="192" height="44"/>
                                                         <color key="backgroundColor" red="0.48188826260000001" green="0.48100090200000001" blue="0.47833882030000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="44" id="qxv-dp-yRe"/>
                                                         </constraints>
                                                         <state key="normal" title="Log out" image="facebook-icon"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                                <size key="value" width="1" height="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="pulseColor">
+                                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="logOutButtonTapped:" destination="ohk-iL-ZXN" eventType="touchUpInside" id="qtM-WH-RfQ"/>
                                                         </connections>
@@ -296,7 +331,6 @@
                         <outlet property="tableView" destination="Xr2-LR-6Dg" id="Emd-Xx-OxV"/>
                         <outlet property="userInfoView" destination="J65-r6-0tO" id="esl-57-XVE"/>
                         <outlet property="usernameLabel" destination="8dS-bu-1T6" id="1Qo-hw-Eil"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="toHomePage" id="lRB-oj-Ej5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dR4-YD-DW4" userLabel="First Responder" sceneMemberID="firstResponder"/>

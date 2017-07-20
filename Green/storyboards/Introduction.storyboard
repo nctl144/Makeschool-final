@@ -154,16 +154,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hSV-7F-pOn">
-                                <rect key="frame" x="56" y="40" width="263" height="197"/>
+                                <rect key="frame" x="56.5" y="40" width="262.5" height="196.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hSV-7F-pOn" secondAttribute="height" multiplier="4:3" id="I7J-7J-z7k"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="nox-0M-NIU" userLabel="Intro view">
-                                <rect key="frame" x="19" y="287" width="337.5" height="43"/>
+                                <rect key="frame" x="19" y="286.5" width="337.5" height="43.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STEP 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bmh-iP-SzY">
-                                        <rect key="frame" x="0.0" y="0.0" width="236.5" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="236.5" height="34.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="29"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -183,7 +183,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHu-V2-cAp">
-                                <rect key="frame" x="19" y="380" width="338" height="122"/>
+                                <rect key="frame" x="19" y="380" width="337.5" height="122"/>
                                 <string key="text">Sometimes containerized trees become root-bound or the roots look like they're about to circle the root ball. If your tree is like this, cut an X across the bottom of the root ball and four vertical slices along the sides of the root ball with a sharp knife.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -434,7 +434,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2on-7G-jth">
-                                <rect key="frame" x="-0.5" y="617" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="617" width="375" height="30"/>
                                 <state key="normal" title="Back to Home"/>
                                 <connections>
                                     <segue destination="Ezi-Ev-5Af" kind="show" id="vAW-c4-YQX"/>

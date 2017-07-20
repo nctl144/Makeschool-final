@@ -7,9 +7,21 @@
 //
 
 import UIKit
+import Material
 
 class IntroductionViewController: UIPageViewController {
 
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        prepareTabBarItem()
+    }
+    
+    private func prepareTabBarItem() {
+        tabBarItem.title = nil
+        tabBarItem.image = Icon.cm.photoCamera?.tint(with: Color.blueGrey.base)
+        tabBarItem.selectedImage = Icon.cm.photoCamera?.tint(with: Color.blue.base)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
