@@ -10,7 +10,6 @@ import UIKit
 import Material
 
 class MainTabBarViewController: BottomNavigationController {
-    let photoHelper = MGPhotoHelper()
     
     open override func prepare() {
         super.prepare()
@@ -22,7 +21,7 @@ class MainTabBarViewController: BottomNavigationController {
         
         delegate = self
         
-        photoHelper.completionHandler = { image in
+        MGPhotoHelper.completionHandler = { image in
             var flag = false
             let binaryImageData = TreeVerifier.base64EncodeImage(image)
             TreeVerifier.createRequest(with: binaryImageData, url: TreeVerifier.googleURL, completion: { (result) in
@@ -57,15 +56,3 @@ class MainTabBarViewController: BottomNavigationController {
         tabBar.dividerColor = Color.grey.lighten3
     }
 }
-
-//extension MainTabBarViewController: UITabBarControllerDelegate {
-//    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-//        if viewController.tabBarItem.tag == 3 {
-//            // trigger the taking/choosing photo action
-//            photoHelper.presentActionSheet(from: self)
-//            return false
-//        } else {
-//            return true
-//        }
-//    }
-//}

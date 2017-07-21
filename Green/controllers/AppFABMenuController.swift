@@ -1,7 +1,7 @@
 import UIKit
 import Material
 
-class AppFABMenuController: FABMenuController {
+class AppFABMenuController: FABMenuController, UIImagePickerControllerDelegate {
     fileprivate let fabMenuSize = CGSize(width: 56, height: 56)
     fileprivate let bottomInset: CGFloat = 60
     fileprivate let rightInset: CGFloat = 16
@@ -101,6 +101,18 @@ extension AppFABMenuController {
         
         fabMenu.close()
         fabMenu.fabButton?.motion(.rotationAngle(0))
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
+        if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            MGPhotoHelper.completionHandler?(selectedImage)
+        }
+        
+        picker.dismiss(animated: true)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true)
     }
 }
 
