@@ -16,19 +16,10 @@ import Material
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet weak var card: Card!
-    @IBOutlet weak var toolbar: Toolbar!
-    
-    @IBOutlet weak var button: FlatButton!
-    @IBOutlet weak var bottomBar: Bar!
-    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var logoImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        prepareBottomBar()
-        prepareCard()
-        prepareToolbar()
         
         self.view.addBackground(imageName: "another-background.jpg", contentMode: .scaleAspectFill)
 
@@ -64,48 +55,18 @@ class HomeViewController: UIViewController {
                 print("User cancelled login.")
             case .success(let grantedPermissions, let declinedPermissions, let accessToken):
                 let credential = FacebookAuthProvider.credential(withAccessToken: (AccessToken.current?.authenticationToken)!)
-                
+
                 Auth.auth().signIn(with: credential) { (user, error) in
                     print("User logged in the firebase")
                 }
             }
-            
+
             self.performSegue(withIdentifier: "toProfilePage", sender: self)
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-}
-
-extension HomeViewController {
-    fileprivate func prepareToolbar() {
-//        toolbar = Toolbar(rightViews: [moreButton])
-        
-        toolbar.titleLabel.textAlignment = .left
-        
-        toolbar.detailLabel.textAlignment = .left
-        toolbar.detailLabel.textColor = Color.grey.base
-    }
-    
-    fileprivate func prepareBottomBar() {
-        bottomBar.centerViews = [button]
-    }
-    
-    fileprivate func prepareCard() {
-        card.toolbar = toolbar
-        card.contentView = contentView
-        card.bottomBar = bottomBar
-        
-        card.toolbarEdgeInsetsPreset = .square3
-        card.toolbarEdgeInsets.bottom = 0
-        card.toolbarEdgeInsets.right = 8
-        
-        card.contentViewEdgeInsetsPreset = .wideRectangle3
-        
-        card.bottomBarEdgeInsetsPreset = .wideRectangle2
-        
     }
 }
