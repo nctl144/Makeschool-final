@@ -17,9 +17,9 @@ class IntroductionViewController: UIPageViewController {
     }
     
     private func prepareTabBarItem() {
-        tabBarItem.title = nil
-        tabBarItem.image = Icon.cm.photoCamera?.tint(with: Color.blueGrey.base)
-        tabBarItem.selectedImage = Icon.cm.photoCamera?.tint(with: Color.blue.base)
+        tabBarItem.title = "Introduction"
+        tabBarItem.image = Icon.star?.tint(with: Color.blueGrey.base)
+        tabBarItem.selectedImage = Icon.cm.star?.tint(with: Color.blue.base)
     }
     
     override func viewDidLoad() {

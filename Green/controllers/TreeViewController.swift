@@ -27,9 +27,9 @@ class TreeViewController: UIViewController {
     }
     
     private func prepareTabBarItem() {
-        tabBarItem.title = nil
-        tabBarItem.image = Icon.cm.videocam?.tint(with: Color.blueGrey.base)
-        tabBarItem.selectedImage = Icon.cm.videocam?.tint(with: Color.blue.base)
+        tabBarItem.title = "Your trees"
+        tabBarItem.image = Icon.cm.photoLibrary?.tint(with: Color.blueGrey.base)
+        tabBarItem.selectedImage = Icon.cm.photoLibrary?.tint(with: Color.blue.base)
     }
     
     override func viewDidLoad() {

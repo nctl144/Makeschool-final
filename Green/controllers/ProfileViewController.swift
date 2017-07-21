@@ -28,9 +28,9 @@ class ProfileViewController: UIViewController {
     }
     
     private func prepareTabBarItem() {
-        tabBarItem.title = nil
-        tabBarItem.image = Icon.cm.audioLibrary?.tint(with: Color.blueGrey.base)
-        tabBarItem.selectedImage = Icon.cm.audioLibrary?.tint(with: Color.blue.base)
+        tabBarItem.title = "Home"
+        tabBarItem.image = Icon.home?.tint(with: Color.blueGrey.base)
+        tabBarItem.selectedImage = Icon.home?.tint(with: Color.blue.base)
     }
     
     override func viewDidLoad() {
