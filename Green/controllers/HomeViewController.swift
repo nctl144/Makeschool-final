@@ -12,24 +12,20 @@ import FacebookLogin
 
 import FirebaseAuth
 import FirebaseCore
+import Material
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet weak var myLoginButton: UIButton!
-    @IBOutlet weak var logOutButton: UIButton!
-    @IBOutlet weak var gotoProfileButton: UIButton!
-    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var logoImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.addBackground(imageName: "another-background.jpg", contentMode: .scaleAspectFill)
-        
-        iconImageView.image = UIImage(named: "icon.png")
-        
-        myLoginButton.setTitle("Start Planting!", for: .normal)
-        logOutButton.setTitle("log out", for: .normal)
-        
+
+        logoImage.image = UIImage(named: "icon.png")
+
+
         // Handle clicks on the button
         if AccessToken.current != nil {
             // show the log out button if the user access token has existed
@@ -37,9 +33,7 @@ class HomeViewController: UIViewController {
             
             Auth.auth().signIn(with: credential) { (user, error) in
                 print("User logged in the firebase")
-                self.performSegue(withIdentifier: "toProfilePage", sender: self)
             }
-            self.logOutButton.isHidden = false
         } else {
             // show the login button if the access token is not set
             do {
@@ -47,12 +41,7 @@ class HomeViewController: UIViewController {
             } catch let signOutError as NSError {
                 print("error signing in \(signOutError)")
             }
-            myLoginButton.isHidden = false
         }
-        
-        // Add the button to the view
-        view.addSubview(myLoginButton)
-        view.addSubview(logOutButton)
     }
 
     @IBAction func loginButtonTapped(_ sender: UIButton) {
@@ -65,48 +54,18 @@ class HomeViewController: UIViewController {
                 print("User cancelled login.")
             case .success(let grantedPermissions, let declinedPermissions, let accessToken):
                 let credential = FacebookAuthProvider.credential(withAccessToken: (AccessToken.current?.authenticationToken)!)
-                
+
                 Auth.auth().signIn(with: credential) { (user, error) in
                     print("User logged in the firebase")
+                    self.view.window?.rootViewController = AppFABMenuController(rootViewController: UIStoryboard.initialViewController(for: .main))
+                    self.view.window?.makeKeyAndVisible()
                 }
-                
-                // hide the login button and show the logout button
-                self.logOutButton.isHidden = false
-                self.myLoginButton.isHidden = true
             }
-            
-            self.performSegue(withIdentifier: "toProfilePage", sender: self)
         }
     }
     
-    @IBAction func logOutButtonTapped(_ sender: UIButton) {
-        print("logging the user out")
-        let loginManager = LoginManager()
-        
-        // log the user out
-        loginManager.logOut()
-        do {
-            try Auth.auth().signOut()
-        } catch let signOutError as NSError {
-            print("error signing in \(signOutError)")
-        }
-        self.logOutButton.isHidden = true
-        self.myLoginButton.isHidden = false
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

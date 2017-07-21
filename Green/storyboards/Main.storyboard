@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6qO-Fe-cwM">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,94 +11,13 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Green" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="951"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plant app" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCp-RL-Grq">
-                                <rect key="frame" x="48" y="227.5" width="224" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V54-gO-tZJ">
-                                <rect key="frame" x="48.5" y="453.5" width="224" height="44"/>
-                                <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="oT3-2v-llm"/>
-                                </constraints>
-                                <state key="normal" title="Log in button" image="facebook-icon">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="loginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dqL-uh-tUw"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cca-dx-BmA">
-                                <rect key="frame" x="48.5" y="453.5" width="224" height="44"/>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="vpB-Dk-E9x"/>
-                                </constraints>
-                                <state key="normal" title="Log out button" image="facebook-icon">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="logOutButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y3r-oL-1zQ"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gz3-wD-Q91">
-                                <rect key="frame" x="96" y="60" width="128" height="127.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="gz3-wD-Q91" secondAttribute="height" multiplier="1:1" id="Tdv-bk-DNW"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.33756102664225723" blue="0.34095242042440321" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="gz3-wD-Q91" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="1rT-Kf-6GS"/>
-                            <constraint firstItem="cca-dx-BmA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7mV-yF-0J8"/>
-                            <constraint firstItem="ZCp-RL-Grq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9P0-pV-rQX"/>
-                            <constraint firstItem="ZCp-RL-Grq" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="RLA-jO-76A"/>
-                            <constraint firstItem="V54-gO-tZJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z4n-5D-PWH"/>
-                            <constraint firstItem="V54-gO-tZJ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="Z9S-VX-9AL"/>
-                            <constraint firstItem="gz3-wD-Q91" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b8s-hx-mdp"/>
-                            <constraint firstItem="cca-dx-BmA" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="l33-Wf-FuL"/>
-                            <constraint firstItem="gz3-wD-Q91" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" multiplier="3" id="lrH-I7-4xG"/>
-                            <constraint firstItem="ZCp-RL-Grq" firstAttribute="top" secondItem="gz3-wD-Q91" secondAttribute="bottom" constant="40" id="onA-Td-Jci"/>
-                            <constraint firstItem="V54-gO-tZJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rP4-V7-KT3"/>
-                            <constraint firstItem="cca-dx-BmA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zBv-Mb-AoX"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" tag="1" title="Home" id="tGd-d0-hvG"/>
-                    <navigationItem key="navigationItem" title="Home" id="Fkk-wN-Wz5"/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <connections>
-                        <outlet property="iconImageView" destination="gz3-wD-Q91" id="3JW-Pg-Vox"/>
-                        <outlet property="logOutButton" destination="cca-dx-BmA" id="crm-rj-2yY"/>
-                        <outlet property="myLoginButton" destination="V54-gO-tZJ" id="7JD-Zq-PsS"/>
-                        <segue destination="6qO-Fe-cwM" kind="show" identifier="toProfilePage" id="tqq-Sw-Eeg"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="456" y="-898"/>
-        </scene>
         <!--Main Tab Bar View Controller-->
         <scene sceneID="M5H-El-RK7">
             <objects>
                 <tabBarController storyboardIdentifier="tabBarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6qO-Fe-cwM" customClass="MainTabBarViewController" customModule="Green" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="hdL-gy-glR">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="hdL-gy-glR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -153,13 +72,31 @@
                                                         <color key="textColor" red="0.3213801315" green="0.36417233090000001" blue="0.35504028580000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yT7-2B-kR6">
-                                                        <rect key="frame" x="64" y="400" width="192" height="44"/>
-                                                        <color key="backgroundColor" red="0.48188826260000001" green="0.48100090200000001" blue="0.47833882030000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yT7-2B-kR6" customClass="RaisedButton" customModule="Material">
+                                                        <rect key="frame" x="104" y="400" width="112" height="44"/>
+                                                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="44" id="qxv-dp-yRe"/>
                                                         </constraints>
-                                                        <state key="normal" title="Log out" image="facebook-icon"/>
+                                                        <state key="normal" title="Log out" image="facebook-icon-2"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                                <size key="value" width="1" height="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="pulseColor">
+                                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                                <color key="value" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="   LOG OUT   "/>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="logOutButtonTapped:" destination="ohk-iL-ZXN" eventType="touchUpInside" id="qtM-WH-RfQ"/>
                                                         </connections>
@@ -167,8 +104,8 @@
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="A0f-5G-jAO" firstAttribute="width" secondItem="INI-Tc-cTd" secondAttribute="width" id="O2C-we-uyP"/>
-                                                    <constraint firstItem="yT7-2B-kR6" firstAttribute="width" secondItem="INI-Tc-cTd" secondAttribute="width" multiplier="0.6" id="RHd-mg-N2o"/>
                                                     <constraint firstItem="A0f-5G-jAO" firstAttribute="centerX" secondItem="INI-Tc-cTd" secondAttribute="centerX" id="Zim-l6-8La"/>
+                                                    <constraint firstItem="yT7-2B-kR6" firstAttribute="centerX" secondItem="INI-Tc-cTd" secondAttribute="centerX" id="iEC-MX-3zo"/>
                                                     <constraint firstItem="8dS-bu-1T6" firstAttribute="width" secondItem="INI-Tc-cTd" secondAttribute="width" id="mZ3-wn-ajn"/>
                                                     <constraint firstItem="8dS-bu-1T6" firstAttribute="centerX" secondItem="INI-Tc-cTd" secondAttribute="centerX" id="op9-S6-uJQ"/>
                                                 </constraints>
@@ -296,7 +233,6 @@
                         <outlet property="tableView" destination="Xr2-LR-6Dg" id="Emd-Xx-OxV"/>
                         <outlet property="userInfoView" destination="J65-r6-0tO" id="esl-57-XVE"/>
                         <outlet property="usernameLabel" destination="8dS-bu-1T6" id="1Qo-hw-Eil"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="toHomePage" id="lRB-oj-Ej5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dR4-YD-DW4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -531,7 +467,7 @@
         <!--Introduction View -->
         <scene sceneID="MJ1-Cj-1YH">
             <objects>
-                <viewController storyboardIdentifier="photoController" title="Introduction View " id="AP5-M9-ksO" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="photoController" title="Introduction View " id="AP5-M9-ksO" customClass="PhotoViewController" customModule="Green" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BDf-QP-VKV"/>
                         <viewControllerLayoutGuide type="bottom" id="kO7-eO-138"/>
@@ -554,8 +490,8 @@
     <resources>
         <image name="btn_heart_red_solid" width="24" height="24"/>
         <image name="camera" width="25" height="25"/>
-        <image name="facebook-icon" width="48" height="48"/>
         <image name="facebook-icon-1" width="512" height="512"/>
+        <image name="facebook-icon-2" width="50" height="50"/>
         <image name="messenger-icon-1" width="252" height="252"/>
         <image name="tab_home_black" width="25" height="25"/>
         <image name="tree" width="25" height="25"/>

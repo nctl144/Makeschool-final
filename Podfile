@@ -23,5 +23,7 @@ target 'Green' do
   pod 'Alamofire', '~> 4.4'
   pod 'AlamofireImage', '~> 3.1'
   pod 'SwiftyJSON', '~> 3.1'
+  
+  pod 'Material', '~> 2.0'
 
 end

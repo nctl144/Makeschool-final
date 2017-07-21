@@ -10,6 +10,7 @@ import UIKit
 import FirebaseDatabase
 import AlamofireImage
 import FacebookShare
+import Material
 
 class TreeViewController: UIViewController {
 
@@ -19,6 +20,17 @@ class TreeViewController: UIViewController {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var messengerShareButton: UIButton!
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        prepareTabBarItem()
+    }
+    
+    private func prepareTabBarItem() {
+        tabBarItem.title = nil
+        tabBarItem.image = Icon.cm.videocam?.tint(with: Color.blueGrey.base)
+        tabBarItem.selectedImage = Icon.cm.videocam?.tint(with: Color.blue.base)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

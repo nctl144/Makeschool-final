@@ -11,6 +11,8 @@ import CoreData
 import Firebase
 import FBSDKCoreKit
 import FBSDKLoginKit
+import FacebookLogin
+import FacebookCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     public func application(_ application: UIApplication,  didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        
+        configureIntitialRootViewController(for: window)
+        
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     
@@ -67,4 +72,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return UIInterfaceOrientationMask(rawValue: UIInterfaceOrientationMask.portrait.rawValue)
     }
 }
+
+// determine if the userdefault has been set, if yes then change the view to main immediately
+extension AppDelegate {
+    func configureIntitialRootViewController(for window: UIWindow?) {
+        let initialViewController: UIViewController
+        
+        // skip the login flow if the currentuser has been set, firuser has been set
+        if Auth.auth().currentUser != nil {
+            initialViewController = AppFABMenuController(rootViewController: UIStoryboard.initialViewController(for: .main))
+        } else {
+            initialViewController = UIStoryboard.initialViewController(for: .login)
+        }
+        
+        window?.rootViewController = initialViewController
+        window?.makeKeyAndVisible()
+    }
+}
+
 

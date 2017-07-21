@@ -11,6 +11,7 @@ import Kingfisher
 import FirebaseAuth
 import FacebookCore
 import FacebookLogin
+import Material
 
 class ProfileViewController: UIViewController {
 
@@ -20,6 +21,17 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var logoutButton: UIStackView!
     
     @IBOutlet weak var tableView: UITableView!
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        prepareTabBarItem()
+    }
+    
+    private func prepareTabBarItem() {
+        tabBarItem.title = nil
+        tabBarItem.image = Icon.cm.audioLibrary?.tint(with: Color.blueGrey.base)
+        tabBarItem.selectedImage = Icon.cm.audioLibrary?.tint(with: Color.blue.base)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +65,7 @@ class ProfileViewController: UIViewController {
             print("error signing in \(signOutError)")
         }
         
-        performSegue(withIdentifier: "toHomePage", sender: self)
+        self.view.window?.rootViewController = UIStoryboard.initialViewController(for: .login)
+        self.view.window?.makeKeyAndVisible()
     }
 }

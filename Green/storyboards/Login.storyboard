@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Green" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SlS-wu-xXg"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sab-cs-ajD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="44M-u7-P5M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gj2-zd-vzU">
+                                <rect key="frame" x="94" y="50" width="187.5" height="140.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Gj2-zd-vzU" secondAttribute="height" multiplier="4:3" id="xLD-tl-PSA"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manage your trees during your free time. Hope you have fun with this app!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUu-7L-4BN">
+                                <rect key="frame" x="37.5" y="210.5" width="300" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49A-x8-XQg" customClass="FlatButton" customModule="Material">
+                                <rect key="frame" x="162.5" y="302" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.32156862745098036" green="0.36470588235294116" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                <state key="normal" image="facebook-icon-2">
+                                    <color key="titleColor" red="0.32156862745098036" green="0.36470588235294116" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="1" height="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="   LOGIN WITH FACEBOOK   "/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                        <color key="value" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AeD-7k-KFb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gj2-zd-vzU" firstAttribute="top" secondItem="SlS-wu-xXg" secondAttribute="bottom" constant="30" id="4WO-a3-uDr"/>
+                            <constraint firstItem="Gj2-zd-vzU" firstAttribute="centerX" secondItem="44M-u7-P5M" secondAttribute="centerX" id="7Wo-wQ-MfP"/>
+                            <constraint firstItem="UUu-7L-4BN" firstAttribute="centerX" secondItem="44M-u7-P5M" secondAttribute="centerX" id="EKS-sh-I5T"/>
+                            <constraint firstItem="UUu-7L-4BN" firstAttribute="top" secondItem="Gj2-zd-vzU" secondAttribute="bottom" constant="20" id="Zko-Ua-zpB"/>
+                            <constraint firstItem="UUu-7L-4BN" firstAttribute="width" secondItem="44M-u7-P5M" secondAttribute="width" multiplier="0.8" id="eNt-Lo-Vyu"/>
+                            <constraint firstItem="49A-x8-XQg" firstAttribute="centerX" secondItem="44M-u7-P5M" secondAttribute="centerX" id="mFZ-nP-upk"/>
+                            <constraint firstItem="Gj2-zd-vzU" firstAttribute="width" secondItem="44M-u7-P5M" secondAttribute="width" multiplier="0.5" id="unL-mK-cn1"/>
+                            <constraint firstItem="49A-x8-XQg" firstAttribute="top" secondItem="UUu-7L-4BN" secondAttribute="bottom" multiplier="1.2" id="vPK-7b-wLP"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="1" title="Home" id="tGd-d0-hvG"/>
+                    <navigationItem key="navigationItem" title="Home" id="Fkk-wN-Wz5"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="logoImage" destination="Gj2-zd-vzU" id="tgd-Se-j1l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="455.625" y="-898.94366197183103"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="facebook-icon-2" width="50" height="50"/>
+    </resources>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+</document>

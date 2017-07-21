@@ -7,10 +7,16 @@
 //
 
 import UIKit
+import Material
 
-class MainTabBarViewController: UITabBarController {
+class MainTabBarViewController: BottomNavigationController {
     let photoHelper = MGPhotoHelper()
     
+    open override func prepare() {
+        super.prepare()
+        prepareTabBar()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,35 +45,27 @@ class MainTabBarViewController: UITabBarController {
                 })
             })
         }
-
-        // Do any additional setup after loading the view.
-        self.tabBar.barTintColor = UIColor(hexString: "26272b")
-        UITabBar.appearance().tintColor = UIColor.white
-        
-        // change the background color of the selected bar item
-        let numberOfItems = CGFloat(tabBar.items!.count)
-        let tabBarItemSize = CGSize(width: tabBar.frame.width / numberOfItems, height: tabBar.frame.height)
-        tabBar.selectionIndicatorImage = UIImage.imageWithColor(color: UIColor(hexString: "70877F"), size: tabBarItemSize).resizableImage(withCapInsets: UIEdgeInsets.zero)
-        
-        // remove default border
-        tabBar.frame.size.width = self.view.frame.width + 4
-        tabBar.frame.origin.x = -2
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-}
-
-extension MainTabBarViewController: UITabBarControllerDelegate {
-    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        if viewController.tabBarItem.tag == 3 {
-            // trigger the taking/choosing photo action
-            photoHelper.presentActionSheet(from: self)
-            return false
-        } else {
-            return true
-        }
+    
+    private func prepareTabBar() {
+        tabBar.depthPreset = .none
+        tabBar.dividerColor = Color.grey.lighten3
     }
 }
+
+//extension MainTabBarViewController: UITabBarControllerDelegate {
+//    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+//        if viewController.tabBarItem.tag == 3 {
+//            // trigger the taking/choosing photo action
+//            photoHelper.presentActionSheet(from: self)
+//            return false
+//        } else {
+//            return true
+//        }
+//    }
+//}
