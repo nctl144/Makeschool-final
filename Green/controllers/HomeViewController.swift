@@ -33,7 +33,9 @@ class HomeViewController: UIViewController {
             
             Auth.auth().signIn(with: credential) { (user, error) in
                 print("User logged in the firebase")
-                self.performSegue(withIdentifier: "toProfilePage", sender: self)
+                
+                self.view.window?.rootViewController = UIStoryboard.initialViewController(for: .main)
+                self.view.window?.makeKeyAndVisible()
             }
         } else {
             // show the login button if the access token is not set
@@ -60,8 +62,6 @@ class HomeViewController: UIViewController {
                     print("User logged in the firebase")
                 }
             }
-
-            self.performSegue(withIdentifier: "toProfilePage", sender: self)
         }
     }
     

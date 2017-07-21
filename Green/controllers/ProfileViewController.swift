@@ -65,11 +65,7 @@ class ProfileViewController: UIViewController {
             print("error signing in \(signOutError)")
         }
         
-        let storyboard = UIStoryboard(name: "LoginScreen", bundle: .main)
-        
-        if let initialViewController = storyboard.instantiateInitialViewController() {
-            self.view.window?.rootViewController = initialViewController
-            self.view.window?.makeKeyAndVisible()
-        }
+        self.view.window?.rootViewController = UIStoryboard.initialViewController(for: .login)
+        self.view.window?.makeKeyAndVisible()
     }
 }
