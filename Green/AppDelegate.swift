@@ -80,7 +80,7 @@ extension AppDelegate {
         
         // skip the login flow if the currentuser has been set, firuser has been set
         if Auth.auth().currentUser != nil {
-            initialViewController = UIStoryboard.initialViewController(for: .main)
+            initialViewController = AppFABMenuController(rootViewController: UIStoryboard.initialViewController(for: .main))
         } else {
             initialViewController = UIStoryboard.initialViewController(for: .login)
         }

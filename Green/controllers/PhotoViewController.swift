@@ -42,12 +42,20 @@ class AppFABMenuController: FABMenuController {
     
     open override func prepare() {
         super.prepare()
-        view.backgroundColor = .white
         
         prepareFABButton()
         prepareNotesFABMenuItem()
         prepareRemindersFABMenuItem()
         prepareFABMenu()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 }
 
