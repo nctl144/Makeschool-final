@@ -25,13 +25,17 @@ class ProfileViewController: UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        prepareTabBarItem()
+        preparePageTabBarItem()
     }
     
-    private func prepareTabBarItem() {
-        tabBarItem.title = "Home"
-        tabBarItem.image = Icon.home?.tint(with: Color.blueGrey.base)
-        tabBarItem.selectedImage = Icon.home?.tint(with: Color.blue.base)
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        preparePageTabBarItem()
+    }
+    
+    fileprivate func preparePageTabBarItem() {
+        pageTabBarItem.title = "Profile"
+        pageTabBarItem.titleColor = Color.blueGrey.base
     }
     
     override func viewDidLoad() {

@@ -10,10 +10,16 @@
 		05082B8F1F16A8E800A4415B /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05082B8E1F16A8E800A4415B /* UserProfile.swift */; };
 		05082B911F16C29C00A4415B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05082B901F16C29C00A4415B /* ProfileViewController.swift */; };
 		050C48E71F22774A0011D712 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 050C48E61F22774A0011D712 /* Login.storyboard */; };
-		050C48E91F2282690011D712 /* AppFABMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050C48E81F2282690011D712 /* AppFABMenuController.swift */; };
 		050C48EB1F229ADD0011D712 /* UIStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050C48EA1F229ADD0011D712 /* UIStoryboardExtensions.swift */; };
 		0512D8A71F2673C000EE6B0B /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512D8A61F2673C000EE6B0B /* Reward.swift */; };
 		0512D8AC1F26851300EE6B0B /* RewardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512D8AB1F26851300EE6B0B /* RewardCell.swift */; };
+		0512D8BE1F26995A00EE6B0B /* TransitionedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512D8B91F26995A00EE6B0B /* TransitionedViewController.swift */; };
+		0512D8BF1F26995A00EE6B0B /* RightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512D8BA1F26995A00EE6B0B /* RightViewController.swift */; };
+		0512D8C01F26995A00EE6B0B /* AppToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512D8BB1F26995A00EE6B0B /* AppToolbarController.swift */; };
+		0512D8C11F26995A00EE6B0B /* AppNavigationDrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512D8BC1F26995A00EE6B0B /* AppNavigationDrawerController.swift */; };
+		0512D8C21F26995A00EE6B0B /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512D8BD1F26995A00EE6B0B /* LeftViewController.swift */; };
+		0512D8C41F26996300EE6B0B /* AppFABMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512D8C31F26996300EE6B0B /* AppFABMenuController.swift */; };
+		0512D8C71F269BBA00EE6B0B /* AppPageTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512D8C61F269BBA00EE6B0B /* AppPageTabBarController.swift */; };
 		051DBFCA1F1FCB03004066ED /* Introduction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 051DBFC91F1FCB03004066ED /* Introduction.storyboard */; };
 		051DBFCE1F1FF6D2004066ED /* TreeVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051DBFCD1F1FF6D2004066ED /* TreeVerifier.swift */; };
 		0536AB8B1F156F7C00A14C6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0536AB891F156F7C00A14C6C /* Main.storyboard */; };
@@ -38,10 +44,16 @@
 		05082B8E1F16A8E800A4415B /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfile.swift; path = models/UserProfile.swift; sourceTree = "<group>"; };
 		05082B901F16C29C00A4415B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = controllers/ProfileViewController.swift; sourceTree = "<group>"; };
 		050C48E61F22774A0011D712 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = storyboards/Login.storyboard; sourceTree = "<group>"; };
-		050C48E81F2282690011D712 /* AppFABMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppFABMenuController.swift; path = controllers/AppFABMenuController.swift; sourceTree = "<group>"; };
 		050C48EA1F229ADD0011D712 /* UIStoryboardExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIStoryboardExtensions.swift; path = extensions/UIStoryboardExtensions.swift; sourceTree = "<group>"; };
 		0512D8A61F2673C000EE6B0B /* Reward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reward.swift; path = models/Reward.swift; sourceTree = "<group>"; };
 		0512D8AB1F26851300EE6B0B /* RewardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RewardCell.swift; path = views/RewardCell.swift; sourceTree = "<group>"; };
+		0512D8B91F26995A00EE6B0B /* TransitionedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransitionedViewController.swift; path = controllers/navigationDrawer/TransitionedViewController.swift; sourceTree = "<group>"; };
+		0512D8BA1F26995A00EE6B0B /* RightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RightViewController.swift; path = controllers/navigationDrawer/RightViewController.swift; sourceTree = "<group>"; };
+		0512D8BB1F26995A00EE6B0B /* AppToolbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppToolbarController.swift; path = controllers/navigationDrawer/AppToolbarController.swift; sourceTree = "<group>"; };
+		0512D8BC1F26995A00EE6B0B /* AppNavigationDrawerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppNavigationDrawerController.swift; path = controllers/navigationDrawer/AppNavigationDrawerController.swift; sourceTree = "<group>"; };
+		0512D8BD1F26995A00EE6B0B /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftViewController.swift; path = controllers/navigationDrawer/LeftViewController.swift; sourceTree = "<group>"; };
+		0512D8C31F26996300EE6B0B /* AppFABMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppFABMenuController.swift; path = controllers/fabMenuController/AppFABMenuController.swift; sourceTree = "<group>"; };
+		0512D8C61F269BBA00EE6B0B /* AppPageTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppPageTabBarController.swift; path = controllers/pageTabbar/AppPageTabBarController.swift; sourceTree = "<group>"; };
 		051DBFC91F1FCB03004066ED /* Introduction.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Introduction.storyboard; path = storyboards/Introduction.storyboard; sourceTree = "<group>"; };
 		051DBFCD1F1FF6D2004066ED /* TreeVerifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TreeVerifier.swift; path = services/TreeVerifier.swift; sourceTree = "<group>"; };
 		0536AB891F156F7C00A14C6C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = storyboards/Main.storyboard; sourceTree = "<group>"; };
@@ -87,15 +99,45 @@
 			name = views;
 			sourceTree = "<group>";
 		};
+		0512D8B71F26994600EE6B0B /* fabMenu */ = {
+			isa = PBXGroup;
+			children = (
+				0512D8C31F26996300EE6B0B /* AppFABMenuController.swift */,
+			);
+			name = fabMenu;
+			sourceTree = "<group>";
+		};
+		0512D8B81F26994D00EE6B0B /* navigation */ = {
+			isa = PBXGroup;
+			children = (
+				0512D8B91F26995A00EE6B0B /* TransitionedViewController.swift */,
+				0512D8BA1F26995A00EE6B0B /* RightViewController.swift */,
+				0512D8BB1F26995A00EE6B0B /* AppToolbarController.swift */,
+				0512D8BC1F26995A00EE6B0B /* AppNavigationDrawerController.swift */,
+				0512D8BD1F26995A00EE6B0B /* LeftViewController.swift */,
+			);
+			name = navigation;
+			sourceTree = "<group>";
+		};
+		0512D8C51F269BA400EE6B0B /* pageTabbar */ = {
+			isa = PBXGroup;
+			children = (
+				0512D8C61F269BBA00EE6B0B /* AppPageTabBarController.swift */,
+			);
+			name = pageTabbar;
+			sourceTree = "<group>";
+		};
 		0536AB831F156F4000A14C6C /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0512D8C51F269BA400EE6B0B /* pageTabbar */,
+				0512D8B81F26994D00EE6B0B /* navigation */,
+				0512D8B71F26994600EE6B0B /* fabMenu */,
 				05A84CEB1F1571940018C4C4 /* HomeViewController.swift */,
 				05A84CED1F157ED20018C4C4 /* TreeViewController.swift */,
 				05082B901F16C29C00A4415B /* ProfileViewController.swift */,
 				05F0383E1F17FA31004C335D /* MainTabBarViewController.swift */,
 				05EFBE331F193DCC009DE0C4 /* IntroductionViewController.swift */,
-				050C48E81F2282690011D712 /* AppFABMenuController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -349,21 +391,27 @@
 				05082B8F1F16A8E800A4415B /* UserProfile.swift in Sources */,
 				05F4E9541F15572B008159E9 /* AppDelegate.swift in Sources */,
 				05EFBE3F1F19843F009DE0C4 /* TreeService.swift in Sources */,
+				0512D8C11F26995A00EE6B0B /* AppNavigationDrawerController.swift in Sources */,
 				05EFBE421F1991B0009DE0C4 /* StorageExtensions.swift in Sources */,
+				0512D8C21F26995A00EE6B0B /* LeftViewController.swift in Sources */,
 				05082B911F16C29C00A4415B /* ProfileViewController.swift in Sources */,
 				05C1B6801F2023C100E6EFDD /* UIextension.swift in Sources */,
+				0512D8BE1F26995A00EE6B0B /* TransitionedViewController.swift in Sources */,
 				05F038421F181FF2004C335D /* PhotoHelper.swift in Sources */,
 				05EFBE341F193DCC009DE0C4 /* IntroductionViewController.swift in Sources */,
+				0512D8C01F26995A00EE6B0B /* AppToolbarController.swift in Sources */,
 				051DBFCE1F1FF6D2004066ED /* TreeVerifier.swift in Sources */,
+				0512D8C41F26996300EE6B0B /* AppFABMenuController.swift in Sources */,
+				0512D8C71F269BBA00EE6B0B /* AppPageTabBarController.swift in Sources */,
 				05EFBE391F19827D009DE0C4 /* StorageService.swift in Sources */,
 				05F0383F1F17FA31004C335D /* MainTabBarViewController.swift in Sources */,
 				05F038481F183505004C335D /* TreeInfo.swift in Sources */,
 				0512D8A71F2673C000EE6B0B /* Reward.swift in Sources */,
 				05A84CEE1F157ED20018C4C4 /* TreeViewController.swift in Sources */,
+				0512D8BF1F26995A00EE6B0B /* RightViewController.swift in Sources */,
 				05A84CEC1F1571940018C4C4 /* HomeViewController.swift in Sources */,
 				050C48EB1F229ADD0011D712 /* UIStoryboardExtensions.swift in Sources */,
 				0512D8AC1F26851300EE6B0B /* RewardCell.swift in Sources */,
-				050C48E91F2282690011D712 /* AppFABMenuController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

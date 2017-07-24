@@ -21,15 +21,19 @@ class TreeViewController: UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        prepareTabBarItem()
+        preparePageTabBarItem()
+    }
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        preparePageTabBarItem()
     }
     
     let images = [UIImage]()
     
-    private func prepareTabBarItem() {
-        tabBarItem.title = "Your trees"
-        tabBarItem.image = Icon.cm.photoLibrary?.tint(with: Color.blueGrey.base)
-        tabBarItem.selectedImage = Icon.cm.photoLibrary?.tint(with: Color.blue.base)
+    fileprivate func preparePageTabBarItem() {
+        pageTabBarItem.title = "Your tree"
+        pageTabBarItem.titleColor = Color.blueGrey.base
     }
     
     override func viewDidLoad() {
