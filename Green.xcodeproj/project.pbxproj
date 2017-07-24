@@ -12,6 +12,8 @@
 		050C48E71F22774A0011D712 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 050C48E61F22774A0011D712 /* Login.storyboard */; };
 		050C48E91F2282690011D712 /* AppFABMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050C48E81F2282690011D712 /* AppFABMenuController.swift */; };
 		050C48EB1F229ADD0011D712 /* UIStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050C48EA1F229ADD0011D712 /* UIStoryboardExtensions.swift */; };
+		0512D8A71F2673C000EE6B0B /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512D8A61F2673C000EE6B0B /* Reward.swift */; };
+		0512D8AC1F26851300EE6B0B /* RewardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512D8AB1F26851300EE6B0B /* RewardCell.swift */; };
 		051DBFCA1F1FCB03004066ED /* Introduction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 051DBFC91F1FCB03004066ED /* Introduction.storyboard */; };
 		051DBFCE1F1FF6D2004066ED /* TreeVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051DBFCD1F1FF6D2004066ED /* TreeVerifier.swift */; };
 		0536AB8B1F156F7C00A14C6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0536AB891F156F7C00A14C6C /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 		050C48E61F22774A0011D712 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = storyboards/Login.storyboard; sourceTree = "<group>"; };
 		050C48E81F2282690011D712 /* AppFABMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppFABMenuController.swift; path = controllers/AppFABMenuController.swift; sourceTree = "<group>"; };
 		050C48EA1F229ADD0011D712 /* UIStoryboardExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIStoryboardExtensions.swift; path = extensions/UIStoryboardExtensions.swift; sourceTree = "<group>"; };
+		0512D8A61F2673C000EE6B0B /* Reward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reward.swift; path = models/Reward.swift; sourceTree = "<group>"; };
+		0512D8AB1F26851300EE6B0B /* RewardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RewardCell.swift; path = views/RewardCell.swift; sourceTree = "<group>"; };
 		051DBFC91F1FCB03004066ED /* Introduction.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Introduction.storyboard; path = storyboards/Introduction.storyboard; sourceTree = "<group>"; };
 		051DBFCD1F1FF6D2004066ED /* TreeVerifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TreeVerifier.swift; path = services/TreeVerifier.swift; sourceTree = "<group>"; };
 		0536AB891F156F7C00A14C6C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = storyboards/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0512D8A81F267CC800EE6B0B /* views */ = {
+			isa = PBXGroup;
+			children = (
+				0512D8AB1F26851300EE6B0B /* RewardCell.swift */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
 		0536AB831F156F4000A14C6C /* controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +116,7 @@
 			children = (
 				05F038471F183505004C335D /* TreeInfo.swift */,
 				05082B8E1F16A8E800A4415B /* UserProfile.swift */,
+				0512D8A61F2673C000EE6B0B /* Reward.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -166,6 +179,7 @@
 		05F4E9521F15572B008159E9 /* Green */ = {
 			isa = PBXGroup;
 			children = (
+				0512D8A81F267CC800EE6B0B /* views */,
 				0553938A1F1ED9CD005664A7 /* Green.entitlements */,
 				05EFBE401F199192009DE0C4 /* extensions */,
 				05EFBE351F19824F009DE0C4 /* services */,
@@ -344,9 +358,11 @@
 				05EFBE391F19827D009DE0C4 /* StorageService.swift in Sources */,
 				05F0383F1F17FA31004C335D /* MainTabBarViewController.swift in Sources */,
 				05F038481F183505004C335D /* TreeInfo.swift in Sources */,
+				0512D8A71F2673C000EE6B0B /* Reward.swift in Sources */,
 				05A84CEE1F157ED20018C4C4 /* TreeViewController.swift in Sources */,
 				05A84CEC1F1571940018C4C4 /* HomeViewController.swift in Sources */,
 				050C48EB1F229ADD0011D712 /* UIStoryboardExtensions.swift in Sources */,
+				0512D8AC1F26851300EE6B0B /* RewardCell.swift in Sources */,
 				050C48E91F2282690011D712 /* AppFABMenuController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

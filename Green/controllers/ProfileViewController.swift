@@ -21,6 +21,8 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var rewards = [Reward]()
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         prepareTabBarItem()
@@ -34,6 +36,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureTableView()
         
         UserProfile.getUserData { (result) in
             print(result)
@@ -46,6 +49,17 @@ class ProfileViewController: UIViewController {
         // styling
         userInfoView.layer.borderWidth = 1
         userInfoView.layer.borderColor = UIColor(hexString: "f1efec").cgColor
+    }
+    
+    func configureTableView() {
+        // remove seperator for empty cells
+        tableView.tableFooterView = UIView()
+        // remove seperator from cells
+        tableView.separatorStyle = .none
+        
+        // add pull to refresh
+//        refreshControl.addTarget(self, action: #selector(reloadTimeline), for: .valueChanged)
+//        tableView.addSubview(refreshControl)
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,6 +83,25 @@ class ProfileViewController: UIViewController {
     }
 }
 
-class RewardViewController: UITableViewController {
+extension ProfileViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+    }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RewardCell", for: indexPath) as! RewardCell
+        
+        cell.rewardLabel?.text = "Section \(indexPath.section) Row \(indexPath.row)"
+        print("dang chay r em e")
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Section \(section)"
+    }
 }
