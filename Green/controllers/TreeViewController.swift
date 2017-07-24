@@ -29,8 +29,6 @@ class TreeViewController: UIViewController {
         preparePageTabBarItem()
     }
     
-    let images = [UIImage]()
-    
     fileprivate func preparePageTabBarItem() {
         pageTabBarItem.title = "Your tree"
         pageTabBarItem.titleColor = Color.blueGrey.base
@@ -39,19 +37,19 @@ class TreeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(reloadTimeline), name: NSNotification.Name(rawValue: "upload"), object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(reloadTimeline), name: NSNotification.Name(rawValue: "upload"), object: nil)
 
         // update the tree image
-        TreeService.retrieveImage { imageUrl in
-            self.treePhoto.kf.setImage(with: URL(string: imageUrl))
-        }
+//        TreeService.retrieveImage { imageUrl in
+//            self.treePhoto.kf.setImage(with: URL(string: imageUrl))
+//        }
     }
     
-    func reloadTimeline() {
-        TreeService.retrieveImage { imageUrl in
-            self.treePhoto.kf.setImage(with: URL(string: imageUrl))
-        }
-    }
+//    func reloadTimeline() {
+//        TreeService.retrieveImage { imageUrl in
+//            self.treePhoto.kf.setImage(with: URL(string: imageUrl))
+//        }
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

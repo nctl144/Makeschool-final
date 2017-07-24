@@ -11,14 +11,14 @@ import Material
 
 class AppToolbarController: ToolbarController {
     fileprivate var menuButton: IconButton!
-    fileprivate var switchControl: Switch!
-    fileprivate var moreButton: IconButton!
+    fileprivate var starButton: IconButton!
+    fileprivate var searchButton: IconButton!
     
-    override func prepare() {
+    open override func prepare() {
         super.prepare()
         prepareMenuButton()
-        prepareSwitch()
-        prepareMoreButton()
+        prepareStarButton()
+        prepareSearchButton()
         prepareStatusBar()
         prepareToolbar()
     }
@@ -26,40 +26,37 @@ class AppToolbarController: ToolbarController {
 
 extension AppToolbarController {
     fileprivate func prepareMenuButton() {
-        menuButton = IconButton(image: Icon.cm.menu)
-        menuButton.addTarget(self, action: #selector(handleMenuButton), for: .touchUpInside)
+        menuButton = IconButton(image: Icon.cm.menu, tintColor: .white)
+        menuButton.pulseColor = .white
     }
     
-    fileprivate func prepareSwitch() {
-        switchControl = Switch(state: .off, style: .light, size: .small)
+    fileprivate func prepareStarButton() {
+        starButton = IconButton(image: Icon.cm.star, tintColor: .white)
+        starButton.pulseColor = .white
     }
     
-    fileprivate func prepareMoreButton() {
-        moreButton = IconButton(image: Icon.cm.moreVertical)
-        moreButton.addTarget(self, action: #selector(handleMoreButton), for: .touchUpInside)
+    fileprivate func prepareSearchButton() {
+        searchButton = IconButton(image: Icon.cm.search, tintColor: .white)
+        searchButton.pulseColor = .white
     }
     
     fileprivate func prepareStatusBar() {
         statusBarStyle = .lightContent
-        
-        // Access the statusBar.
-        //        statusBar.backgroundColor = Color.green.base
+        statusBar.backgroundColor = Color.blue.darken3
     }
     
     fileprivate func prepareToolbar() {
+        toolbar.depthPreset = .none
+        toolbar.backgroundColor = Color.blue.darken2
+        
+        toolbar.title = "HealthyMind"
+        toolbar.titleLabel.textColor = .white
+        toolbar.titleLabel.textAlignment = .left
+        
+        toolbar.detailLabel.textColor = .white
+        toolbar.detailLabel.textAlignment = .left
+        
         toolbar.leftViews = [menuButton]
-        toolbar.rightViews = [switchControl, moreButton]
-    }
-}
-
-extension AppToolbarController {
-    @objc
-    fileprivate func handleMenuButton() {
-        navigationDrawerController?.toggleLeftView()
-    }
-    
-    @objc
-    fileprivate func handleMoreButton() {
-        navigationDrawerController?.toggleRightView()
+        toolbar.rightViews = [starButton, searchButton]
     }
 }

@@ -436,9 +436,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2on-7G-jth">
                                 <rect key="frame" x="0.0" y="617" width="375" height="30"/>
                                 <state key="normal" title="Back to Home"/>
-                                <connections>
-                                    <segue destination="Ezi-Ev-5Af" kind="show" id="vAW-c4-YQX"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.38037276268005371" green="0.71050649881362915" blue="0.44112873077392578" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -461,14 +458,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uGR-lp-Ery" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4894" y="1086"/>
-        </scene>
-        <!--tabBarController-->
-        <scene sceneID="dId-Jz-0oz">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="tabBarController" id="Ezi-Ev-5Af" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="A58-cT-vpC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5669" y="1045"/>
         </scene>
     </scenes>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
