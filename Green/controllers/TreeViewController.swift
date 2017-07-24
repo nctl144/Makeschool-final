@@ -15,8 +15,6 @@ import Material
 class TreeViewController: UIViewController {
 
     @IBOutlet weak var treePhoto: UIImageView!
-    @IBOutlet weak var treePhotoCartoon: UIImageView!
-    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var messengerShareButton: UIButton!
@@ -25,6 +23,8 @@ class TreeViewController: UIViewController {
         super.init(coder: aDecoder)
         prepareTabBarItem()
     }
+    
+    let images = [UIImage]()
     
     private func prepareTabBarItem() {
         tabBarItem.title = "Your trees"
@@ -36,14 +36,11 @@ class TreeViewController: UIViewController {
         super.viewDidLoad()
         
         NotificationCenter.default.addObserver(self, selector: #selector(reloadTimeline), name: NSNotification.Name(rawValue: "upload"), object: nil)
-        
-        // Do any additional setup after loading the view.
-        treePhotoCartoon.image = UIImage(named: "dying-tree.png")
+
         // update the tree image
         TreeService.retrieveImage { imageUrl in
             self.treePhoto.kf.setImage(with: URL(string: imageUrl))
         }
-
     }
     
     func reloadTimeline() {

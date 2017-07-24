@@ -18,7 +18,6 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var userInfoView: UIView!
     @IBOutlet weak var profilePicView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var logoutButton: UIStackView!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -68,4 +67,8 @@ class ProfileViewController: UIViewController {
         self.view.window?.rootViewController = UIStoryboard.initialViewController(for: .login)
         self.view.window?.makeKeyAndVisible()
     }
+}
+
+class RewardViewController: UITableViewController {
+    
 }
