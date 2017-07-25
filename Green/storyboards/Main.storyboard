@@ -52,7 +52,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="951"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="INI-Tc-cTd" userLabel="User Info">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="354"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A0f-5G-jAO">
                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
@@ -72,46 +72,16 @@
                                                         <color key="textColor" red="0.3213801315" green="0.36417233090000001" blue="0.35504028580000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yT7-2B-kR6" customClass="RaisedButton" customModule="Material">
-                                                        <rect key="frame" x="104" y="310" width="112" height="44"/>
-                                                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="44" id="qxv-dp-yRe"/>
-                                                        </constraints>
-                                                        <state key="normal" title="Log out" image="facebook-icon-2"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                                <size key="value" width="1" height="1"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="pulseColor">
-                                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
-                                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                                <color key="value" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="   LOG OUT   "/>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="logOutButtonTapped:" destination="ohk-iL-ZXN" eventType="touchUpInside" id="qtM-WH-RfQ"/>
-                                                        </connections>
-                                                    </button>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="A0f-5G-jAO" firstAttribute="width" secondItem="INI-Tc-cTd" secondAttribute="width" id="O2C-we-uyP"/>
                                                     <constraint firstItem="A0f-5G-jAO" firstAttribute="centerX" secondItem="INI-Tc-cTd" secondAttribute="centerX" id="Zim-l6-8La"/>
-                                                    <constraint firstItem="yT7-2B-kR6" firstAttribute="centerX" secondItem="INI-Tc-cTd" secondAttribute="centerX" id="iEC-MX-3zo"/>
                                                     <constraint firstItem="8dS-bu-1T6" firstAttribute="width" secondItem="INI-Tc-cTd" secondAttribute="width" id="mZ3-wn-ajn"/>
                                                     <constraint firstItem="8dS-bu-1T6" firstAttribute="centerX" secondItem="INI-Tc-cTd" secondAttribute="centerX" id="op9-S6-uJQ"/>
                                                 </constraints>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J65-r6-0tO" userLabel="User stat view">
-                                                <rect key="frame" x="0.0" y="404" width="320" height="145"/>
+                                                <rect key="frame" x="0.0" y="350" width="320" height="145"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yve-nj-zbl" userLabel="labels wrapper">
                                                         <rect key="frame" x="0.0" y="19" width="320" height="90"/>
@@ -173,7 +143,7 @@
                                                 </constraints>
                                             </view>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xr2-LR-6Dg">
-                                                <rect key="frame" x="0.0" y="597" width="320" height="354"/>
+                                                <rect key="frame" x="0.0" y="543" width="320" height="408"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RewardCell" rowHeight="50" id="mnF-q7-nTJ" customClass="RewardCell" customModule="Green" customModuleProvider="target">

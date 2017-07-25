@@ -66,21 +66,6 @@ class ProfileViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    @IBAction func logOutButtonTapped(_ sender: UIButton) {
-        let loginManager = LoginManager()
-        
-        // log the user out
-        loginManager.logOut()
-        do {
-            try Auth.auth().signOut()
-        } catch let signOutError as NSError {
-            print("error signing in \(signOutError)")
-        }
-        
-        self.view.window?.rootViewController = UIStoryboard.initialViewController(for: .login)
-        self.view.window?.makeKeyAndVisible()
-    }
 }
 
 extension ProfileViewController: UITableViewDataSource {

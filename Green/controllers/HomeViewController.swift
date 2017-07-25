@@ -57,7 +57,13 @@ class HomeViewController: UIViewController {
 
                 Auth.auth().signIn(with: credential) { (user, error) in
                     print("User logged in the firebase")
-                    self.view.window?.rootViewController = AppFABMenuController(rootViewController: UIStoryboard.initialViewController(for: .main))
+                    let initialViewController: UIViewController
+                    
+                    let fabMenuController = AppFABMenuController(rootViewController: UIStoryboard.initialViewController(for: .main))
+                    let toolBarController = AppToolbarController(rootViewController: fabMenuController)
+                    
+                    initialViewController = AppNavigationDrawerController(rootViewController: toolBarController, leftViewController: LeftViewController())
+                    self.view.window?.rootViewController = initialViewController
                     self.view.window?.makeKeyAndVisible()
                 }
             }

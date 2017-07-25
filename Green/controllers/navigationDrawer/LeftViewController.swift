@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FacebookCore
+import FacebookLogin
 import Material
 
 class LeftViewController: UIViewController {
@@ -57,7 +60,19 @@ extension LeftViewController {
     
     @objc
     fileprivate func handleLogOutButton() {
+        let loginManager = LoginManager()
         
+        // log the user out
+        loginManager.logOut()
+
+        do {
+            try Auth.auth().signOut()
+        } catch let signOutError as NSError {
+            print("error signing in \(signOutError)")
+        }
+        
+        self.view.window?.rootViewController = UIStoryboard.initialViewController(for: .login)
+        self.view.window?.makeKeyAndVisible()
     }
     
     fileprivate func closeNavigationDrawer(result: Bool) {
