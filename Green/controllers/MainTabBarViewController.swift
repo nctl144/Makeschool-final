@@ -10,6 +10,7 @@ import UIKit
 import Material
 
 class MainTabBarViewController: BottomNavigationController {
+    fileprivate var undoButton: FlatButton!
     
     open override func prepare() {
         super.prepare()
@@ -34,14 +35,13 @@ class MainTabBarViewController: BottomNavigationController {
                 if flag == true {
                     TreeService.createImageUrl(for: image)
                     NotificationCenter.default.post(name: Notification.Name(rawValue: "upload"), object: self)
+                } else {
+                    DispatchQueue.main.async(execute: {
+                        let alert = UIAlertController(title: "Take the picture again u dumbass", message: "Because it is NOT A FUCKING tree, its a dog", preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title: "OK I am totally sorry", style: UIAlertActionStyle.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                    })
                 }
-                // if not a tree
-                // create the alert
-                DispatchQueue.main.async(execute: {
-                    let alert = UIAlertController(title: "Take the picture again u dumbass", message: "Because it is NOT A FUCKING tree, its a dog", preferredStyle: UIAlertControllerStyle.alert)
-                    alert.addAction(UIAlertAction(title: "OK I am totally sorry", style: UIAlertActionStyle.default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
-                })
             })
         }
     }
