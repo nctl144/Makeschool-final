@@ -13,7 +13,6 @@
 		050C48EB1F229ADD0011D712 /* UIStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050C48EA1F229ADD0011D712 /* UIStoryboardExtensions.swift */; };
 		0512D8A71F2673C000EE6B0B /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512D8A61F2673C000EE6B0B /* Reward.swift */; };
 		0512D8AC1F26851300EE6B0B /* RewardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512D8AB1F26851300EE6B0B /* RewardCell.swift */; };
-		0512D8BE1F26995A00EE6B0B /* TransitionedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512D8B91F26995A00EE6B0B /* TransitionedViewController.swift */; };
 		0512D8BF1F26995A00EE6B0B /* RightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512D8BA1F26995A00EE6B0B /* RightViewController.swift */; };
 		0512D8C01F26995A00EE6B0B /* AppToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512D8BB1F26995A00EE6B0B /* AppToolbarController.swift */; };
 		0512D8C11F26995A00EE6B0B /* AppNavigationDrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512D8BC1F26995A00EE6B0B /* AppNavigationDrawerController.swift */; };
@@ -26,6 +25,7 @@
 		05A84CEC1F1571940018C4C4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A84CEB1F1571940018C4C4 /* HomeViewController.swift */; };
 		05A84CEE1F157ED20018C4C4 /* TreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A84CED1F157ED20018C4C4 /* TreeViewController.swift */; };
 		05C1B6801F2023C100E6EFDD /* UIextension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C1B67F1F2023C100E6EFDD /* UIextension.swift */; };
+		05E21ACE1F27B97500ED8627 /* TransitionedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E21ACD1F27B97500ED8627 /* TransitionedViewController.swift */; };
 		05EFBE341F193DCC009DE0C4 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EFBE331F193DCC009DE0C4 /* IntroductionViewController.swift */; };
 		05EFBE391F19827D009DE0C4 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EFBE381F19827D009DE0C4 /* StorageService.swift */; };
 		05EFBE3F1F19843F009DE0C4 /* TreeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EFBE3E1F19843F009DE0C4 /* TreeService.swift */; };
@@ -46,7 +46,6 @@
 		050C48EA1F229ADD0011D712 /* UIStoryboardExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIStoryboardExtensions.swift; path = extensions/UIStoryboardExtensions.swift; sourceTree = "<group>"; };
 		0512D8A61F2673C000EE6B0B /* Reward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reward.swift; path = models/Reward.swift; sourceTree = "<group>"; };
 		0512D8AB1F26851300EE6B0B /* RewardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RewardCell.swift; path = views/RewardCell.swift; sourceTree = "<group>"; };
-		0512D8B91F26995A00EE6B0B /* TransitionedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransitionedViewController.swift; path = controllers/navigationDrawer/TransitionedViewController.swift; sourceTree = "<group>"; };
 		0512D8BA1F26995A00EE6B0B /* RightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RightViewController.swift; path = controllers/navigationDrawer/RightViewController.swift; sourceTree = "<group>"; };
 		0512D8BB1F26995A00EE6B0B /* AppToolbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppToolbarController.swift; path = controllers/navigationDrawer/AppToolbarController.swift; sourceTree = "<group>"; };
 		0512D8BC1F26995A00EE6B0B /* AppNavigationDrawerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppNavigationDrawerController.swift; path = controllers/navigationDrawer/AppNavigationDrawerController.swift; sourceTree = "<group>"; };
@@ -61,6 +60,7 @@
 		05A84CEB1F1571940018C4C4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = controllers/HomeViewController.swift; sourceTree = "<group>"; };
 		05A84CED1F157ED20018C4C4 /* TreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TreeViewController.swift; path = controllers/TreeViewController.swift; sourceTree = "<group>"; };
 		05C1B67F1F2023C100E6EFDD /* UIextension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIextension.swift; path = extensions/UIextension.swift; sourceTree = "<group>"; };
+		05E21ACD1F27B97500ED8627 /* TransitionedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransitionedViewController.swift; path = controllers/navigationDrawer/TransitionedViewController.swift; sourceTree = "<group>"; };
 		05EFBE331F193DCC009DE0C4 /* IntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntroductionViewController.swift; path = controllers/IntroductionViewController.swift; sourceTree = "<group>"; };
 		05EFBE381F19827D009DE0C4 /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StorageService.swift; path = services/StorageService.swift; sourceTree = "<group>"; };
 		05EFBE3E1F19843F009DE0C4 /* TreeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TreeService.swift; path = services/TreeService.swift; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 		0512D8B81F26994D00EE6B0B /* navigation */ = {
 			isa = PBXGroup;
 			children = (
-				0512D8B91F26995A00EE6B0B /* TransitionedViewController.swift */,
+				05E21ACD1F27B97500ED8627 /* TransitionedViewController.swift */,
 				0512D8BA1F26995A00EE6B0B /* RightViewController.swift */,
 				0512D8BB1F26995A00EE6B0B /* AppToolbarController.swift */,
 				0512D8BC1F26995A00EE6B0B /* AppNavigationDrawerController.swift */,
@@ -384,8 +384,8 @@
 				05EFBE421F1991B0009DE0C4 /* StorageExtensions.swift in Sources */,
 				0512D8C21F26995A00EE6B0B /* LeftViewController.swift in Sources */,
 				05082B911F16C29C00A4415B /* ProfileViewController.swift in Sources */,
+				05E21ACE1F27B97500ED8627 /* TransitionedViewController.swift in Sources */,
 				05C1B6801F2023C100E6EFDD /* UIextension.swift in Sources */,
-				0512D8BE1F26995A00EE6B0B /* TransitionedViewController.swift in Sources */,
 				05F038421F181FF2004C335D /* PhotoHelper.swift in Sources */,
 				05EFBE341F193DCC009DE0C4 /* IntroductionViewController.swift in Sources */,
 				0512D8C01F26995A00EE6B0B /* AppToolbarController.swift in Sources */,

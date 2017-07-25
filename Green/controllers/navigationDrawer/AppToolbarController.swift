@@ -17,7 +17,6 @@ class AppToolbarController: ToolbarController {
     override func prepare() {
         super.prepare()
         prepareMenuButton()
-        prepareSwitch()
         prepareMoreButton()
         prepareStatusBar()
         prepareToolbar()
@@ -26,16 +25,12 @@ class AppToolbarController: ToolbarController {
 
 extension AppToolbarController {
     fileprivate func prepareMenuButton() {
-        menuButton = IconButton(image: Icon.cm.menu)
+        menuButton = IconButton(image: Icon.cm.menu, tintColor: .white)
         menuButton.addTarget(self, action: #selector(handleMenuButton), for: .touchUpInside)
     }
     
-    fileprivate func prepareSwitch() {
-        switchControl = Switch(state: .off, style: .light, size: .small)
-    }
-    
     fileprivate func prepareMoreButton() {
-        moreButton = IconButton(image: Icon.cm.moreVertical)
+        moreButton = IconButton(image: Icon.cm.moreVertical, tintColor: .white)
         moreButton.addTarget(self, action: #selector(handleMoreButton), for: .touchUpInside)
     }
     
@@ -43,12 +38,22 @@ extension AppToolbarController {
         statusBarStyle = .lightContent
         
         // Access the statusBar.
-        //        statusBar.backgroundColor = Color.green.base
+        statusBar.backgroundColor = UIColor(hexString: "226F54")
     }
     
     fileprivate func prepareToolbar() {
+        toolbar.depthPreset = .none
+        toolbar.backgroundColor = UIColor(hexString: "226F54")
+        
+        toolbar.title = "Green"
+        toolbar.titleLabel.textColor = .white
+        toolbar.titleLabel.textAlignment = .left
+        
+        toolbar.detailLabel.textColor = .white
+        toolbar.detailLabel.textAlignment = .left
+        
         toolbar.leftViews = [menuButton]
-        toolbar.rightViews = [switchControl, moreButton]
+        toolbar.rightViews = [moreButton]
     }
 }
 
