@@ -63,7 +63,6 @@ extension AppFABMenuController {
     fileprivate func prepareFABMenu() {
         fabMenu.fabButton = fabButton
         fabMenu.fabMenuItems = [notesFABMenuItem, remindersFABMenuItem]
-        fabMenuBacking = .none
         
         view.layout(fabMenu)
             .size(fabMenuSize)
