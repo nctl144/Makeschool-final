@@ -245,7 +245,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dR4-YD-DW4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2538.75" y="-1826.4084507042253"/>
+            <point key="canvasLocation" x="2138" y="413"/>
         </scene>
         <!--Your trees-->
         <scene sceneID="oWB-9m-27b">
@@ -359,7 +359,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ad-k2-eft" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2756.25" y="-719.36619718309862"/>
+            <point key="canvasLocation" x="3246" y="184"/>
         </scene>
         <!--Introduction-->
         <scene sceneID="oEp-rq-Ufr">
@@ -369,7 +369,7 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rsi-45-4CG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2439" y="250"/>
+            <point key="canvasLocation" x="1221" y="185"/>
         </scene>
         <!--IntroStep5-->
         <scene sceneID="AsQ-CB-oBl">
@@ -447,7 +447,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j4C-cL-f45" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1421" y="249"/>
+            <point key="canvasLocation" x="81" y="185"/>
         </scene>
     </scenes>
     <resources>
