@@ -246,35 +246,37 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5uD-aV-lLz" userLabel="plant description View">
-                                <rect key="frame" x="0.0" y="200" width="320" height="183"/>
+                                <rect key="frame" x="0.0" y="200" width="320" height="219"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your plant is dead" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vh-V6-5hm">
-                                        <rect key="frame" x="16" y="40" width="288" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your plant is dead" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vh-V6-5hm">
+                                        <rect key="frame" x="20" y="10" width="214" height="32.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <color key="textColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A dry plant is not good! You need to water your plant within 5 hours!" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2q-3x-XXM">
-                                        <rect key="frame" x="16" y="103" width="288" height="41"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A dry plant is not good! You need to water your plant within 5 hours!" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2q-3x-XXM">
+                                        <rect key="frame" x="20" y="52.5" width="280" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.13333333333333333" green="0.43529411764705883" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="183" id="3Eg-WB-CTs"/>
+                                    <constraint firstItem="L2q-3x-XXM" firstAttribute="leading" secondItem="5uD-aV-lLz" secondAttribute="leading" constant="20" id="cp0-7S-Wbs"/>
+                                    <constraint firstAttribute="trailing" secondItem="L2q-3x-XXM" secondAttribute="trailing" constant="20" id="g3l-cY-iZE"/>
+                                    <constraint firstItem="4Vh-V6-5hm" firstAttribute="leading" secondItem="5uD-aV-lLz" secondAttribute="leading" constant="20" id="rin-BM-JpR"/>
+                                    <constraint firstItem="L2q-3x-XXM" firstAttribute="top" secondItem="4Vh-V6-5hm" secondAttribute="bottom" constant="10" id="tHV-Wu-MXc"/>
+                                    <constraint firstItem="4Vh-V6-5hm" firstAttribute="top" secondItem="5uD-aV-lLz" secondAttribute="top" constant="10" id="vTm-73-m9R"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Awe-Mb-RKa" userLabel="facebook share view">
-                                <rect key="frame" x="0.0" y="383" width="320" height="136"/>
+                                <rect key="frame" x="0.0" y="419" width="320" height="100"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="P7B-ZJ-gM6" userLabel="share icons">
-                                        <rect key="frame" x="20" y="51" width="110" height="50"/>
+                                        <rect key="frame" x="20" y="41" width="110" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eU2-Hm-LL9">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eU2-Hm-LL9" customClass="FlatButton" customModule="Material">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="messenger-icon-2"/>
@@ -282,7 +284,7 @@
                                                     <action selector="messengerShareButtonTapped:" destination="vSO-EQ-eOs" eventType="touchUpInside" id="NuP-kp-1w9"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8IQ-zM-gK1">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8IQ-zM-gK1" customClass="FlatButton" customModule="Material">
                                                 <rect key="frame" x="60" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="facebook-icon-2"/>
@@ -297,7 +299,7 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share on your Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYu-tO-Ve1">
-                                        <rect key="frame" x="20" y="20" width="233.5" height="23"/>
+                                        <rect key="frame" x="20" y="10" width="233.5" height="23"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -307,8 +309,9 @@
                                 <constraints>
                                     <constraint firstItem="P7B-ZJ-gM6" firstAttribute="top" secondItem="nYu-tO-Ve1" secondAttribute="bottom" constant="8" symbolic="YES" id="5D7-ji-Okx"/>
                                     <constraint firstItem="P7B-ZJ-gM6" firstAttribute="leading" secondItem="nYu-tO-Ve1" secondAttribute="leading" id="Ngz-AU-6Vu"/>
-                                    <constraint firstAttribute="bottom" secondItem="P7B-ZJ-gM6" secondAttribute="bottom" constant="35" id="Pfm-I5-RO7"/>
                                     <constraint firstItem="P7B-ZJ-gM6" firstAttribute="leading" secondItem="Awe-Mb-RKa" secondAttribute="leading" constant="20" id="hk3-Xo-LYn"/>
+                                    <constraint firstItem="nYu-tO-Ve1" firstAttribute="top" secondItem="Awe-Mb-RKa" secondAttribute="top" constant="10" id="k0x-BS-qLW"/>
+                                    <constraint firstAttribute="height" constant="100" id="sNB-B8-sI8"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -318,12 +321,12 @@
                             <constraint firstItem="5uD-aV-lLz" firstAttribute="leading" secondItem="kN9-g2-yWv" secondAttribute="leading" id="HAX-6G-jua"/>
                             <constraint firstItem="kE6-eu-beY" firstAttribute="centerX" secondItem="kN9-g2-yWv" secondAttribute="centerX" id="JQ9-an-XA1"/>
                             <constraint firstItem="JA4-Um-emJ" firstAttribute="top" secondItem="Awe-Mb-RKa" secondAttribute="bottom" id="LVP-6k-iB8"/>
-                            <constraint firstItem="Awe-Mb-RKa" firstAttribute="top" secondItem="5uD-aV-lLz" secondAttribute="bottom" id="V7H-76-GL2"/>
                             <constraint firstItem="kE6-eu-beY" firstAttribute="top" secondItem="fZ3-10-ljP" secondAttribute="bottom" id="VbD-Ux-GEF"/>
                             <constraint firstItem="kE6-eu-beY" firstAttribute="width" secondItem="kN9-g2-yWv" secondAttribute="width" id="fwv-3l-6QC"/>
                             <constraint firstItem="5uD-aV-lLz" firstAttribute="top" secondItem="kE6-eu-beY" secondAttribute="bottom" id="ozE-Kd-CJp"/>
                             <constraint firstItem="Awe-Mb-RKa" firstAttribute="centerX" secondItem="kN9-g2-yWv" secondAttribute="centerX" id="sFs-e8-dJJ"/>
                             <constraint firstAttribute="trailing" secondItem="5uD-aV-lLz" secondAttribute="trailing" id="shX-oW-OMP"/>
+                            <constraint firstItem="Awe-Mb-RKa" firstAttribute="top" secondItem="5uD-aV-lLz" secondAttribute="bottom" id="x58-pQ-DqG"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="Your trees" image="tree" id="fcN-fR-z2V"/>
