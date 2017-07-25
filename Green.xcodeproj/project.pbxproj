@@ -13,7 +13,6 @@
 		050C48EB1F229ADD0011D712 /* UIStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050C48EA1F229ADD0011D712 /* UIStoryboardExtensions.swift */; };
 		0512D8A71F2673C000EE6B0B /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512D8A61F2673C000EE6B0B /* Reward.swift */; };
 		0512D8AC1F26851300EE6B0B /* RewardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512D8AB1F26851300EE6B0B /* RewardCell.swift */; };
-		0512D8BF1F26995A00EE6B0B /* RightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512D8BA1F26995A00EE6B0B /* RightViewController.swift */; };
 		0512D8C01F26995A00EE6B0B /* AppToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512D8BB1F26995A00EE6B0B /* AppToolbarController.swift */; };
 		0512D8C11F26995A00EE6B0B /* AppNavigationDrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512D8BC1F26995A00EE6B0B /* AppNavigationDrawerController.swift */; };
 		0512D8C21F26995A00EE6B0B /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512D8BD1F26995A00EE6B0B /* LeftViewController.swift */; };
@@ -46,7 +45,6 @@
 		050C48EA1F229ADD0011D712 /* UIStoryboardExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIStoryboardExtensions.swift; path = extensions/UIStoryboardExtensions.swift; sourceTree = "<group>"; };
 		0512D8A61F2673C000EE6B0B /* Reward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reward.swift; path = models/Reward.swift; sourceTree = "<group>"; };
 		0512D8AB1F26851300EE6B0B /* RewardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RewardCell.swift; path = views/RewardCell.swift; sourceTree = "<group>"; };
-		0512D8BA1F26995A00EE6B0B /* RightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RightViewController.swift; path = controllers/navigationDrawer/RightViewController.swift; sourceTree = "<group>"; };
 		0512D8BB1F26995A00EE6B0B /* AppToolbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppToolbarController.swift; path = controllers/navigationDrawer/AppToolbarController.swift; sourceTree = "<group>"; };
 		0512D8BC1F26995A00EE6B0B /* AppNavigationDrawerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppNavigationDrawerController.swift; path = controllers/navigationDrawer/AppNavigationDrawerController.swift; sourceTree = "<group>"; };
 		0512D8BD1F26995A00EE6B0B /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftViewController.swift; path = controllers/navigationDrawer/LeftViewController.swift; sourceTree = "<group>"; };
@@ -109,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				05E21ACD1F27B97500ED8627 /* TransitionedViewController.swift */,
-				0512D8BA1F26995A00EE6B0B /* RightViewController.swift */,
 				0512D8BB1F26995A00EE6B0B /* AppToolbarController.swift */,
 				0512D8BC1F26995A00EE6B0B /* AppNavigationDrawerController.swift */,
 				0512D8BD1F26995A00EE6B0B /* LeftViewController.swift */,
@@ -396,7 +393,6 @@
 				05F038481F183505004C335D /* TreeInfo.swift in Sources */,
 				0512D8A71F2673C000EE6B0B /* Reward.swift in Sources */,
 				05A84CEE1F157ED20018C4C4 /* TreeViewController.swift in Sources */,
-				0512D8BF1F26995A00EE6B0B /* RightViewController.swift in Sources */,
 				05A84CEC1F1571940018C4C4 /* HomeViewController.swift in Sources */,
 				050C48EB1F229ADD0011D712 /* UIStoryboardExtensions.swift in Sources */,
 				0512D8AC1F26851300EE6B0B /* RewardCell.swift in Sources */,

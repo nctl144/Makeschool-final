@@ -14,19 +14,34 @@ class LeftViewController: UIViewController {
     
     open override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = Color.blue.base
+        view.backgroundColor = UIColor(hexString: "37505C")
         
         prepareTransitionButton()
+        prepareLogoutButton()
     }
 }
 
 extension LeftViewController {
     fileprivate func prepareTransitionButton() {
-        transitionButton = FlatButton(title: "Transition VC", titleColor: .white)
+        transitionButton = FlatButton(title: "Introduction", titleColor: .white)
+        transitionButton.backgroundColor = UIColor(hexString: "912F56")
+        transitionButton.contentHorizontalAlignment = .left
+        transitionButton.contentEdgeInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         transitionButton.pulseColor = .white
         transitionButton.addTarget(self, action: #selector(handleTransitionButton), for: .touchUpInside)
         
-        view.layout(transitionButton).horizontally().center()
+        view.layout(transitionButton).horizontally().top()
+    }
+    
+    fileprivate func prepareLogoutButton() {
+        transitionButton = FlatButton(title: "Log out", titleColor: .white)
+        transitionButton.backgroundColor = UIColor(hexString: "F76F8E")
+        transitionButton.contentHorizontalAlignment = .left
+        transitionButton.contentEdgeInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+        transitionButton.pulseColor = .white
+        transitionButton.addTarget(self, action: #selector(handleLogOutButton), for: .touchUpInside)
+        
+        view.layout(transitionButton).horizontally().top(61)
     }
 }
 
@@ -38,6 +53,11 @@ extension LeftViewController {
         
         // Transition the ToolbarController rootViewController that is in the NavigationDrawer rootViewController.
         (navigationDrawerController?.rootViewController as? ToolbarController)?.transition(to: TransitionedViewController(), completion: closeNavigationDrawer)
+    }
+    
+    @objc
+    fileprivate func handleLogOutButton() {
+        
     }
     
     fileprivate func closeNavigationDrawer(result: Bool) {
