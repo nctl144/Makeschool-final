@@ -9,31 +9,26 @@
 import UIKit
 
 struct Reward {
-    let achievements: [String : [String: Any]] = [
+    static let achievements: [String : [String: String]] = [
         "achievement1": [
-            "image": UIImage(),
-            "title": "Achievement 1",
-            "unlock": true
+            "image": "achievement1.png",
+            "title": "Achievement 1"
         ],
         "achievement2": [
-            "image": UIImage(),
-            "title": "Achievement 2",
-            "unlock": true
+            "image": "achievement2.png",
+            "title": "Achievement 2"
         ],
         "achievement3": [
-            "image": UIImage(),
-            "title": "Achievement 3",
-            "unlock": true
+            "image": "achievement3.png",
+            "title": "Achievement 3"
         ],
         "achievement4": [
-            "image": UIImage(),
-            "title": "Achievement 4",
-            "unlock": true
+            "image": "achievement4.png",
+            "title": "Achievement 4"
         ],
         "achievement5": [
-            "image": UIImage(),
-            "title": "Achievement 5",
-            "unlock": true
+            "image": "achievement5.png",
+            "title": "Achievement 5"
         ]
     ]
 }

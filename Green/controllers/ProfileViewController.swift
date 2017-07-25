@@ -79,8 +79,11 @@ extension ProfileViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RewardCell", for: indexPath) as! RewardCell
-        
-        cell.rewardLabel?.text = "Section \(indexPath.section) Row \(indexPath.row)"
+        let achievementIndex = indexPath.row + 1
+        let achievementDict = Reward.achievements["achievement\(achievementIndex)"]!
+    
+        cell.rewardImage.image = UIImage(named: achievementDict["image"]!)
+        cell.rewardLabel?.text = achievementDict["title"]
         
         return cell
     }
