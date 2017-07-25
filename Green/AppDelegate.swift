@@ -60,7 +60,8 @@ extension AppDelegate {
         if Auth.auth().currentUser != nil {
         
             let fabMenuController = AppFABMenuController(rootViewController: UIStoryboard.initialViewController(for: .main))
-            let toolBarController = AppToolbarController(rootViewController: fabMenuController)
+            let snackbarController = AppSnackbarController(rootViewController: fabMenuController)
+            let toolBarController = AppToolbarController(rootViewController: snackbarController)
 
             initialViewController = AppNavigationDrawerController(rootViewController: toolBarController, leftViewController: LeftViewController())
         } else {
