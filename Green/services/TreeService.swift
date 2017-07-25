@@ -30,7 +30,10 @@ struct TreeService {
             }
             
             let urlString = downloadURL.absoluteString
-            let childUpdates = ["posts/\(userUid)/postImageUrl": urlString]
+            let postKey = ref.child("posts/\(userUid)/allImages").childByAutoId().key
+            
+            let childUpdates = ["posts/\(userUid)/postImageUrl": urlString,
+                                "posts/\(userUid)/allImages/\(postKey)": urlString]
             ref.updateChildValues(childUpdates)
         }
     }
