@@ -62,7 +62,7 @@ extension AppDelegate {
             let fabMenuController = AppFABMenuController(rootViewController: UIStoryboard.initialViewController(for: .main))
             let toolBarController = AppToolbarController(rootViewController: fabMenuController)
 
-            initialViewController = AppNavigationDrawerController(rootViewController: toolBarController, leftViewController: LeftViewController(), rightViewController: RightViewController())
+            initialViewController = AppNavigationDrawerController(rootViewController: toolBarController, leftViewController: LeftViewController())
 
         } else {
             initialViewController = UIStoryboard.initialViewController(for: .login)
