@@ -21,35 +21,31 @@ class TreeViewController: UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        preparePageTabBarItem()
+        prepareTabBarItem()
     }
     
-    init() {
-        super.init(nibName: nil, bundle: nil)
-        preparePageTabBarItem()
-    }
-    
-    fileprivate func preparePageTabBarItem() {
-        pageTabBarItem.title = "Your tree"
-        pageTabBarItem.titleColor = Color.blueGrey.base
+    private func prepareTabBarItem() {
+        tabBarItem.title = "Your trees"
+        tabBarItem.image = Icon.cm.photoLibrary?.tint(with: Color.blueGrey.base)
+        tabBarItem.selectedImage = Icon.cm.photoLibrary?.tint(with: Color.blue.base)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        NotificationCenter.default.addObserver(self, selector: #selector(reloadTimeline), name: NSNotification.Name(rawValue: "upload"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadTimeline), name: NSNotification.Name(rawValue: "upload"), object: nil)
 
         // update the tree image
-//        TreeService.retrieveImage { imageUrl in
-//            self.treePhoto.kf.setImage(with: URL(string: imageUrl))
-//        }
+        TreeService.retrieveImage { imageUrl in
+            self.treePhoto.kf.setImage(with: URL(string: imageUrl))
+        }
     }
     
-//    func reloadTimeline() {
-//        TreeService.retrieveImage { imageUrl in
-//            self.treePhoto.kf.setImage(with: URL(string: imageUrl))
-//        }
-//    }
+    func reloadTimeline() {
+        TreeService.retrieveImage { imageUrl in
+            self.treePhoto.kf.setImage(with: URL(string: imageUrl))
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

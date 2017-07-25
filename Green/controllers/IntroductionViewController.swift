@@ -13,12 +13,13 @@ class IntroductionViewController: UIPageViewController {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        preparePageTabBarItem()
+        prepareTabBarItem()
     }
     
-    fileprivate func preparePageTabBarItem() {
-        pageTabBarItem.title = "Red"
-        pageTabBarItem.titleColor = Color.blueGrey.base
+    private func prepareTabBarItem() {
+        tabBarItem.title = "Introduction"
+        tabBarItem.image = Icon.star?.tint(with: Color.blueGrey.base)
+        tabBarItem.selectedImage = Icon.cm.star?.tint(with: Color.blue.base)
     }
     
     override func viewDidLoad() {
