@@ -25,6 +25,7 @@
 		05A84CEE1F157ED20018C4C4 /* TreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A84CED1F157ED20018C4C4 /* TreeViewController.swift */; };
 		05C1B6801F2023C100E6EFDD /* UIextension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C1B67F1F2023C100E6EFDD /* UIextension.swift */; };
 		05E21ACE1F27B97500ED8627 /* TransitionedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E21ACD1F27B97500ED8627 /* TransitionedViewController.swift */; };
+		05E21AD01F27E59900ED8627 /* RewardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E21ACF1F27E59900ED8627 /* RewardService.swift */; };
 		05EFBE341F193DCC009DE0C4 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EFBE331F193DCC009DE0C4 /* IntroductionViewController.swift */; };
 		05EFBE391F19827D009DE0C4 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EFBE381F19827D009DE0C4 /* StorageService.swift */; };
 		05EFBE3F1F19843F009DE0C4 /* TreeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EFBE3E1F19843F009DE0C4 /* TreeService.swift */; };
@@ -59,6 +60,7 @@
 		05A84CED1F157ED20018C4C4 /* TreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TreeViewController.swift; path = controllers/TreeViewController.swift; sourceTree = "<group>"; };
 		05C1B67F1F2023C100E6EFDD /* UIextension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIextension.swift; path = extensions/UIextension.swift; sourceTree = "<group>"; };
 		05E21ACD1F27B97500ED8627 /* TransitionedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransitionedViewController.swift; path = controllers/navigationDrawer/TransitionedViewController.swift; sourceTree = "<group>"; };
+		05E21ACF1F27E59900ED8627 /* RewardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RewardService.swift; path = services/RewardService.swift; sourceTree = "<group>"; };
 		05EFBE331F193DCC009DE0C4 /* IntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntroductionViewController.swift; path = controllers/IntroductionViewController.swift; sourceTree = "<group>"; };
 		05EFBE381F19827D009DE0C4 /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StorageService.swift; path = services/StorageService.swift; sourceTree = "<group>"; };
 		05EFBE3E1F19843F009DE0C4 /* TreeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TreeService.swift; path = services/TreeService.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				05EFBE3E1F19843F009DE0C4 /* TreeService.swift */,
 				05EFBE381F19827D009DE0C4 /* StorageService.swift */,
 				051DBFCD1F1FF6D2004066ED /* TreeVerifier.swift */,
+				05E21ACF1F27E59900ED8627 /* RewardService.swift */,
 			);
 			name = services;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 			files = (
 				05082B8F1F16A8E800A4415B /* UserProfile.swift in Sources */,
 				05F4E9541F15572B008159E9 /* AppDelegate.swift in Sources */,
+				05E21AD01F27E59900ED8627 /* RewardService.swift in Sources */,
 				05EFBE3F1F19843F009DE0C4 /* TreeService.swift in Sources */,
 				0512D8C11F26995A00EE6B0B /* AppNavigationDrawerController.swift in Sources */,
 				05EFBE421F1991B0009DE0C4 /* StorageExtensions.swift in Sources */,

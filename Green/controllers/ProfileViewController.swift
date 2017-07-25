@@ -84,10 +84,6 @@ extension ProfileViewController: UITableViewDataSource {
         
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Achievements"
-    }
 }
 
 extension ProfileViewController: UITableViewDelegate {

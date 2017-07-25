@@ -144,7 +144,7 @@
                                                 </constraints>
                                             </view>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xr2-LR-6Dg">
-                                                <rect key="frame" x="0.0" y="513" width="320" height="438"/>
+                                                <rect key="frame" x="0.0" y="554.5" width="320" height="396.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RewardCell" rowHeight="80" id="mnF-q7-nTJ" customClass="RewardCell" customModule="Green" customModuleProvider="target">
@@ -189,13 +189,21 @@
                                                     <outlet property="delegate" destination="ohk-iL-ZXN" id="SY3-Z6-bLz"/>
                                                 </connections>
                                             </tableView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Achivements" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imG-p5-vOp">
+                                                <rect key="frame" x="10" y="505" width="154.5" height="30"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="J65-r6-0tO" firstAttribute="top" secondItem="INI-Tc-cTd" secondAttribute="bottom" constant="20" id="2Ua-Oh-mrd"/>
+                                            <constraint firstItem="Xr2-LR-6Dg" firstAttribute="top" secondItem="imG-p5-vOp" secondAttribute="bottom" constant="20" id="5dz-U6-0ms"/>
                                             <constraint firstAttribute="bottom" secondItem="Xr2-LR-6Dg" secondAttribute="bottom" id="AOn-bg-d01"/>
                                             <constraint firstItem="INI-Tc-cTd" firstAttribute="top" secondItem="TXg-I7-BSs" secondAttribute="top" id="FCW-LU-u4c"/>
-                                            <constraint firstItem="Xr2-LR-6Dg" firstAttribute="top" secondItem="J65-r6-0tO" secondAttribute="bottom" constant="48" id="UBc-sa-uDL"/>
+                                            <constraint firstItem="imG-p5-vOp" firstAttribute="top" secondItem="J65-r6-0tO" secondAttribute="bottom" constant="40" id="HCn-9x-kpn"/>
+                                            <constraint firstItem="imG-p5-vOp" firstAttribute="leading" secondItem="TXg-I7-BSs" secondAttribute="leading" constant="10" id="TqI-VL-uND"/>
                                             <constraint firstItem="Xr2-LR-6Dg" firstAttribute="leading" secondItem="INI-Tc-cTd" secondAttribute="leading" id="ZPS-zp-0cV"/>
                                             <constraint firstItem="Xr2-LR-6Dg" firstAttribute="leading" secondItem="TXg-I7-BSs" secondAttribute="leading" id="mpB-oK-gGI"/>
                                             <constraint firstItem="Xr2-LR-6Dg" firstAttribute="leading" secondItem="J65-r6-0tO" secondAttribute="leading" id="pyG-dc-vHO"/>
