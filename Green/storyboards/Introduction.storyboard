@@ -160,10 +160,10 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="nox-0M-NIU" userLabel="Intro view">
-                                <rect key="frame" x="19" y="286.5" width="337.5" height="43.5"/>
+                                <rect key="frame" x="19" y="286.5" width="337.5" height="43"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STEP 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bmh-iP-SzY">
-                                        <rect key="frame" x="0.0" y="0.0" width="236.5" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="236.5" height="34"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="29"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -183,7 +183,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHu-V2-cAp">
-                                <rect key="frame" x="19" y="380" width="337.5" height="122"/>
+                                <rect key="frame" x="19" y="379.5" width="337.5" height="122"/>
                                 <string key="text">Sometimes containerized trees become root-bound or the roots look like they're about to circle the root ball. If your tree is like this, cut an X across the bottom of the root ball and four vertical slices along the sides of the root ball with a sharp knife.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -193,7 +193,6 @@
                         <color key="backgroundColor" red="0.48838376998901367" green="0.55349743366241455" blue="0.537242591381073" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="nox-0M-NIU" firstAttribute="centerX" secondItem="E8z-Ar-qD3" secondAttribute="centerX" id="8Xb-o3-yrU"/>
-                            <constraint firstItem="nfn-md-aSn" firstAttribute="top" secondItem="dHu-V2-cAp" secondAttribute="bottom" constant="165" id="GKr-n6-OOB"/>
                             <constraint firstItem="hSV-7F-pOn" firstAttribute="width" secondItem="E8z-Ar-qD3" secondAttribute="width" multiplier="0.7" id="GXC-je-KqB"/>
                             <constraint firstItem="nox-0M-NIU" firstAttribute="width" secondItem="E8z-Ar-qD3" secondAttribute="width" multiplier="0.9" id="ImF-Pp-mf5"/>
                             <constraint firstItem="hSV-7F-pOn" firstAttribute="top" secondItem="WDw-Nx-ktq" secondAttribute="bottom" multiplier="2" id="NGQ-Q8-s9S"/>

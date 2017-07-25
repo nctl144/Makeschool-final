@@ -57,16 +57,16 @@ extension AppDelegate {
         let initialViewController: UIViewController
         
         // skip the login flow if the currentuser has been set, firuser has been set
-        if Auth.auth().currentUser != nil {
-            
+//        if Auth.auth().currentUser != nil {
+        
             let fabMenuController = AppFABMenuController(rootViewController: UIStoryboard.initialViewController(for: .main))
             let toolBarController = AppToolbarController(rootViewController: fabMenuController)
 
             initialViewController = AppNavigationDrawerController(rootViewController: toolBarController, leftViewController: LeftViewController())
 
-        } else {
-            initialViewController = UIStoryboard.initialViewController(for: .login)
-        }
+//        } else {
+//            initialViewController = UIStoryboard.initialViewController(for: .login)
+//        }
         
         window?.rootViewController = initialViewController
         window?.makeKeyAndVisible()
