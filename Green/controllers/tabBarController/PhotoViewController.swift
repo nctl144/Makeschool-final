@@ -11,6 +11,9 @@ import Kingfisher
 import Material
 
 class PhotoViewController: UIViewController {
+    
+    fileprivate var images = [UIImage]()
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         prepareTabBarItem()
@@ -25,8 +28,15 @@ class PhotoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        TreeService.retrieveAllImages { image in
-            print(image)
+        TreeService.retrieveAllImages { imagesUrls in
+            for imageUrl in imagesUrls {
+                guard let url = URL(string: imageUrl) else {
+                    return
+                }
+                let data = try? Data(contentsOf: url)
+                self.images.append(UIImage(data: data!)!)
+            }
+            print(self.images)
         }
     }
 }
