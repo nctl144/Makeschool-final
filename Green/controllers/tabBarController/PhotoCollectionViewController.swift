@@ -57,7 +57,7 @@ extension PhotoCollectionViewController {
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: "PhotoCollectionViewCell")
         collectionView.backgroundColor = .clear
-        collectionView.delegate = self as? UICollectionViewDelegate
+        collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.showsHorizontalScrollIndicator = false
         
