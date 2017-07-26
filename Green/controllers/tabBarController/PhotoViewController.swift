@@ -11,6 +11,7 @@ import Kingfisher
 import Material
 
 class PhotoViewController: UIViewController {
+    fileprivate var collectionView: UICollectionView!
     
     fileprivate var images = [UIImage]()
     
@@ -36,7 +37,54 @@ class PhotoViewController: UIViewController {
                 let data = try? Data(contentsOf: url)
                 self.images.append(UIImage(data: data!)!)
             }
-            print(self.images)
+            self.prepareCollectionView()
         }
+    }
+}
+
+extension PhotoViewController {
+    fileprivate func prepareCollectionView() {
+        let columns: CGFloat = .phone == Device.userInterfaceIdiom ? 4 : 11
+        let w: CGFloat = (view.bounds.width - columns - 1) / columns
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = 1
+        layout.minimumInteritemSpacing = 1
+        layout.scrollDirection = .vertical
+        layout.itemSize = CGSize(width: w, height: w)
+        
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.register(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: "PhotoCollectionViewCell")
+        collectionView.backgroundColor = .clear
+        collectionView.delegate = self as? UICollectionViewDelegate
+        collectionView.dataSource = self
+        collectionView.showsHorizontalScrollIndicator = false
+        
+        view.layout(collectionView).horizontally().top().bottom(50)
+        
+        collectionView.reloadData()
+    }
+}
+
+extension PhotoViewController: UICollectionViewDataSource {
+    @objc
+    open func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    @objc
+    open func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return images.count
+    }
+    
+    @objc
+    open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCollectionViewCell", for: indexPath) as! PhotoCollectionViewCell
+        
+        cell.imageView.image = images[indexPath.item]
+        cell.imageView.motionIdentifier = "photo_\(indexPath.item)"
+        
+        
+        return cell
     }
 }

@@ -18,6 +18,7 @@
 		0512D8C41F26996300EE6B0B /* AppFABMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512D8C31F26996300EE6B0B /* AppFABMenuController.swift */; };
 		051DBFCA1F1FCB03004066ED /* Introduction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 051DBFC91F1FCB03004066ED /* Introduction.storyboard */; };
 		051DBFCE1F1FF6D2004066ED /* TreeVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051DBFCD1F1FF6D2004066ED /* TreeVerifier.swift */; };
+		053460271F2918E000F88A21 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053460261F2918E000F88A21 /* PhotoCollectionViewCell.swift */; };
 		0536AB8B1F156F7C00A14C6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0536AB891F156F7C00A14C6C /* Main.storyboard */; };
 		058B772F1F183D9A00F44FCE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 058B772E1F183D9A00F44FCE /* GoogleService-Info.plist */; };
 		05A84CEC1F1571940018C4C4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A84CEB1F1571940018C4C4 /* HomeViewController.swift */; };
@@ -53,6 +54,7 @@
 		0512D8C31F26996300EE6B0B /* AppFABMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppFABMenuController.swift; path = controllers/fabMenuController/AppFABMenuController.swift; sourceTree = "<group>"; };
 		051DBFC91F1FCB03004066ED /* Introduction.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Introduction.storyboard; path = storyboards/Introduction.storyboard; sourceTree = "<group>"; };
 		051DBFCD1F1FF6D2004066ED /* TreeVerifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TreeVerifier.swift; path = services/TreeVerifier.swift; sourceTree = "<group>"; };
+		053460261F2918E000F88A21 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoCollectionViewCell.swift; path = views/PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		0536AB891F156F7C00A14C6C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = storyboards/Main.storyboard; sourceTree = "<group>"; };
 		0536AB8E1F156F9E00A14C6C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = supporting/Info.plist; sourceTree = "<group>"; };
 		0553938A1F1ED9CD005664A7 /* Green.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Green.entitlements; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 		0512D8A81F267CC800EE6B0B /* views */ = {
 			isa = PBXGroup;
 			children = (
+				053460261F2918E000F88A21 /* PhotoCollectionViewCell.swift */,
 				0512D8AB1F26851300EE6B0B /* RewardCell.swift */,
 			);
 			name = views;
@@ -400,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05E21AD31F27FAE200ED8627 /* AppSnackbarController.swift in Sources */,
+				053460271F2918E000F88A21 /* PhotoCollectionViewCell.swift in Sources */,
 				05082B8F1F16A8E800A4415B /* UserProfile.swift in Sources */,
 				05F4E9541F15572B008159E9 /* AppDelegate.swift in Sources */,
 				05E21AD01F27E59900ED8627 /* RewardService.swift in Sources */,

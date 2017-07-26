@@ -71,8 +71,6 @@ struct TreeService {
                 return completion([])
             }
             
-            let dispatchGroup = DispatchGroup()
-            
             var images: [String] = []
             
             for postSnap in snapshot {
