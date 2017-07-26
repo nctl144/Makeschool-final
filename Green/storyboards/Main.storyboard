@@ -26,7 +26,7 @@
                     <connections>
                         <segue destination="H6U-BN-d2H" kind="relationship" relationship="viewControllers" id="To8-jC-6cP"/>
                         <segue destination="vSO-EQ-eOs" kind="relationship" relationship="viewControllers" id="cVa-RG-hre"/>
-                        <segue destination="AP5-M9-ksO" kind="relationship" relationship="viewControllers" id="L1u-GX-5hI"/>
+                        <segue destination="vjs-a5-VfR" kind="relationship" relationship="viewControllers" id="L1u-GX-5hI"/>
                         <segue destination="ohk-iL-ZXN" kind="relationship" relationship="viewControllers" id="bAl-ND-xbk"/>
                     </connections>
                 </tabBarController>
@@ -427,32 +427,19 @@
             </objects>
             <point key="canvasLocation" x="810" y="1087"/>
         </scene>
-        <!--Introduction View -->
-        <scene sceneID="MJ1-Cj-1YH">
+        <!--photoController-->
+        <scene sceneID="xh8-OX-zU1">
             <objects>
-                <viewController storyboardIdentifier="photoController" title="Introduction View " id="AP5-M9-ksO" customClass="PhotoViewController" customModule="Green" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="BDf-QP-VKV"/>
-                        <viewControllerLayoutGuide type="bottom" id="kO7-eO-138"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="6sB-7x-Ir4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" tag="3" title="Take Photo" image="camera" id="sA2-T9-PsP"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO">
-                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </simulatedTabBarMetrics>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j4C-cL-f45" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="photoController" storyboardName="Photo" referencedIdentifier="photoController" id="vjs-a5-VfR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="vR1-qs-6tK"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7LE-0v-NEu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="81" y="185"/>
         </scene>
     </scenes>
     <resources>
         <image name="btn_heart_red_solid" width="24" height="24"/>
-        <image name="camera" width="25" height="25"/>
         <image name="facebook-icon-2" width="50" height="50"/>
         <image name="messenger-icon-2" width="50" height="50"/>
         <image name="tab_home_black" width="25" height="25"/>

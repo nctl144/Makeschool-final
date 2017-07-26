@@ -10,7 +10,7 @@ import UIKit
 import Kingfisher
 import Material
 
-class PhotoViewController: UIViewController {
+class PhotoCollectionViewController: UIViewController {
     fileprivate var collectionView: UICollectionView!
     
     fileprivate var images = [UIImage]()
@@ -28,6 +28,7 @@ class PhotoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        isMotionEnabled = true
         
         TreeService.retrieveAllImages { imagesUrls in
             for imageUrl in imagesUrls {
@@ -42,7 +43,7 @@ class PhotoViewController: UIViewController {
     }
 }
 
-extension PhotoViewController {
+extension PhotoCollectionViewController {
     fileprivate func prepareCollectionView() {
         let columns: CGFloat = .phone == Device.userInterfaceIdiom ? 4 : 11
         let w: CGFloat = (view.bounds.width - columns - 1) / columns
@@ -66,7 +67,7 @@ extension PhotoViewController {
     }
 }
 
-extension PhotoViewController: UICollectionViewDataSource {
+extension PhotoCollectionViewController: UICollectionViewDataSource {
     @objc
     open func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -86,5 +87,12 @@ extension PhotoViewController: UICollectionViewDataSource {
         
         
         return cell
+    }
+}
+
+extension PhotoCollectionViewController: UICollectionViewDelegate {
+    @objc
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        navigationController?.pushViewController(PhotoViewController(index: indexPath.item), animated: true)
     }
 }
