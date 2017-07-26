@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 import Material
 
 class PhotoViewController: UIViewController {
@@ -23,5 +24,9 @@ class PhotoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        TreeService.retrieveAllImages { image in
+            print(image)
+        }
     }
 }

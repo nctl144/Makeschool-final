@@ -57,4 +57,34 @@ struct TreeService {
             print(error.localizedDescription)
         }
     }
+    
+    static func retrieveAllImages(completion: @escaping ([String]) -> Void) {
+        guard let userUid = Auth.auth().currentUser?.uid
+            else {
+                return
+        }
+        
+        let ref = Database.database().reference()
+        
+        ref.child("posts").child(userUid).child("allImages").observe(DataEventType.value, with: { (snapshot) in
+            guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else {
+                return completion([])
+            }
+            
+            let dispatchGroup = DispatchGroup()
+            
+            var images: [String] = []
+            
+            for postSnap in snapshot {
+                guard let imageUrl = postSnap.value as? String else {
+                    continue
+                }
+                images.append(imageUrl)
+            }
+            completion(images)
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+    }
 }
