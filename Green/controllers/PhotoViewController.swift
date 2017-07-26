@@ -14,36 +14,7 @@ class PhotoViewController: UIViewController {
     
     var dataSourceItems = [DataSourceItem]()
     
-    fileprivate let photos = [
-        "photo_1",
-        "photo_2",
-        "photo_3",
-        "photo_4",
-        "photo_5",
-        "photo_6",
-        "photo_7",
-        "photo_8",
-        "photo_9",
-        "photo_10",
-        "photo_12",
-        "photo_13",
-        "photo_14",
-        "photo_15",
-        "photo_16",
-        "photo_17",
-        "photo_18",
-        "photo_19",
-        "photo_20",
-        "photo_21",
-        "photo_22",
-        "photo_23",
-        "photo_24",
-        "photo_25",
-        "photo_26",
-        "photo_27",
-        "photo_28",
-        "photo_29"
-    ]
+    fileprivate var photos: [UIImage] = []
     
     fileprivate var fabButton: FABButton!
     
@@ -64,7 +35,6 @@ class PhotoViewController: UIViewController {
         view.backgroundColor = .white
         
         preparePhotos()
-        prepareFABButton()
         prepareCollectionView()
     }
     
@@ -75,21 +45,16 @@ class PhotoViewController: UIViewController {
 
 extension PhotoViewController {
     fileprivate func preparePhotos() {
-        photos.forEach { [weak self, w = view.bounds.width] in
-            guard let image = UIImage(named: $0) else {
-                return
+        TreeService.retrieveAllImages { imagesUrls in
+            for imageUrl in imagesUrls {
+                guard let url = URL(string: imageUrl) else {
+                    return
+                }
+                let data = try? Data(contentsOf: url)
+                let w = self.view.bounds.width
+                self.dataSourceItems.append(DataSourceItem(data: UIImage(data: data!)!, width: w))
             }
-            
-            self?.dataSourceItems.append(DataSourceItem(data: image, width: w))
         }
-    }
-    
-    fileprivate func prepareFABButton() {
-        fabButton = FABButton(image: Icon.cm.moreHorizontal, tintColor: .white)
-        fabButton.pulseColor = .white
-        fabButton.backgroundColor = Color.red.base
-        fabButton.motionIdentifier = "options"
-        view.layout(fabButton).width(64).height(64).bottom(24).right(24)
     }
     
     fileprivate func prepareCollectionView() {
