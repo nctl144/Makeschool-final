@@ -25,6 +25,7 @@
 		0536AB8B1F156F7C00A14C6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0536AB891F156F7C00A14C6C /* Main.storyboard */; };
 		058B772F1F183D9A00F44FCE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 058B772E1F183D9A00F44FCE /* GoogleService-Info.plist */; };
 		05A84CEC1F1571940018C4C4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A84CEB1F1571940018C4C4 /* HomeViewController.swift */; };
+		05AD648C1F2A714A00803CE7 /* Stages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AD648B1F2A714A00803CE7 /* Stages.swift */; };
 		05C1B6801F2023C100E6EFDD /* UIextension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C1B67F1F2023C100E6EFDD /* UIextension.swift */; };
 		05E21ACE1F27B97500ED8627 /* TransitionedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E21ACD1F27B97500ED8627 /* TransitionedViewController.swift */; };
 		05E21AD01F27E59900ED8627 /* RewardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E21ACF1F27E59900ED8627 /* RewardService.swift */; };
@@ -66,6 +67,7 @@
 		0553938A1F1ED9CD005664A7 /* Green.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Green.entitlements; sourceTree = "<group>"; };
 		058B772E1F183D9A00F44FCE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "supporting/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		05A84CEB1F1571940018C4C4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = controllers/HomeViewController.swift; sourceTree = "<group>"; };
+		05AD648B1F2A714A00803CE7 /* Stages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stages.swift; path = models/Stages.swift; sourceTree = "<group>"; };
 		05C1B67F1F2023C100E6EFDD /* UIextension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIextension.swift; path = extensions/UIextension.swift; sourceTree = "<group>"; };
 		05E21ACD1F27B97500ED8627 /* TransitionedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransitionedViewController.swift; path = controllers/navigationDrawer/TransitionedViewController.swift; sourceTree = "<group>"; };
 		05E21ACF1F27E59900ED8627 /* RewardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RewardService.swift; path = services/RewardService.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				05F038471F183505004C335D /* TreeInfo.swift */,
 				05082B8E1F16A8E800A4415B /* UserProfile.swift */,
 				0512D8A61F2673C000EE6B0B /* Reward.swift */,
+				05AD648B1F2A714A00803CE7 /* Stages.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -319,10 +322,13 @@
 				TargetAttributes = {
 					05F4E94F1F15572B008159E9 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 988TK7CY2J;
+						DevelopmentTeam = 9CL97632BB;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Push = {
 								enabled = 1;
 							};
 							com.apple.WAC = {
@@ -421,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05E21AD31F27FAE200ED8627 /* AppSnackbarController.swift in Sources */,
+				05AD648C1F2A714A00803CE7 /* Stages.swift in Sources */,
 				053460271F2918E000F88A21 /* PhotoCollectionViewCell.swift in Sources */,
 				05082B8F1F16A8E800A4415B /* UserProfile.swift in Sources */,
 				05F4E9541F15572B008159E9 /* AppDelegate.swift in Sources */,
@@ -553,10 +560,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Green/Green.entitlements;
-				DEVELOPMENT_TEAM = 988TK7CY2J;
+				DEVELOPMENT_TEAM = 9CL97632BB;
 				INFOPLIST_FILE = "$(SRCROOT)/Green/supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lamo.Green;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tunglam.Green;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -568,10 +575,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Green/Green.entitlements;
-				DEVELOPMENT_TEAM = 988TK7CY2J;
+				DEVELOPMENT_TEAM = 9CL97632BB;
 				INFOPLIST_FILE = "$(SRCROOT)/Green/supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lamo.Green;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tunglam.Green;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
