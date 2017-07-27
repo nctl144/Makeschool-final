@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import UserNotifications
 import CoreData
 import Firebase
 import FBSDKCoreKit
@@ -25,9 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         configureIntitialRootViewController(for: window)
-        
-        // notification
-        registerForPushNotifications()
         
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
@@ -53,46 +49,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask(rawValue: UIInterfaceOrientationMask.portrait.rawValue)
     }
-    
-//    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-//        let tokenParts = deviceToken.map { data -> String in
-//            return String(format: "%02.2hhx", data)
-//        }
-//        
-//        let token = tokenParts.joined()
-//        print("Device Token: \(token)")
-//    }
-//    
-//    func application(_ application: UIApplication,
-//                     didFailToRegisterForRemoteNotificationsWithError error: Error) {
-//        print("Failed to register: \(error)")
-//    }
 }
 
-extension AppDelegate {
-    func registerForPushNotifications() {
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
-            (granted, error) in
-            print("Permission granted: \(granted)")
-            
-//            guard granted else {
-//                return
-//            }
-//            
-//            self.getNotificationSettings()
-        }
-    }
-    
-//    func getNotificationSettings() {
-//        UNUserNotificationCenter.current().getNotificationSettings { (settings) in
-//            print("Notification settings: \(settings)")
-//            guard settings.authorizationStatus == .authorized else { return }
-//            UIApplication.shared.registerForRemoteNotifications()
-//        }
-//    }
-}
-
-
+// determine if the userdefault has been set, if yes then change the view to main immediately
 extension AppDelegate {
     func configureIntitialRootViewController(for window: UIWindow?) {
         let initialViewController: UIViewController
