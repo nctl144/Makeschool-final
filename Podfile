@@ -11,6 +11,7 @@ target 'Green' do
   pod 'FirebaseUI/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
+  pod 'Firebase/Messaging'
 
   pod 'FacebookCore'
   pod 'FacebookLogin', '~> 0.2'

@@ -325,10 +325,13 @@
 				TargetAttributes = {
 					05F4E94F1F15572B008159E9 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 988TK7CY2J;
+						DevelopmentTeam = 9CL97632BB;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Push = {
 								enabled = 1;
 							};
 							com.apple.WAC = {
@@ -561,10 +564,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Green/Green.entitlements;
-				DEVELOPMENT_TEAM = 988TK7CY2J;
+				DEVELOPMENT_TEAM = 9CL97632BB;
 				INFOPLIST_FILE = "$(SRCROOT)/Green/supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lamo.Green;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tunglam.Green;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -576,10 +579,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Green/Green.entitlements;
-				DEVELOPMENT_TEAM = 988TK7CY2J;
+				DEVELOPMENT_TEAM = 9CL97632BB;
 				INFOPLIST_FILE = "$(SRCROOT)/Green/supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lamo.Green;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tunglam.Green;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
