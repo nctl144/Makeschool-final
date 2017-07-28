@@ -48,8 +48,12 @@ extension WaterViewController {
     }
     
     func updateTimer() {
-        seconds -= 1
-        timeLabel.text = "\(timeString(time: TimeInterval(seconds)))"
+        if seconds < 1 {
+            timer.invalidate()
+        } else {
+            seconds -= 1
+            timeLabel.text = "\(timeString(time: TimeInterval(seconds)))"
+        }
     }
     
     func timeString(time:TimeInterval) -> String {
