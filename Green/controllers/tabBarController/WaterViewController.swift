@@ -13,9 +13,11 @@ class WaterViewController: UIViewController {
     @IBOutlet weak var waterConfirmButton: FlatButton!
     @IBOutlet weak var timeLabel: UILabel!
     
-    var seconds = 100
+    var seconds = 0
     var timer = Timer()
     var isTimeRunning = false
+    
+    let date = Date()
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -30,8 +32,9 @@ class WaterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        seconds = calculateTimeLeft()
         timeLabel.text = "\(timeString(time: TimeInterval(seconds)))"
         runTimer()
     }
@@ -61,5 +64,20 @@ extension WaterViewController {
         let minutes = Int(time) / 60 % 60
         let seconds = Int(time) % 60
         return String(format: "%02i:%02i:%02i", hours, minutes, seconds)
+    }
+    
+    func calculateTimeLeft() -> Int {
+        
+        let now = Date()
+        let calendar = Calendar.current
+        // get the time for the next 8am
+        let components = DateComponents(calendar: calendar, hour: 8)
+        let nextTime = calendar.nextDate(after: now, matching: components, matchingPolicy: .nextTime)!
+        let diff = calendar.dateComponents([.second], from: now, to: nextTime)
+        
+        guard let secondLeft = diff.second else {
+            return 0
+        }
+        return secondLeft
     }
 }
