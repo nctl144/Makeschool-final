@@ -10,6 +10,7 @@ import UIKit
 import Material
 
 class WaterViewController: UIViewController {
+    @IBOutlet weak var waterConfirmButton: FlatButton!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -33,4 +34,6 @@ class WaterViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func waterButtonTapped(_ sender: UIButton) {
+    }
 }

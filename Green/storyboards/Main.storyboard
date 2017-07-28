@@ -11,6 +11,11 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Main Tab Bar View Controller-->
         <scene sceneID="M5H-El-RK7">
@@ -26,8 +31,8 @@
                     <connections>
                         <segue destination="H6U-BN-d2H" kind="relationship" relationship="viewControllers" id="To8-jC-6cP"/>
                         <segue destination="vSO-EQ-eOs" kind="relationship" relationship="viewControllers" id="cVa-RG-hre"/>
-                        <segue destination="ohk-iL-ZXN" kind="relationship" relationship="viewControllers" id="bAl-ND-xbk"/>
                         <segue destination="efe-Cb-noI" kind="relationship" relationship="viewControllers" id="G0o-0K-Xxa"/>
+                        <segue destination="ohk-iL-ZXN" kind="relationship" relationship="viewControllers" id="bAl-ND-xbk"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O4e-Qt-swC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -372,13 +377,63 @@
                     <view key="view" contentMode="scaleToFill" id="Koj-xe-0gc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="water" translatesAutoresizingMaskIntoConstraints="NO" id="hML-f5-hpN">
+                                <rect key="frame" x="64" y="70" width="192" height="153.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hML-f5-hpN" secondAttribute="height" multiplier="5:4" id="H1V-sY-tO9"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You need to water your tree in: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5t-5B-dgG">
+                                <rect key="frame" x="16" y="273.5" width="288" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1h1-RO-J9x">
+                                <rect key="frame" x="0.0" y="344" width="320" height="53"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGB-qV-bEU" customClass="FlatButton" customModule="Material">
+                                <rect key="frame" x="48" y="425" width="224" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Hh0-vz-K9u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                <state key="normal" title="I have watered the tree!">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="waterButtonTapped:" destination="efe-Cb-noI" eventType="touchUpInside" id="tN7-6Y-0xG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98823529409999999" green="0.98431372549999996" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hML-f5-hpN" firstAttribute="top" secondItem="jTm-ne-KX6" secondAttribute="bottom" constant="50" id="0n3-kS-hPi"/>
+                            <constraint firstItem="cGB-qV-bEU" firstAttribute="centerX" secondItem="Koj-xe-0gc" secondAttribute="centerX" id="23D-3L-0xE"/>
+                            <constraint firstItem="1h1-RO-J9x" firstAttribute="top" secondItem="o5t-5B-dgG" secondAttribute="bottom" constant="50" id="CfG-hH-5SU"/>
+                            <constraint firstItem="hML-f5-hpN" firstAttribute="width" secondItem="Koj-xe-0gc" secondAttribute="width" multiplier="0.6" id="DHy-VT-KET"/>
+                            <constraint firstItem="hML-f5-hpN" firstAttribute="centerX" secondItem="Koj-xe-0gc" secondAttribute="centerX" id="I5r-NJ-vFU"/>
+                            <constraint firstItem="1h1-RO-J9x" firstAttribute="centerX" secondItem="Koj-xe-0gc" secondAttribute="centerX" id="LIq-O5-rjg"/>
+                            <constraint firstItem="cGB-qV-bEU" firstAttribute="width" secondItem="Koj-xe-0gc" secondAttribute="width" multiplier="0.7" id="N4y-Al-Yja"/>
+                            <constraint firstItem="1h1-RO-J9x" firstAttribute="width" secondItem="Koj-xe-0gc" secondAttribute="width" id="icQ-9b-cm2"/>
+                            <constraint firstItem="O8d-V9-7sP" firstAttribute="top" secondItem="cGB-qV-bEU" secondAttribute="bottom" constant="50" id="oYz-s7-QXu"/>
+                            <constraint firstItem="o5t-5B-dgG" firstAttribute="top" secondItem="hML-f5-hpN" secondAttribute="bottom" constant="50" id="obR-2h-2KQ"/>
+                            <constraint firstItem="o5t-5B-dgG" firstAttribute="centerX" secondItem="Koj-xe-0gc" secondAttribute="centerX" id="uvh-ub-Iuh"/>
+                            <constraint firstItem="o5t-5B-dgG" firstAttribute="width" secondItem="Koj-xe-0gc" secondAttribute="width" multiplier="0.9" id="wqY-sO-tJe"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="GdJ-t5-5wl"/>
+                    <connections>
+                        <outlet property="waterConfirmButton" destination="cGB-qV-bEU" id="AsW-ab-wPL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UOR-99-B8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="401" y="184"/>
+            <point key="canvasLocation" x="399.375" y="183.80281690140845"/>
         </scene>
         <!--Introduction-->
         <scene sceneID="oEp-rq-Ufr">
@@ -453,6 +508,7 @@
         <image name="messenger-icon-2" width="50" height="50"/>
         <image name="tab_home_black" width="25" height="25"/>
         <image name="tree" width="25" height="25"/>
+        <image name="water" width="128" height="128"/>
     </resources>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
