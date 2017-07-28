@@ -391,8 +391,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1h1-RO-J9x">
-                                <rect key="frame" x="0.0" y="344" width="320" height="53"/>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="40"/>
+                                <rect key="frame" x="0.0" y="319" width="320" height="79.5"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="60"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -414,7 +414,7 @@
                         <constraints>
                             <constraint firstItem="hML-f5-hpN" firstAttribute="top" secondItem="jTm-ne-KX6" secondAttribute="bottom" constant="50" id="0n3-kS-hPi"/>
                             <constraint firstItem="cGB-qV-bEU" firstAttribute="centerX" secondItem="Koj-xe-0gc" secondAttribute="centerX" id="23D-3L-0xE"/>
-                            <constraint firstItem="1h1-RO-J9x" firstAttribute="top" secondItem="o5t-5B-dgG" secondAttribute="bottom" constant="50" id="CfG-hH-5SU"/>
+                            <constraint firstItem="1h1-RO-J9x" firstAttribute="top" secondItem="o5t-5B-dgG" secondAttribute="bottom" constant="25" id="CfG-hH-5SU"/>
                             <constraint firstItem="hML-f5-hpN" firstAttribute="width" secondItem="Koj-xe-0gc" secondAttribute="width" multiplier="0.6" id="DHy-VT-KET"/>
                             <constraint firstItem="hML-f5-hpN" firstAttribute="centerX" secondItem="Koj-xe-0gc" secondAttribute="centerX" id="I5r-NJ-vFU"/>
                             <constraint firstItem="1h1-RO-J9x" firstAttribute="centerX" secondItem="Koj-xe-0gc" secondAttribute="centerX" id="LIq-O5-rjg"/>

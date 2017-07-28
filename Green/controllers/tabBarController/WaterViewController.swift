@@ -32,6 +32,7 @@ class WaterViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        timeLabel.text = "\(timeString(time: TimeInterval(seconds)))"
         runTimer()
     }
     
@@ -48,6 +49,13 @@ extension WaterViewController {
     
     func updateTimer() {
         seconds -= 1
-        timeLabel.text = "\(seconds)"
+        timeLabel.text = "\(timeString(time: TimeInterval(seconds)))"
+    }
+    
+    func timeString(time:TimeInterval) -> String {
+        let hours = Int(time) / 3600
+        let minutes = Int(time) / 60 % 60
+        let seconds = Int(time) % 60
+        return String(format: "%02i:%02i:%02i", hours, minutes, seconds)
     }
 }
