@@ -11,6 +11,11 @@ import Material
 
 class WaterViewController: UIViewController {
     @IBOutlet weak var waterConfirmButton: FlatButton!
+    @IBOutlet weak var timeLabel: UILabel!
+    
+    var seconds = 100
+    var timer = Timer()
+    var isTimeRunning = false
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -27,13 +32,22 @@ class WaterViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        runTimer()
     }
     
     @IBAction func waterButtonTapped(_ sender: UIButton) {
+        print("water button tapped")
+    }
+}
+
+extension WaterViewController {
+    func runTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
+        print("this is running")
+    }
+    
+    func updateTimer() {
+        seconds -= 1
+        timeLabel.text = "\(seconds)"
     }
 }

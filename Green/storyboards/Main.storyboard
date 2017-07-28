@@ -428,6 +428,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="GdJ-t5-5wl"/>
                     <connections>
+                        <outlet property="timeLabel" destination="1h1-RO-J9x" id="sb9-DF-4r6"/>
                         <outlet property="waterConfirmButton" destination="cGB-qV-bEU" id="AsW-ab-wPL"/>
                     </connections>
                 </viewController>
