@@ -47,6 +47,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         application.registerForRemoteNotifications()
+        let token = Messaging.messaging().fcmToken
+        print("FCM token: \(token ?? "")   dit nhau")
         
         configureIntitialRootViewController(for: window)
         
