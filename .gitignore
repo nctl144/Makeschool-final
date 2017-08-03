@@ -20,3 +20,4 @@ DerivedData
 Pods
 /Green/supporting/GoogleService-Info.plist
 /Green/Green.entitlements
+node_modules
