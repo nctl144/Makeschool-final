@@ -47,8 +47,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         application.registerForRemoteNotifications()
-        let token = Messaging.messaging().fcmToken
-        print("FCM token: \(token ?? "")   dit nhau")
+        
+        // add the token to the database if the user dont have one
+        NotificationService.addUserToken()
         
         configureIntitialRootViewController(for: window)
         
