@@ -28,6 +28,7 @@
 		0564D9261F2A9CF9003DFC4A /* WaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0564D9251F2A9CF9003DFC4A /* WaterViewController.swift */; };
 		058B772F1F183D9A00F44FCE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 058B772E1F183D9A00F44FCE /* GoogleService-Info.plist */; };
 		05A84CEC1F1571940018C4C4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A84CEB1F1571940018C4C4 /* HomeViewController.swift */; };
+		05B38F291F3A6BD400C57F2B /* WaterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B38F281F3A6BD400C57F2B /* WaterService.swift */; };
 		05C1B6801F2023C100E6EFDD /* UIextension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C1B67F1F2023C100E6EFDD /* UIextension.swift */; };
 		05E21ACE1F27B97500ED8627 /* TransitionedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E21ACD1F27B97500ED8627 /* TransitionedViewController.swift */; };
 		05E21AD01F27E59900ED8627 /* RewardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E21ACF1F27E59900ED8627 /* RewardService.swift */; };
@@ -72,6 +73,7 @@
 		0564D9251F2A9CF9003DFC4A /* WaterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaterViewController.swift; path = controllers/tabBarController/WaterViewController.swift; sourceTree = "<group>"; };
 		058B772E1F183D9A00F44FCE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "supporting/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		05A84CEB1F1571940018C4C4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = controllers/HomeViewController.swift; sourceTree = "<group>"; };
+		05B38F281F3A6BD400C57F2B /* WaterService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaterService.swift; path = services/WaterService.swift; sourceTree = "<group>"; };
 		05C1B67F1F2023C100E6EFDD /* UIextension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIextension.swift; path = extensions/UIextension.swift; sourceTree = "<group>"; };
 		05E21ACD1F27B97500ED8627 /* TransitionedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransitionedViewController.swift; path = controllers/navigationDrawer/TransitionedViewController.swift; sourceTree = "<group>"; };
 		05E21ACF1F27E59900ED8627 /* RewardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RewardService.swift; path = services/RewardService.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				051DBFCD1F1FF6D2004066ED /* TreeVerifier.swift */,
 				05E21ACF1F27E59900ED8627 /* RewardService.swift */,
 				053893A81F3A369F00B33536 /* NotificationService.swift */,
+				05B38F281F3A6BD400C57F2B /* WaterService.swift */,
 			);
 			name = services;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05E21AD31F27FAE200ED8627 /* AppSnackbarController.swift in Sources */,
+				05B38F291F3A6BD400C57F2B /* WaterService.swift in Sources */,
 				053460271F2918E000F88A21 /* PhotoCollectionViewCell.swift in Sources */,
 				0564D9261F2A9CF9003DFC4A /* WaterViewController.swift in Sources */,
 				05082B8F1F16A8E800A4415B /* UserProfile.swift in Sources */,

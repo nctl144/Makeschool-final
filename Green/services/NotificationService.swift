@@ -20,7 +20,10 @@ class NotificationService {
         let ref = Database.database().reference()
         let token = Messaging.messaging().fcmToken
         
-        let childUpdates = ["users/\(userUid)/notificationToken": token ?? ""]
+        let postKey = ref.child("users/allTokens").childByAutoId().key
+        
+        let childUpdates = ["users/\(userUid)/notificationToken": token ?? "",
+                            "users/allTokens/\(postKey)": token ?? ""]
         
         let tokenRef = Database.database().reference().child("users").child(userUid).child("notificationToken")
         
