@@ -40,8 +40,8 @@ class MainTabBarViewController: BottomNavigationController {
                     self.animateSnackbar()
                 } else {
                     DispatchQueue.main.async(execute: {
-                        let alert = UIAlertController(title: "Take the picture again u dumbass", message: "Because it is NOT A FUCKING tree, its a dog", preferredStyle: UIAlertControllerStyle.alert)
-                        alert.addAction(UIAlertAction(title: "OK I am totally sorry", style: UIAlertActionStyle.default, handler: nil))
+                        let alert = UIAlertController(title: "Attention", message: "The picture you just took is not a picture of a tree. Please take another picture!", preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
                         self.present(alert, animated: true, completion: nil)
                     })
                 }
