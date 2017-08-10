@@ -19,8 +19,7 @@ struct TreeService {
         let imageRef = StorageReference.newPostImageReference()
         let ref = Database.database().reference()
         
-        guard let userUid = Auth.auth().currentUser?.uid
-        else {
+        guard let userUid = Auth.auth().currentUser?.uid else {
             return
         }
         

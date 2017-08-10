@@ -11,8 +11,18 @@ import FirebaseAuth
 import FirebaseDatabase
 
 class WaterService {
-    static func ifHasWatered() {
-        let ref = Database.database().reference()
+    static func markAsWatered() {
+        guard let userUid = Auth.auth().currentUser?.uid else {
+            return
+        }
         
+        let dateformatter = DateFormatter()
+        
+        dateformatter.dateFormat = "MM-dd-yyyy"
+        
+        let today = dateformatter.string(from: NSDate() as Date)
+        
+        let ref = Database.database().reference()
+        ref.child("water").child(userUid).updateChildValues([today: "true"])
     }
 }

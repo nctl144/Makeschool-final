@@ -40,7 +40,7 @@ class WaterViewController: UIViewController {
     }
     
     @IBAction func waterButtonTapped(_ sender: UIButton) {
-        print("water button tapped")
+        WaterService.markAsWatered()
     }
 }
 
