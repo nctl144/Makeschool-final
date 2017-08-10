@@ -12,12 +12,12 @@ import FirebaseAuth
 import FirebaseMessaging
 
 class NotificationService {
-    static func ifUserTokenExist(completion: @escaping (Bool) -> Void) {
+    static func ifUserTokenExist(_ path: String, completion: @escaping (Bool) -> Void) {
         guard let userUid = Auth.auth().currentUser?.uid else {
                 return completion(false)
         }
         
-        let userTokenRef = Database.database().reference().child("users").child(userUid)
+        let userTokenRef = Database.database().reference().child(path)
         let token = Messaging.messaging().fcmToken
         
         userTokenRef.observe(DataEventType.value, with: { (snapshot) in
@@ -54,11 +54,19 @@ class NotificationService {
         let allTokenUpdate = ["users/allTokens/\(allTokenKey)": token ?? ""]
         
         // check why it is false at the beginning and then turned to true?
-        self.ifUserTokenExist { isInDB in
+        self.ifUserTokenExist("users/\(userUid)") { isInDB in
             print(isInDB)
             if isInDB == false {
                 print("it is false")
                 ref.updateChildValues(userTokenUpdate)
+            }
+        }
+        
+        self.ifUserTokenExist("users/allTokens") { isInDB in
+            print(isInDB)
+            if isInDB == false {
+                print("it is false")
+                ref.updateChildValues(allTokenUpdate)
             }
         }
 
