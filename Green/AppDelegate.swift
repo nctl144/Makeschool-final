@@ -44,12 +44,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let settings: UIUserNotificationSettings =
                 UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
             application.registerUserNotificationSettings(settings)
+            
+            // add the token to the database if the user dont have one
+            NotificationService.addUserToken()
         }
+        let token = Messaging.messaging().fcmToken
+        print("FCM token: \(token ?? "")   dit nhau")
         
         application.registerForRemoteNotifications()
-        
-        // add the token to the database if the user dont have one
-        NotificationService.addUserToken()
         
         configureIntitialRootViewController(for: window)
         

@@ -119,30 +119,25 @@ extension AppFABMenuController {
     @objc
     open func fabMenuWillOpen(fabMenu: FABMenu) {
         fabMenu.fabButton?.motion(.rotationAngle(45))
-        
-        print("fabMenuWillOpen")
     }
     
     @objc
     open func fabMenuDidOpen(fabMenu: FABMenu) {
-        print("fabMenuDidOpen")
+        
     }
     
     @objc
     open func fabMenuWillClose(fabMenu: FABMenu) {
         fabMenu.fabButton?.motion(.rotationAngle(0))
-        
-        print("fabMenuWillClose")
     }
     
     @objc
     open func fabMenuDidClose(fabMenu: FABMenu) {
-        print("fabMenuDidClose")
+        
     }
     
     @objc
     open func fabMenu(fabMenu: FABMenu, tappedAt point: CGPoint, isOutside: Bool) {
-        print("fabMenuTappedAtPointIsOutside", point, isOutside)
         
         guard isOutside else {
             return

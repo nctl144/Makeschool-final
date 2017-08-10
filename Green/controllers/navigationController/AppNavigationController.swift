@@ -14,8 +14,6 @@ class AppNavigationController: NavigationController {
         super.prepare()
         isMotionEnabled = true
         
-        //        motionNavigationTransitionType = .autoReverse(presenting: .zoom)
-        
         navigationBar.depthPreset = .none
         navigationBar.dividerColor = Color.grey.lighten3
         (navigationBar as? NavigationBar)?.backButtonImage = Icon.close?.tint(with: Color.red.base)

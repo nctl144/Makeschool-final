@@ -55,9 +55,7 @@ class NotificationService {
         
         // check why it is false at the beginning and then turned to true?
         self.ifUserTokenExist("users/\(userUid)") { isInDB in
-            print(isInDB)
             if isInDB == false {
-                print("it is false")
                 ref.updateChildValues(userTokenUpdate)
             }
         }
@@ -65,7 +63,6 @@ class NotificationService {
         self.ifUserTokenExist("allUsers/allTokens") { isInDB in
             print(isInDB)
             if isInDB == false {
-                print("it is false")
                 ref.updateChildValues(allTokenUpdate)
             }
         }
