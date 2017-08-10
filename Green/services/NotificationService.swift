@@ -51,7 +51,7 @@ class NotificationService {
         let userTokenKey = ref.child("users/\(userUid)").childByAutoId().key
         
         let userTokenUpdate = ["users/\(userUid)/\(userTokenKey)": token ?? ""]
-        let allTokenUpdate = ["users/allTokens/\(allTokenKey)": token ?? ""]
+        let allTokenUpdate = ["allUsers/allTokens/\(allTokenKey)": token ?? ""]
         
         // check why it is false at the beginning and then turned to true?
         self.ifUserTokenExist("users/\(userUid)") { isInDB in
@@ -62,7 +62,7 @@ class NotificationService {
             }
         }
         
-        self.ifUserTokenExist("users/allTokens") { isInDB in
+        self.ifUserTokenExist("allUsers/allTokens") { isInDB in
             print(isInDB)
             if isInDB == false {
                 print("it is false")
