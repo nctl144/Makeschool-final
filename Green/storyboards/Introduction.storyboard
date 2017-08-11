@@ -404,7 +404,7 @@
         <!--Intro step 7-->
         <scene sceneID="gE6-GX-jsE">
             <objects>
-                <viewController storyboardIdentifier="IntroStep7" title="Intro step 7" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wI6-Oj-vZy" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IntroStep7" title="Intro step 7" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wI6-Oj-vZy" customClass="LastIntroViewController" customModule="Green" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8EE-vb-8kV"/>
                         <viewControllerLayoutGuide type="bottom" id="ojQ-Fx-4vj"/>
@@ -433,15 +433,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2on-7G-jth">
-                                <rect key="frame" x="0.0" y="617" width="375" height="30"/>
+                                <rect key="frame" x="56.5" y="602" width="262.5" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="bw8-dH-2jb"/>
+                                </constraints>
                                 <state key="normal" title="Back to Home"/>
+                                <connections>
+                                    <action selector="backToHomeButtonTapped:" destination="wI6-Oj-vZy" eventType="touchUpInside" id="pbS-2b-BMs"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.38037276268005371" green="0.71050649881362915" blue="0.44112873077392578" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hW4-DR-bMv" firstAttribute="centerX" secondItem="cIV-3Q-dCX" secondAttribute="centerX" id="1xJ-WU-PXO"/>
                             <constraint firstItem="og5-67-SVB" firstAttribute="width" secondItem="cIV-3Q-dCX" secondAttribute="width" multiplier="0.8" id="Cb6-ut-quV"/>
-                            <constraint firstItem="2on-7G-jth" firstAttribute="width" secondItem="cIV-3Q-dCX" secondAttribute="width" id="DNh-O2-bqV"/>
+                            <constraint firstItem="2on-7G-jth" firstAttribute="width" secondItem="cIV-3Q-dCX" secondAttribute="width" multiplier="0.7" id="DNh-O2-bqV"/>
                             <constraint firstItem="og5-67-SVB" firstAttribute="top" secondItem="hW4-DR-bMv" secondAttribute="bottom" constant="50" id="GYL-7j-5TV"/>
                             <constraint firstItem="kAM-0g-qHl" firstAttribute="width" secondItem="og5-67-SVB" secondAttribute="width" id="GhL-2n-i82"/>
                             <constraint firstItem="kAM-0g-qHl" firstAttribute="centerX" secondItem="cIV-3Q-dCX" secondAttribute="centerX" id="P4z-9v-VcY"/>

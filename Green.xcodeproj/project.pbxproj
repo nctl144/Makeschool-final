@@ -39,6 +39,7 @@
 		05E21ADC1F28113500ED8627 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E21AD81F28113500ED8627 /* ProfileViewController.swift */; };
 		05E21ADD1F28113500ED8627 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E21AD91F28113500ED8627 /* IntroductionViewController.swift */; };
 		05E21ADE1F28113500ED8627 /* TreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E21ADA1F28113500ED8627 /* TreeViewController.swift */; };
+		05E985AC1F3E691600EE452F /* LastIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E985AB1F3E691600EE452F /* LastIntroViewController.swift */; };
 		05EFBE391F19827D009DE0C4 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EFBE381F19827D009DE0C4 /* StorageService.swift */; };
 		05EFBE3F1F19843F009DE0C4 /* TreeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EFBE3E1F19843F009DE0C4 /* TreeService.swift */; };
 		05EFBE421F1991B0009DE0C4 /* StorageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EFBE411F1991B0009DE0C4 /* StorageExtensions.swift */; };
@@ -86,6 +87,7 @@
 		05E21AD81F28113500ED8627 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = controllers/tabBarController/ProfileViewController.swift; sourceTree = "<group>"; };
 		05E21AD91F28113500ED8627 /* IntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntroductionViewController.swift; path = controllers/tabBarController/IntroductionViewController.swift; sourceTree = "<group>"; };
 		05E21ADA1F28113500ED8627 /* TreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TreeViewController.swift; path = controllers/tabBarController/TreeViewController.swift; sourceTree = "<group>"; };
+		05E985AB1F3E691600EE452F /* LastIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LastIntroViewController.swift; path = controllers/introductionControllers/LastIntroViewController.swift; sourceTree = "<group>"; };
 		05EFBE381F19827D009DE0C4 /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StorageService.swift; path = services/StorageService.swift; sourceTree = "<group>"; };
 		05EFBE3E1F19843F009DE0C4 /* TreeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TreeService.swift; path = services/TreeService.swift; sourceTree = "<group>"; };
 		05EFBE411F1991B0009DE0C4 /* StorageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StorageExtensions.swift; path = extensions/StorageExtensions.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		0536AB831F156F4000A14C6C /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				05E985AA1F3E68A500EE452F /* introductionController */,
 				053460281F291CC500F88A21 /* navigationController */,
 				05E21AD61F28112800ED8627 /* tabbarController */,
 				05E21AD11F27F8E800ED8627 /* snackbarController */,
@@ -215,6 +218,14 @@
 				0564D9251F2A9CF9003DFC4A /* WaterViewController.swift */,
 			);
 			name = tabbarController;
+			sourceTree = "<group>";
+		};
+		05E985AA1F3E68A500EE452F /* introductionController */ = {
+			isa = PBXGroup;
+			children = (
+				05E985AB1F3E691600EE452F /* LastIntroViewController.swift */,
+			);
+			name = introductionController;
 			sourceTree = "<group>";
 		};
 		05EFBE351F19824F009DE0C4 /* services */ = {
@@ -475,6 +486,7 @@
 				0512D8AC1F26851300EE6B0B /* RewardCell.swift in Sources */,
 				05E21ADB1F28113500ED8627 /* PhotoCollectionViewController.swift in Sources */,
 				0564D9241F2A9A08003DFC4A /* TreeStages.swift in Sources */,
+				05E985AC1F3E691600EE452F /* LastIntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
