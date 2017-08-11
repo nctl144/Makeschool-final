@@ -12,6 +12,7 @@ import Material
 class WaterViewController: UIViewController {
     @IBOutlet weak var waterConfirmButton: FlatButton!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var centerPopUpConstraint: NSLayoutConstraint!
     
     var seconds = 0
     var timer = Timer()
@@ -41,6 +42,20 @@ class WaterViewController: UIViewController {
     
     @IBAction func waterButtonTapped(_ sender: UIButton) {
         WaterService.markAsWatered()
+        centerPopUpConstraint.constant = 0
+        
+        UIView.animate(withDuration: 0.4,
+            animations: {
+            self.view.layoutIfNeeded()
+        })
+    }
+    @IBAction func closePopUp(_ sender: UIButton) {
+        centerPopUpConstraint.constant = -600
+        
+        UIView.animate(withDuration: 0.2,
+            animations: {
+            self.view.layoutIfNeeded()
+        })
     }
 }
 

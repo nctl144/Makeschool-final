@@ -379,55 +379,112 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="water" translatesAutoresizingMaskIntoConstraints="NO" id="hML-f5-hpN">
-                                <rect key="frame" x="64" y="70" width="192" height="153.5"/>
+                                <rect key="frame" x="64" y="40" width="192" height="153.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hML-f5-hpN" secondAttribute="height" multiplier="5:4" id="H1V-sY-tO9"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You need to water your tree in: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5t-5B-dgG">
-                                <rect key="frame" x="16" y="273.5" width="288" height="20.5"/>
+                                <rect key="frame" x="16" y="243.5" width="288" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1h1-RO-J9x">
-                                <rect key="frame" x="0.0" y="319" width="320" height="79.5"/>
+                                <rect key="frame" x="0.0" y="289" width="320" height="79.5"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="60"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGB-qV-bEU" customClass="FlatButton" customModule="Material">
-                                <rect key="frame" x="48" y="425" width="224" height="44"/>
+                                <rect key="frame" x="48" y="408.5" width="224" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Hh0-vz-K9u"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
-                                <state key="normal" title="I have watered the tree!">
+                                <state key="normal" title="I have watered my tree!">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="1" height="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="0.38234084844589233" green="0.64809316396713257" blue="0.63705712556838989" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="pulseColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="waterButtonTapped:" destination="efe-Cb-noI" eventType="touchUpInside" id="tN7-6Y-0xG"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rAn-Fy-Rhp">
+                                <rect key="frame" x="0.0" y="0.5" width="320" height="519"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good job, keep up doing the good work taking care of the tree" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1Z-dQ-uz0">
+                                        <rect key="frame" x="32" y="55" width="256" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1Y-Zk-IbC">
+                                        <rect key="frame" x="129" y="193" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closePopUp:" destination="efe-Cb-noI" eventType="touchUpInside" id="PGI-ed-8uS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="T1Z-dQ-uz0" firstAttribute="top" secondItem="rAn-Fy-Rhp" secondAttribute="top" constant="55" id="7fa-nS-wnz"/>
+                                    <constraint firstItem="T1Z-dQ-uz0" firstAttribute="width" secondItem="rAn-Fy-Rhp" secondAttribute="width" multiplier="0.8" id="Q0Z-90-2f2"/>
+                                    <constraint firstItem="T1Z-dQ-uz0" firstAttribute="centerX" secondItem="rAn-Fy-Rhp" secondAttribute="centerX" id="Yl9-it-cbq"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="0.38234084844589233" green="0.64809316396713257" blue="0.63705712556838989" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.98823529409999999" green="0.98431372549999996" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="hML-f5-hpN" firstAttribute="top" secondItem="jTm-ne-KX6" secondAttribute="bottom" constant="50" id="0n3-kS-hPi"/>
+                            <constraint firstItem="hML-f5-hpN" firstAttribute="top" secondItem="jTm-ne-KX6" secondAttribute="bottom" constant="20" id="0n3-kS-hPi"/>
                             <constraint firstItem="cGB-qV-bEU" firstAttribute="centerX" secondItem="Koj-xe-0gc" secondAttribute="centerX" id="23D-3L-0xE"/>
+                            <constraint firstItem="rAn-Fy-Rhp" firstAttribute="width" secondItem="Koj-xe-0gc" secondAttribute="width" id="9yZ-oK-Obo"/>
                             <constraint firstItem="1h1-RO-J9x" firstAttribute="top" secondItem="o5t-5B-dgG" secondAttribute="bottom" constant="25" id="CfG-hH-5SU"/>
                             <constraint firstItem="hML-f5-hpN" firstAttribute="width" secondItem="Koj-xe-0gc" secondAttribute="width" multiplier="0.6" id="DHy-VT-KET"/>
                             <constraint firstItem="hML-f5-hpN" firstAttribute="centerX" secondItem="Koj-xe-0gc" secondAttribute="centerX" id="I5r-NJ-vFU"/>
                             <constraint firstItem="1h1-RO-J9x" firstAttribute="centerX" secondItem="Koj-xe-0gc" secondAttribute="centerX" id="LIq-O5-rjg"/>
                             <constraint firstItem="cGB-qV-bEU" firstAttribute="width" secondItem="Koj-xe-0gc" secondAttribute="width" multiplier="0.7" id="N4y-Al-Yja"/>
+                            <constraint firstItem="rAn-Fy-Rhp" firstAttribute="centerX" secondItem="Koj-xe-0gc" secondAttribute="centerX" id="PUS-KO-i4V"/>
+                            <constraint firstItem="cGB-qV-bEU" firstAttribute="top" secondItem="1h1-RO-J9x" secondAttribute="bottom" constant="40" id="iN9-bM-kk6"/>
                             <constraint firstItem="1h1-RO-J9x" firstAttribute="width" secondItem="Koj-xe-0gc" secondAttribute="width" id="icQ-9b-cm2"/>
-                            <constraint firstItem="O8d-V9-7sP" firstAttribute="top" secondItem="cGB-qV-bEU" secondAttribute="bottom" constant="50" id="oYz-s7-QXu"/>
+                            <constraint firstItem="rAn-Fy-Rhp" firstAttribute="height" secondItem="Koj-xe-0gc" secondAttribute="height" id="nFv-Ic-RDw"/>
                             <constraint firstItem="o5t-5B-dgG" firstAttribute="top" secondItem="hML-f5-hpN" secondAttribute="bottom" constant="50" id="obR-2h-2KQ"/>
                             <constraint firstItem="o5t-5B-dgG" firstAttribute="centerX" secondItem="Koj-xe-0gc" secondAttribute="centerX" id="uvh-ub-Iuh"/>
                             <constraint firstItem="o5t-5B-dgG" firstAttribute="width" secondItem="Koj-xe-0gc" secondAttribute="width" multiplier="0.9" id="wqY-sO-tJe"/>
+                            <constraint firstItem="rAn-Fy-Rhp" firstAttribute="centerY" secondItem="Koj-xe-0gc" secondAttribute="centerY" id="xZP-xu-BAB"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="GdJ-t5-5wl"/>
                     <connections>
+                        <outlet property="centerPopUpConstraint" destination="PUS-KO-i4V" id="K6o-Sx-k3l"/>
                         <outlet property="timeLabel" destination="1h1-RO-J9x" id="sb9-DF-4r6"/>
                         <outlet property="waterConfirmButton" destination="cGB-qV-bEU" id="AsW-ab-wPL"/>
                     </connections>

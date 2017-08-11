@@ -18,6 +18,7 @@
 		0512D8C41F26996300EE6B0B /* AppFABMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512D8C31F26996300EE6B0B /* AppFABMenuController.swift */; };
 		051DBFCA1F1FCB03004066ED /* Introduction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 051DBFC91F1FCB03004066ED /* Introduction.storyboard */; };
 		051DBFCE1F1FF6D2004066ED /* TreeVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051DBFCD1F1FF6D2004066ED /* TreeVerifier.swift */; };
+		052FF1271F3E2AFF001C03CF /* Credit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 052FF1261F3E2AFF001C03CF /* Credit.storyboard */; };
 		053460271F2918E000F88A21 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053460261F2918E000F88A21 /* PhotoCollectionViewCell.swift */; };
 		0534602A1F291D0A00F88A21 /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053460291F291D0A00F88A21 /* AppNavigationController.swift */; };
 		0534602C1F291F3B00F88A21 /* Photo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0534602B1F291F3B00F88A21 /* Photo.storyboard */; };
@@ -30,7 +31,7 @@
 		05A84CEC1F1571940018C4C4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A84CEB1F1571940018C4C4 /* HomeViewController.swift */; };
 		05B38F291F3A6BD400C57F2B /* WaterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B38F281F3A6BD400C57F2B /* WaterService.swift */; };
 		05C1B6801F2023C100E6EFDD /* UIextension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C1B67F1F2023C100E6EFDD /* UIextension.swift */; };
-		05E21ACE1F27B97500ED8627 /* TransitionedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E21ACD1F27B97500ED8627 /* TransitionedViewController.swift */; };
+		05E21ACE1F27B97500ED8627 /* CreditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E21ACD1F27B97500ED8627 /* CreditViewController.swift */; };
 		05E21AD01F27E59900ED8627 /* RewardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E21ACF1F27E59900ED8627 /* RewardService.swift */; };
 		05E21AD31F27FAE200ED8627 /* AppSnackbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E21AD21F27FAE200ED8627 /* AppSnackbarController.swift */; };
 		05E21ADB1F28113500ED8627 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E21AD71F28113500ED8627 /* PhotoCollectionViewController.swift */; };
@@ -61,6 +62,7 @@
 		0512D8C31F26996300EE6B0B /* AppFABMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppFABMenuController.swift; path = controllers/fabMenuController/AppFABMenuController.swift; sourceTree = "<group>"; };
 		051DBFC91F1FCB03004066ED /* Introduction.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Introduction.storyboard; path = storyboards/Introduction.storyboard; sourceTree = "<group>"; };
 		051DBFCD1F1FF6D2004066ED /* TreeVerifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TreeVerifier.swift; path = services/TreeVerifier.swift; sourceTree = "<group>"; };
+		052FF1261F3E2AFF001C03CF /* Credit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Credit.storyboard; path = storyboards/Credit.storyboard; sourceTree = "<group>"; };
 		053460261F2918E000F88A21 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoCollectionViewCell.swift; path = views/PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		053460291F291D0A00F88A21 /* AppNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppNavigationController.swift; path = controllers/navigationController/AppNavigationController.swift; sourceTree = "<group>"; };
 		0534602B1F291F3B00F88A21 /* Photo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Photo.storyboard; path = storyboards/Photo.storyboard; sourceTree = "<group>"; };
@@ -75,7 +77,7 @@
 		05A84CEB1F1571940018C4C4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = controllers/HomeViewController.swift; sourceTree = "<group>"; };
 		05B38F281F3A6BD400C57F2B /* WaterService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaterService.swift; path = services/WaterService.swift; sourceTree = "<group>"; };
 		05C1B67F1F2023C100E6EFDD /* UIextension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIextension.swift; path = extensions/UIextension.swift; sourceTree = "<group>"; };
-		05E21ACD1F27B97500ED8627 /* TransitionedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransitionedViewController.swift; path = controllers/navigationDrawer/TransitionedViewController.swift; sourceTree = "<group>"; };
+		05E21ACD1F27B97500ED8627 /* CreditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreditViewController.swift; path = controllers/navigationDrawer/CreditViewController.swift; sourceTree = "<group>"; };
 		05E21ACF1F27E59900ED8627 /* RewardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RewardService.swift; path = services/RewardService.swift; sourceTree = "<group>"; };
 		05E21AD21F27FAE200ED8627 /* AppSnackbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppSnackbarController.swift; path = controllers/snackbarController/AppSnackbarController.swift; sourceTree = "<group>"; };
 		05E21AD71F28113500ED8627 /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoCollectionViewController.swift; path = controllers/tabBarController/PhotoCollectionViewController.swift; sourceTree = "<group>"; };
@@ -129,7 +131,7 @@
 		0512D8B81F26994D00EE6B0B /* navigation */ = {
 			isa = PBXGroup;
 			children = (
-				05E21ACD1F27B97500ED8627 /* TransitionedViewController.swift */,
+				05E21ACD1F27B97500ED8627 /* CreditViewController.swift */,
 				0512D8BB1F26995A00EE6B0B /* AppToolbarController.swift */,
 				0512D8BC1F26995A00EE6B0B /* AppNavigationDrawerController.swift */,
 				0512D8BD1F26995A00EE6B0B /* LeftViewController.swift */,
@@ -167,6 +169,7 @@
 				050C48E61F22774A0011D712 /* Login.storyboard */,
 				051DBFC91F1FCB03004066ED /* Introduction.storyboard */,
 				05F038431F182F35004C335D /* Launch Screen.storyboard */,
+				052FF1261F3E2AFF001C03CF /* Credit.storyboard */,
 			);
 			name = storyboards;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				0534602C1F291F3B00F88A21 /* Photo.storyboard in Resources */,
 				051DBFCA1F1FCB03004066ED /* Introduction.storyboard in Resources */,
 				05F038441F182F35004C335D /* Launch Screen.storyboard in Resources */,
+				052FF1271F3E2AFF001C03CF /* Credit.storyboard in Resources */,
 				058B772F1F183D9A00F44FCE /* GoogleService-Info.plist in Resources */,
 				0536AB8B1F156F7C00A14C6C /* Main.storyboard in Resources */,
 				050C48E71F22774A0011D712 /* Login.storyboard in Resources */,
@@ -447,7 +451,7 @@
 				0512D8C11F26995A00EE6B0B /* AppNavigationDrawerController.swift in Sources */,
 				05EFBE421F1991B0009DE0C4 /* StorageExtensions.swift in Sources */,
 				0512D8C21F26995A00EE6B0B /* LeftViewController.swift in Sources */,
-				05E21ACE1F27B97500ED8627 /* TransitionedViewController.swift in Sources */,
+				05E21ACE1F27B97500ED8627 /* CreditViewController.swift in Sources */,
 				05C1B6801F2023C100E6EFDD /* UIextension.swift in Sources */,
 				05F038421F181FF2004C335D /* PhotoHelper.swift in Sources */,
 				0512D8C01F26995A00EE6B0B /* AppToolbarController.swift in Sources */,

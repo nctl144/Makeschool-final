@@ -1,5 +1,5 @@
 //
-//  TransitionedViewController.swift
+//  CreditViewController.swift
 //  Green
 //
 //  Created by Nguyễn Lâm on 7/24/17.
@@ -9,7 +9,7 @@
 import UIKit
 import Material
 
-class TransitionedViewController: UIViewController {
+class CreditViewController: UIViewController {
     open override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = Color.purple.base
@@ -18,7 +18,7 @@ class TransitionedViewController: UIViewController {
     }
 }
 
-extension TransitionedViewController {
+extension CreditViewController {
     fileprivate func prepareToolbar() {
         guard let tc = toolbarController else {
             return

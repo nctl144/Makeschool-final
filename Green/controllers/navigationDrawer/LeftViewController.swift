@@ -55,7 +55,7 @@ extension LeftViewController {
         //        navigationDrawerController?.transition(to: TransitionedViewController(), completion: closeNavigationDrawer)
         
         // Transition the ToolbarController rootViewController that is in the NavigationDrawer rootViewController.
-        (navigationDrawerController?.rootViewController as? ToolbarController)?.transition(to: TransitionedViewController(), completion: closeNavigationDrawer)
+        (navigationDrawerController?.rootViewController as? ToolbarController)?.transition(to: CreditViewController(), completion: closeNavigationDrawer)
     }
     
     @objc
