@@ -53,8 +53,7 @@ extension LeftViewController {
     fileprivate func handleTransitionButton() {
         let initialViewController: UIViewController
         initialViewController = UIStoryboard.initialViewController(for: .credit)
-        
-        (navigationDrawerController?.rootViewController as? ToolbarController)?.transition(to: initialViewController, completion: closeNavigationDrawer)
+        TransitionExtension.toCreditPage(self.view.window)
     }
     
     @objc

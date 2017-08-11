@@ -39,4 +39,16 @@ struct TransitionExtension {
         window?.rootViewController = UIStoryboard.initialViewController(for: .login)
         window?.makeKeyAndVisible()
     }
+    
+    static func toCreditPage(_ window: UIWindow?) {
+        
+        let initialViewController: UIViewController
+        let toolBarController = AppToolbarController(rootViewController: UIStoryboard.initialViewController(for: .credit))
+        let snackbarController = AppSnackbarController(rootViewController: toolBarController)
+        
+        initialViewController = AppNavigationDrawerController(rootViewController: snackbarController, leftViewController: LeftViewController())
+        
+        window?.rootViewController = initialViewController
+        window?.makeKeyAndVisible()
+    }
 }

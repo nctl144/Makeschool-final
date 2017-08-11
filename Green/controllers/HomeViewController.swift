@@ -28,14 +28,12 @@ class HomeViewController: UIViewController {
 
         // Handle clicks on the button
         if AccessToken.current != nil {
-            // show the log out button if the user access token has existed
             let credential = FacebookAuthProvider.credential(withAccessToken: (AccessToken.current?.authenticationToken)!)
             
             Auth.auth().signIn(with: credential) { (user, error) in
                 print("User logged in the firebase")
             }
         } else {
-            // show the login button if the access token is not set
             do {
                 try Auth.auth().signOut()
             } catch let signOutError as NSError {
@@ -57,14 +55,7 @@ class HomeViewController: UIViewController {
 
                 Auth.auth().signIn(with: credential) { (user, error) in
                     print("User logged in the firebase")
-                    let initialViewController: UIViewController
-                    
-                    let fabMenuController = AppFABMenuController(rootViewController: UIStoryboard.initialViewController(for: .main))
-                    let toolBarController = AppToolbarController(rootViewController: fabMenuController)
-                    
-                    initialViewController = AppNavigationDrawerController(rootViewController: toolBarController, leftViewController: LeftViewController())
-                    self.view.window?.rootViewController = initialViewController
-                    self.view.window?.makeKeyAndVisible()
+                    TransitionExtension.toHomePage(self.view.window)
                 }
             }
         }
