@@ -379,25 +379,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="water" translatesAutoresizingMaskIntoConstraints="NO" id="hML-f5-hpN">
-                                <rect key="frame" x="64" y="40" width="192" height="153.5"/>
+                                <rect key="frame" x="64" y="40" width="192" height="192"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="hML-f5-hpN" secondAttribute="height" multiplier="5:4" id="H1V-sY-tO9"/>
+                                    <constraint firstAttribute="width" secondItem="hML-f5-hpN" secondAttribute="height" multiplier="1:1" id="H1V-sY-tO9"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You need to water your tree in: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5t-5B-dgG">
-                                <rect key="frame" x="16" y="243.5" width="288" height="20.5"/>
+                                <rect key="frame" x="16" y="282" width="288" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1h1-RO-J9x">
-                                <rect key="frame" x="0.0" y="289" width="320" height="79.5"/>
+                                <rect key="frame" x="0.0" y="327.5" width="320" height="79.5"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="60"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGB-qV-bEU" customClass="FlatButton" customModule="Material">
-                                <rect key="frame" x="48" y="408.5" width="224" height="44"/>
+                                <rect key="frame" x="48" y="447" width="224" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Hh0-vz-K9u"/>
                                 </constraints>
@@ -430,20 +430,43 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rAn-Fy-Rhp">
-                                <rect key="frame" x="0.0" y="0.5" width="320" height="519"/>
+                                <rect key="frame" x="-600" y="0.5" width="320" height="519"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good job, keep up doing the good work taking care of the tree" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1Z-dQ-uz0">
-                                        <rect key="frame" x="32" y="55" width="256" height="41"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good job, keep up doing the good work taking care of the tree" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1Z-dQ-uz0">
+                                        <rect key="frame" x="32" y="55" width="256" height="95"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="24"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1Y-Zk-IbC">
-                                        <rect key="frame" x="129" y="193" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1Y-Zk-IbC" customClass="RaisedButton" customModule="Material">
+                                        <rect key="frame" x="48" y="219.5" width="224" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="t1Y-Zk-IbC" secondAttribute="height" multiplier="14:5" id="atg-LM-tQu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="27"/>
+                                        <state key="normal" title="Okay I got this!">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="1" height="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                <color key="value" red="0.13306888937950134" green="0.43367981910705566" blue="0.33137571811676025" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="pulseColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="closePopUp:" destination="efe-Cb-noI" eventType="touchUpInside" id="PGI-ed-8uS"/>
                                         </connections>
@@ -452,8 +475,11 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="T1Z-dQ-uz0" firstAttribute="top" secondItem="rAn-Fy-Rhp" secondAttribute="top" constant="55" id="7fa-nS-wnz"/>
+                                    <constraint firstItem="t1Y-Zk-IbC" firstAttribute="width" secondItem="rAn-Fy-Rhp" secondAttribute="width" multiplier="0.7" id="92L-iJ-YkB"/>
                                     <constraint firstItem="T1Z-dQ-uz0" firstAttribute="width" secondItem="rAn-Fy-Rhp" secondAttribute="width" multiplier="0.8" id="Q0Z-90-2f2"/>
                                     <constraint firstItem="T1Z-dQ-uz0" firstAttribute="centerX" secondItem="rAn-Fy-Rhp" secondAttribute="centerX" id="Yl9-it-cbq"/>
+                                    <constraint firstItem="t1Y-Zk-IbC" firstAttribute="centerX" secondItem="rAn-Fy-Rhp" secondAttribute="centerX" id="Zu9-Hw-c5f"/>
+                                    <constraint firstItem="t1Y-Zk-IbC" firstAttribute="centerY" secondItem="rAn-Fy-Rhp" secondAttribute="centerY" id="jDC-v3-wu9"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
@@ -472,7 +498,7 @@
                             <constraint firstItem="hML-f5-hpN" firstAttribute="centerX" secondItem="Koj-xe-0gc" secondAttribute="centerX" id="I5r-NJ-vFU"/>
                             <constraint firstItem="1h1-RO-J9x" firstAttribute="centerX" secondItem="Koj-xe-0gc" secondAttribute="centerX" id="LIq-O5-rjg"/>
                             <constraint firstItem="cGB-qV-bEU" firstAttribute="width" secondItem="Koj-xe-0gc" secondAttribute="width" multiplier="0.7" id="N4y-Al-Yja"/>
-                            <constraint firstItem="rAn-Fy-Rhp" firstAttribute="centerX" secondItem="Koj-xe-0gc" secondAttribute="centerX" id="PUS-KO-i4V"/>
+                            <constraint firstItem="rAn-Fy-Rhp" firstAttribute="centerX" secondItem="Koj-xe-0gc" secondAttribute="centerX" constant="-600" id="PUS-KO-i4V"/>
                             <constraint firstItem="cGB-qV-bEU" firstAttribute="top" secondItem="1h1-RO-J9x" secondAttribute="bottom" constant="40" id="iN9-bM-kk6"/>
                             <constraint firstItem="1h1-RO-J9x" firstAttribute="width" secondItem="Koj-xe-0gc" secondAttribute="width" id="icQ-9b-cm2"/>
                             <constraint firstItem="rAn-Fy-Rhp" firstAttribute="height" secondItem="Koj-xe-0gc" secondAttribute="height" id="nFv-Ic-RDw"/>
@@ -566,7 +592,7 @@
         <image name="messenger-icon-2" width="50" height="50"/>
         <image name="tab_home_black" width="25" height="25"/>
         <image name="tree" width="25" height="25"/>
-        <image name="water" width="128" height="128"/>
+        <image name="water" width="512" height="512"/>
     </resources>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

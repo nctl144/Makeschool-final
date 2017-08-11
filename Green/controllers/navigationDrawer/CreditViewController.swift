@@ -24,8 +24,8 @@ extension CreditViewController {
             return
         }
         
-        tc.toolbar.title = "Transitioned"
-        tc.toolbar.detail = "View Controller"
+        tc.toolbar.title = "Credits"
+        tc.toolbar.detail = ""
     }
 }
 

@@ -26,7 +26,7 @@ class LeftViewController: UIViewController {
 
 extension LeftViewController {
     fileprivate func prepareTransitionButton() {
-        transitionButton = FlatButton(title: "Introduction", titleColor: .white)
+        transitionButton = FlatButton(title: "Credits", titleColor: .white)
         transitionButton.backgroundColor = UIColor(hexString: "912F56")
         transitionButton.contentHorizontalAlignment = .left
         transitionButton.contentEdgeInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
@@ -51,11 +51,10 @@ extension LeftViewController {
 extension LeftViewController {
     @objc
     fileprivate func handleTransitionButton() {
-        // Transition the entire NavigationDrawer rootViewController.
-        //        navigationDrawerController?.transition(to: TransitionedViewController(), completion: closeNavigationDrawer)
+        let initialViewController: UIViewController
+        initialViewController = UIStoryboard.initialViewController(for: .credit)
         
-        // Transition the ToolbarController rootViewController that is in the NavigationDrawer rootViewController.
-        (navigationDrawerController?.rootViewController as? ToolbarController)?.transition(to: CreditViewController(), completion: closeNavigationDrawer)
+        (navigationDrawerController?.rootViewController as? ToolbarController)?.transition(to: initialViewController, completion: closeNavigationDrawer)
     }
     
     @objc

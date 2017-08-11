@@ -14,6 +14,7 @@ extension UIStoryboard {
         case main
         case login
         case photo
+        case credit
         
         var filename: String {
             return rawValue.capitalized
