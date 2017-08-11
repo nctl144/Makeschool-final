@@ -12,9 +12,11 @@ import Material
 class CreditViewController: UIViewController {
     open override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = Color.purple.base
         
         prepareToolbar()
+    }
+    @IBAction func goBackHomePage(_ sender: UIButton) {
+        TransitionExtension.toHomePage(self.view.window)
     }
 }
 

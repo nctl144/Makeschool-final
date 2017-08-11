@@ -184,22 +184,13 @@ extension AppDelegate : MessagingDelegate {
 // determine if the userdefault has been set, if yes then change the view to main immediately
 extension AppDelegate {
     func configureIntitialRootViewController(for window: UIWindow?) {
-        let initialViewController: UIViewController
         
         // skip the login flow if the currentuser has been set, firuser has been set
         if Auth.auth().currentUser != nil {
-        
-            let fabMenuController = AppFABMenuController(rootViewController: UIStoryboard.initialViewController(for: .main))
-            let snackbarController = AppSnackbarController(rootViewController: fabMenuController)
-            let toolBarController = AppToolbarController(rootViewController: snackbarController)
-
-            initialViewController = AppNavigationDrawerController(rootViewController: toolBarController, leftViewController: LeftViewController())
+            TransitionExtension.toHomePage(window)
         } else {
-            initialViewController = UIStoryboard.initialViewController(for: .login)
+            TransitionExtension.toLoginPage(window)
         }
-        
-        window?.rootViewController = initialViewController
-        window?.makeKeyAndVisible()
     }
 }
 

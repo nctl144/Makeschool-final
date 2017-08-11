@@ -39,7 +39,7 @@
             </objects>
             <point key="canvasLocation" x="1629" y="-883"/>
         </scene>
-        <!--Profile-->
+        <!--Profile View Controller-->
         <scene sceneID="4Gh-Ou-fph">
             <objects>
                 <viewController id="ohk-iL-ZXN" customClass="ProfileViewController" customModule="Green" customModuleProvider="target" sceneMemberID="viewController">
@@ -236,7 +236,7 @@
                             <constraint firstItem="INI-Tc-cTd" firstAttribute="width" secondItem="xPz-bv-ANV" secondAttribute="width" id="uKx-8R-dmc"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="tab_home_black" id="jy6-6a-hJT">
+                    <tabBarItem key="tabBarItem" title="" id="jy6-6a-hJT">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -252,7 +252,7 @@
             </objects>
             <point key="canvasLocation" x="2138" y="413"/>
         </scene>
-        <!--Your trees-->
+        <!--Tree View Controller-->
         <scene sceneID="oWB-9m-27b">
             <objects>
                 <viewController storyboardIdentifier="treeController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vSO-EQ-eOs" customClass="TreeViewController" customModule="Green" customModuleProvider="target" sceneMemberID="viewController">
@@ -354,7 +354,7 @@
                             <constraint firstItem="Awe-Mb-RKa" firstAttribute="top" secondItem="5uD-aV-lLz" secondAttribute="bottom" id="x58-pQ-DqG"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="1" title="Your trees" image="tree" id="fcN-fR-z2V"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="" id="fcN-fR-z2V"/>
                     <connections>
                         <outlet property="contentView" destination="kN9-g2-yWv" id="IuN-ag-4uA"/>
                         <outlet property="messengerShareButton" destination="eU2-Hm-LL9" id="acq-xc-a6L"/>
@@ -366,7 +366,7 @@
             </objects>
             <point key="canvasLocation" x="3246" y="184"/>
         </scene>
-        <!--Item-->
+        <!--Water View Controller-->
         <scene sceneID="eRO-av-VsQ">
             <objects>
                 <viewController id="efe-Cb-noI" customClass="WaterViewController" customModule="Green" customModuleProvider="target" sceneMemberID="viewController">
@@ -508,7 +508,7 @@
                             <constraint firstItem="rAn-Fy-Rhp" firstAttribute="centerY" secondItem="Koj-xe-0gc" secondAttribute="centerY" id="xZP-xu-BAB"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="GdJ-t5-5wl"/>
+                    <tabBarItem key="tabBarItem" title="" id="GdJ-t5-5wl"/>
                     <connections>
                         <outlet property="centerPopUpConstraint" destination="PUS-KO-i4V" id="K6o-Sx-k3l"/>
                         <outlet property="timeLabel" destination="1h1-RO-J9x" id="sb9-DF-4r6"/>
@@ -519,11 +519,11 @@
             </objects>
             <point key="canvasLocation" x="399.375" y="183.80281690140845"/>
         </scene>
-        <!--Introduction-->
+        <!--Introduction View Controller-->
         <scene sceneID="oEp-rq-Ufr">
             <objects>
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="H6U-BN-d2H" customClass="IntroductionViewController" customModule="Green" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Introduction" image="btn_heart_red_solid" id="Uje-Us-g3T"/>
+                    <tabBarItem key="tabBarItem" title="" id="Uje-Us-g3T"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rsi-45-4CG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -587,11 +587,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="btn_heart_red_solid" width="24" height="24"/>
         <image name="facebook-icon-2" width="50" height="50"/>
         <image name="messenger-icon-2" width="50" height="50"/>
-        <image name="tab_home_black" width="25" height="25"/>
-        <image name="tree" width="25" height="25"/>
         <image name="water" width="512" height="512"/>
     </resources>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

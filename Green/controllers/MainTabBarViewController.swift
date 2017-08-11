@@ -36,7 +36,7 @@ class MainTabBarViewController: BottomNavigationController {
                 if flag == true {
                     TreeService.createImageUrl(for: image)
                     NotificationCenter.default.post(name: Notification.Name(rawValue: "upload"), object: self)
-                    
+                    print("picture saved")
                     self.animateSnackbar()
                 } else {
                     DispatchQueue.main.async(execute: {

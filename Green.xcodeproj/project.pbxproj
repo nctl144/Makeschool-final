@@ -19,6 +19,7 @@
 		051DBFCA1F1FCB03004066ED /* Introduction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 051DBFC91F1FCB03004066ED /* Introduction.storyboard */; };
 		051DBFCE1F1FF6D2004066ED /* TreeVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051DBFCD1F1FF6D2004066ED /* TreeVerifier.swift */; };
 		052FF1271F3E2AFF001C03CF /* Credit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 052FF1261F3E2AFF001C03CF /* Credit.storyboard */; };
+		052FF1291F3E3A8A001C03CF /* TransitionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052FF1281F3E3A8A001C03CF /* TransitionExtension.swift */; };
 		053460271F2918E000F88A21 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053460261F2918E000F88A21 /* PhotoCollectionViewCell.swift */; };
 		0534602A1F291D0A00F88A21 /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053460291F291D0A00F88A21 /* AppNavigationController.swift */; };
 		0534602C1F291F3B00F88A21 /* Photo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0534602B1F291F3B00F88A21 /* Photo.storyboard */; };
@@ -63,6 +64,7 @@
 		051DBFC91F1FCB03004066ED /* Introduction.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Introduction.storyboard; path = storyboards/Introduction.storyboard; sourceTree = "<group>"; };
 		051DBFCD1F1FF6D2004066ED /* TreeVerifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TreeVerifier.swift; path = services/TreeVerifier.swift; sourceTree = "<group>"; };
 		052FF1261F3E2AFF001C03CF /* Credit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Credit.storyboard; path = storyboards/Credit.storyboard; sourceTree = "<group>"; };
+		052FF1281F3E3A8A001C03CF /* TransitionExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransitionExtension.swift; path = extensions/TransitionExtension.swift; sourceTree = "<group>"; };
 		053460261F2918E000F88A21 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoCollectionViewCell.swift; path = views/PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		053460291F291D0A00F88A21 /* AppNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppNavigationController.swift; path = controllers/navigationController/AppNavigationController.swift; sourceTree = "<group>"; };
 		0534602B1F291F3B00F88A21 /* Photo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Photo.storyboard; path = storyboards/Photo.storyboard; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				05EFBE411F1991B0009DE0C4 /* StorageExtensions.swift */,
 				05C1B67F1F2023C100E6EFDD /* UIextension.swift */,
 				050C48EA1F229ADD0011D712 /* UIStoryboardExtensions.swift */,
+				052FF1281F3E3A8A001C03CF /* TransitionExtension.swift */,
 			);
 			name = extensions;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				052FF1291F3E3A8A001C03CF /* TransitionExtension.swift in Sources */,
 				05E21AD31F27FAE200ED8627 /* AppSnackbarController.swift in Sources */,
 				05B38F291F3A6BD400C57F2B /* WaterService.swift in Sources */,
 				053460271F2918E000F88A21 /* PhotoCollectionViewCell.swift in Sources */,

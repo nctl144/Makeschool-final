@@ -17,7 +17,6 @@ class AppToolbarController: ToolbarController {
     override func prepare() {
         super.prepare()
         prepareMenuButton()
-//        prepareMoreButton()
         prepareStatusBar()
         prepareToolbar()
     }
@@ -28,11 +27,6 @@ extension AppToolbarController {
         menuButton = IconButton(image: Icon.cm.menu, tintColor: .white)
         menuButton.addTarget(self, action: #selector(handleMenuButton), for: .touchUpInside)
     }
-    
-//    fileprivate func prepareMoreButton() {
-//        moreButton = IconButton(image: Icon.cm.moreVertical, tintColor: .white)
-//        moreButton.addTarget(self, action: #selector(handleMoreButton), for: .touchUpInside)
-//    }
   
     fileprivate func prepareStatusBar() {
         statusBarStyle = .lightContent
@@ -53,7 +47,6 @@ extension AppToolbarController {
         toolbar.detailLabel.textAlignment = .left
         
         toolbar.leftViews = [menuButton]
-//        toolbar.rightViews = [moreButton]
     }
 }
 
@@ -62,9 +55,4 @@ extension AppToolbarController {
     fileprivate func handleMenuButton() {
         navigationDrawerController?.toggleLeftView()
     }
-    
-//    @objc
-//    fileprivate func handleMoreButton() {
-//        navigationDrawerController?.toggleRightView()
-//    }
 }
